@@ -1,0 +1,12 @@
+{
+  "Htbc": "0x1AFb031389C32B5c9f3e6531fdD445F5cBEF62Fc",
+  "network": "holesky",
+  "timestamp": "2025-02-06T11:16:44.823Z",
+  "details": {
+    "name": "HowToBlockchain Crypto",
+    "symbol": "HTBC",
+    "decimals": 18,
+    "maxSupply": "21000000.0",
+    "price": "0.01"
+  }
+}
