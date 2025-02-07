@@ -17,7 +17,7 @@ const navigation = [
   { name: 'Home', href: '/', icon: Home },
   { name: 'Concepts clés', href: '/concepts', icon: BookOpen },
   { name: 'Créez votre wallet', href: '/wallet', icon: Wallet },
-  { name: 'Vos premières cryptos gratuites', href: '/freecrypto', icon: Gift },
+  { name: 'Vos premières cryptos', href: '/freecrypto', icon: Gift },
   { name: 'Vos Premiers NFTs', href: '/freenft', icon: Image },
   { name: 'Avant d\'investir', href: '/notionsavancees', icon: GraduationCap },
   { name: 'Lancez vous', href: '/get-started', icon: Rocket },
@@ -30,7 +30,7 @@ const HeaderMain = () => {
     return (
         <>
             <header className="border-b fixed top-0 left-0 right-0 bg-background z-50">
-                <div className="container mx-auto px-4 py-2">
+                <div className="container mx-auto px-4 py-2 lg:py-3">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-6">
                             <ModeToggle />
@@ -39,22 +39,23 @@ const HeaderMain = () => {
                         {/* Titre central avec lien - version desktop */}
                         <Link 
                             href="/" 
-                            className={`${roboto.className} text-xl hidden md:block hover:opacity-80 transition-opacity`}
+                            className={`${roboto.className} text-xl hidden ml-5 md:block hover:opacity-80 transition-opacity lg:text-2xl`}
                         >
-                            <span className="text-2xl font-thin">How To </span>
-                            <span className="text-2xl font-bold">Blockchain</span>
+                            <span className="text-2xl font-thin lg:text-3xl">How To </span>
+                            <span className="text-2xl font-bold lg:text-3xl">Blockchain</span>
                         </Link>
                         
                         {/* Navigation pour desktop */}
-                        <nav className="hidden md:flex items-center space-x-4">
+                        <nav className="hidden md:flex items-center space-x-4 lg:space-x-6">
                             {navigation.map((item) => (
                                 <Link 
                                     key={item.name}
                                     href={item.href}
-                                    className={`flex items-center gap-1.5 text-xs font-medium transition-colors hover:text-primary
-                                        ${pathname === item.href ? 'text-primary' : 'text-muted-foreground'}`}
+                                    className={`flex items-center gap-1.5 whitespace-nowrap font-medium transition-colors hover:text-primary
+                                        ${pathname === item.href ? 'text-primary' : 'text-muted-foreground'}
+                                        text-xs lg:text-sm`}
                                 >
-                                    <item.icon className="h-3.5 w-3.5" />
+                                    <item.icon className="h-3.5 w-3.5 lg:h-4 lg:w-4" />
                                     {item.name}
                                 </Link>
                             ))}
@@ -121,7 +122,7 @@ const HeaderMain = () => {
             </div>
 
             {/* Ajustement du spacer pour le header plus petit */}
-            <div className="h-[60px]" />
+            <div className="h-[60px] lg:h-[68px]" />
         </>
     );
 };
