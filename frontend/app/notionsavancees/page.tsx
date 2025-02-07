@@ -11,6 +11,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { ArrowLeft } from "lucide-react";
 
 const quicksand = Quicksand({ 
   subsets: ["latin"],
@@ -26,8 +27,15 @@ export default function NotionsAvanceesPage() {
   return (
     <main className="container mx-auto">
       <HeaderMain />
+
       <div className="py-8 px-4">
         <div className="max-w-2xl mx-auto">
+          <Link href="/">
+              <Button variant="outline" className="mb-8 flex items-center gap-2">
+                <ArrowLeft className="h-4 w-4" />
+                Retour
+              </Button>
+          </Link>
           <h1 className={`${quicksand.className} text-3xl md:text-4xl font-bold text-center mb-8`}>
             Quelques dernières notions
           </h1>
