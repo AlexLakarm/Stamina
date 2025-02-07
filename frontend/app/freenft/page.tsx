@@ -6,8 +6,6 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Quicksand, Inter } from "next/font/google";
 import HeaderMain from "@/components/shared/headermain";
-import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
 
 const quicksand = Quicksand({ 
     subsets: ["latin"],
@@ -20,29 +18,12 @@ const inter = Inter({
 });
 
 export default function FreeNFTPage() {
-    const router = useRouter();
-
-    useEffect(() => {
-        // Restaure la position de défilement au chargement de la page
-        const savedPosition = localStorage.getItem('scrollPosition');
-        if (savedPosition) {
-            window.scrollTo(0, parseInt(savedPosition));
-            localStorage.removeItem('scrollPosition');
-        }
-    }, []);
-
-    const handleNavigation = (path: string) => {
-        // Sauvegarde la position actuelle
-        localStorage.setItem('scrollPosition', window.scrollY.toString());
-        router.push(path);
-    };
-
     return (
         <main className="container mx-auto">
             <HeaderMain />
             <div className="py-8 px-4">
                 <div className="max-w-2xl mx-auto">
-                    <Link href="/" onClick={() => handleNavigation('/')}>
+                    <Link href="/">
                         <Button variant="outline" className="mb-8 flex items-center gap-2">
                             <ArrowLeft className="h-4 w-4" />
                             Retour
@@ -110,7 +91,7 @@ export default function FreeNFTPage() {
                         </div>
 
                         <div className="flex justify-center pt-4">
-                            <Link href="/howtodapp" onClick={() => handleNavigation('/howtodapp')}>
+                            <Link href="/howtodapp">
                                 <Button className="font-bold">
                                     <span className={quicksand.className}>
                                         Commencer l'aventure

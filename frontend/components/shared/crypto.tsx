@@ -21,6 +21,7 @@ const Crypto: FC = () => {
     const router = useRouter();
 
     const handleNavigation = (path: string) => {
+        // Sauvegarde la position actuelle
         localStorage.setItem('scrollPosition', window.scrollY.toString());
         router.push(path);
     };

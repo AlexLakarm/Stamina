@@ -5,6 +5,7 @@ import { FC } from 'react';
 import { Quicksand, Inter } from "next/font/google";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useRouter } from 'next/navigation';
 
 const quicksand = Quicksand({ 
   subsets: ["latin"],
@@ -19,6 +20,13 @@ const inter = Inter({
 type NFTProps = Record<string, never>;
 
 const NFT: FC<NFTProps> = () => {
+    const router = useRouter();
+
+    const handleNavigation = (path: string) => {
+        // Sauvegarde la position actuelle
+        localStorage.setItem('scrollPosition', window.scrollY.toString());
+        router.push(path);
+    };
     return (
         <>
             {/* Séparateur */}
@@ -39,7 +47,7 @@ const NFT: FC<NFTProps> = () => {
                 </p>
 
                 {/* Bouton */}
-                <Link href="/freenft">
+                <Link href="/freenft" onClick={() => handleNavigation('/freenft')}>
                     <Button variant="default" className="font-bold mb-8">
                         <span className={quicksand.className}>
                             Votre premier NFT
