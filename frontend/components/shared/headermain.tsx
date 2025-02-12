@@ -1,7 +1,7 @@
 "use client"
 
 import { ModeToggle } from "@/components/ui/mode-toggle";
-import { Home, Wallet, Gift, Image, Rocket, BookOpen, GraduationCap } from "lucide-react";
+import { Code, Briefcase, Mail, Book } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
 import {useState } from 'react';
@@ -14,13 +14,10 @@ const roboto = Roboto({
 });
 
 const navigation = [
-  { name: 'Home', href: '/', icon: Home },
-  { name: 'Concepts clés', href: '/concepts', icon: BookOpen },
-  { name: 'Créez votre wallet', href: '/wallet', icon: Wallet },
-  { name: 'Vos premières cryptos', href: '/freecrypto', icon: Gift },
-  { name: 'Vos Premiers NFTs', href: '/freenft', icon: Image },
-  { name: 'Avant d\'investir', href: '/notionsavancees', icon: GraduationCap },
-  { name: 'Lancez vous', href: '/get-started', icon: Rocket },
+  { name: 'Blockchain Development', href: '/dev', icon: Code },
+  { name: 'Consulting', href: '/consulting', icon: Briefcase },
+  { name: 'Actualités', href: '/actualites', icon: Book },
+  { name: 'Nous contacter', href: '/contact', icon: Mail },
 ];
 
 const HeaderMain = () => {
@@ -29,21 +26,21 @@ const HeaderMain = () => {
 
     return (
         <>
-            <header className="border-b fixed top-0 left-0 right-0 bg-background z-50">
+            <header className="border-b border-neutral-800 fixed top-0 left-0 right-0 bg-neutral-950 z-50">
                 <div className="container mx-auto px-4 py-2 lg:py-3">
                     <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-6">
+                        {/* Logo et titre à gauche */}
+                        <div className="flex items-center gap-4">
                             <ModeToggle />
+                            <div className="hidden md:block">
+                                <Link href="/" className={`${roboto.className} hover:opacity-80 transition-opacity`}>
+                                    <div className="flex flex-col">
+                                        <span className="text-2xl lg:text-3xl font-bold text-neutral-200">Stamina</span>
+                                        <span className="text-sm lg:text-base text-neutral-400">Blockchain Dev & Consulting</span>
+                                    </div>
+                                </Link>
+                            </div>
                         </div>
-
-                        {/* Titre central avec lien - version desktop */}
-                        <Link 
-                            href="/" 
-                            className={`${roboto.className} text-xl hidden ml-5 md:block hover:opacity-80 transition-opacity lg:text-2xl`}
-                        >
-                            <span className="text-2xl font-thin lg:text-3xl">How To </span>
-                            <span className="text-2xl font-bold lg:text-3xl">Blockchain</span>
-                        </Link>
                         
                         {/* Navigation pour desktop */}
                         <nav className="hidden md:flex items-center space-x-4 lg:space-x-6">
@@ -52,8 +49,8 @@ const HeaderMain = () => {
                                     key={item.name}
                                     href={item.href}
                                     className={`flex items-center gap-1.5 whitespace-nowrap font-medium transition-colors hover:text-primary
-                                        ${pathname === item.href ? 'text-primary' : 'text-muted-foreground'}
-                                        text-xs lg:text-sm`}
+                                        ${pathname === item.href ? 'text-primary' : 'text-neutral-400'}
+                                        text-xs lg:text-sm hover:text-neutral-200`}
                                 >
                                     <item.icon className="h-3.5 w-3.5 lg:h-4 lg:w-4" />
                                     {item.name}
@@ -61,13 +58,15 @@ const HeaderMain = () => {
                             ))}
                         </nav>
 
-                        {/* Version mobile du titre avec lien */}
+                        {/* Version mobile du titre */}
                         <Link 
                             href="/"
                             className={`${roboto.className} text-lg absolute left-1/2 transform -translate-x-1/2 md:hidden hover:opacity-80 transition-opacity`}
                         >
-                            <span className="text-xl font-thin">How To </span>
-                            <span className="text-xl font-bold">Blockchain</span>
+                            <div className="flex flex-col items-center">
+                                <span className="text-2xl font-bold text-neutral-200">Stamina</span>
+                                <span className="text-sm text-neutral-400">Blockchain Dev & Consulting</span>
+                            </div>
                         </Link>
 
                         {/* Bouton burger */}
@@ -76,11 +75,11 @@ const HeaderMain = () => {
                                 className="relative focus:outline-none"
                                 onClick={() => setIsOpen(!isOpen)}
                             >
-                                <div className="relative flex items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all bg-slate-700 shadow-md">
+                                <div className="relative flex items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all bg-neutral-800 shadow-md">
                                     <div className={`flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 ${isOpen ? '-rotate-[45deg]' : 'rotate-0'} origin-center`}>
-                                        <div className={`bg-white h-[2px] w-1/2 rounded transform transition-all duration-300 ${isOpen ? '-rotate-90 h-[1px] -translate-y-[1px]' : 'rotate-0'} origin-right delay-75`}></div>
-                                        <div className="bg-white h-[1px] rounded"></div>
-                                        <div className={`bg-white h-[2px] w-1/2 rounded self-end transform transition-all duration-300 ${isOpen ? '-rotate-90 h-[1px] translate-y-[1px]' : 'rotate-0'} origin-left delay-75`}></div>
+                                        <div className={`bg-neutral-200 h-[2px] w-1/2 rounded transform transition-all duration-300 ${isOpen ? '-rotate-90 h-[1px] -translate-y-[1px]' : 'rotate-0'} origin-right delay-75`}></div>
+                                        <div className="bg-neutral-200 h-[1px] rounded"></div>
+                                        <div className={`bg-neutral-200 h-[2px] w-1/2 rounded self-end transform transition-all duration-300 ${isOpen ? '-rotate-90 h-[1px] translate-y-[1px]' : 'rotate-0'} origin-left delay-75`}></div>
                                     </div>
                                 </div>
                             </button>
@@ -101,7 +100,7 @@ const HeaderMain = () => {
                         quality={100}
                         sizes="100vw"
                     />
-                    <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+                    <div className="absolute inset-0 bg-neutral-950/90 backdrop-blur-sm"></div>
                 </div>
 
                 {/* Navigation */}
@@ -111,8 +110,8 @@ const HeaderMain = () => {
                             key={item.name}
                             href={item.href}
                             onClick={() => setIsOpen(false)}
-                            className={`flex items-center gap-4 px-4 py-4 text-lg font-medium transition-colors hover:text-primary
-                                text-white hover:text-purple-300`}
+                            className={`flex items-center gap-4 px-4 py-4 text-lg font-medium transition-colors
+                                text-neutral-400 hover:text-neutral-200`}
                         >
                             <item.icon className="h-5 w-5" />
                             {item.name}

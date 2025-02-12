@@ -2,11 +2,9 @@
 
 import { useEffect } from 'react';
 import HeaderMain from "@/components/shared/headermain";
-import Intro from "@/components/shared/intro";
-import Wallet from "@/components/shared/wallet";
-import Crypto from "@/components/shared/crypto";
-import NFT from "@/components/shared/nft";
-import AvantInvest from "@/components/shared/avantinvest";
+import Slogan from "@/components/shared/slogan";
+import Activities from "@/components/shared/activities";
+import Actus from "@/components/shared/actus";
 
 export default function Home() {
   useEffect(() => {
@@ -19,14 +17,14 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="container mx-auto">
-      <HeaderMain />
-      <div className="space-y-2">
-        <Intro />
-        <Wallet />
-        <Crypto />
-        <NFT />
-        <AvantInvest />
+    <main className="bg-neutral-950 min-h-screen">
+      <div className="container mx-auto">
+        <HeaderMain />
+        <div className="space-y-2">
+          <Slogan />
+          <Activities />
+          <Actus />
+        </div>
       </div>
     </main>
   );
