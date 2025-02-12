@@ -1,16 +1,15 @@
-# How To Blockchain 🚀
+# Stamina 🚀
 
-Une plateforme éducative interactive pour découvrir la blockchain et le Web3 de manière pratique et sécurisée.
+Une plateforme d'actualités et d'analyses sur la blockchain, la DeFi et le Web3.
 
 ## 🎯 Objectif
 
-How To Blockchain a pour mission de démystifier la blockchain et de permettre à chacun de faire ses premiers pas dans le Web3 en toute sécurité. Notre approche "learning by doing" permet aux utilisateurs de :
+Stamina a pour mission d'informer et d'éduquer sur les dernières actualités et innovations dans l'écosystème blockchain. Notre approche éditoriale permet aux lecteurs de :
 
-- Créer leur premier wallet
-- Obtenir des cryptomonnaies de test gratuitement
-- Interagir avec une DApp (Application Décentralisée)
-- Créer leurs premiers NFTs
-- Le tout sur un réseau de test, sans risque financier
+- Comprendre les fondamentaux de la blockchain
+- Suivre l'actualité DeFi
+- Analyser les événements majeurs du secteur
+- Découvrir les projets innovants
 
 ## 🛠 Technologies Utilisées
 
@@ -18,18 +17,8 @@ How To Blockchain a pour mission de démystifier la blockchain et de permettre �
 - Next.js 14 (App Router)
 - TypeScript
 - Tailwind CSS
-- Shadcn/ui
-- RainbowKit (Gestion des wallets)
-- Wagmi (Interactions blockchain)
-
-### Backend / Smart Contracts
-- Solidity
-- Hardhat
-- OpenZeppelin
-- Ethers.js
-
-### Réseau
-- Ethereum Holesky (Réseau de test)
+- Framer Motion
+- React Markdown
 
 ## 🚀 Démarrage
 
@@ -42,55 +31,34 @@ How To Blockchain a pour mission de démystifier la blockchain et de permettre �
 
 1. Clonez le repository :
 ```bash
-git clone https://github.com/votre-username/howtoblockchain.git
-cd howtoblockchain
+git clone https://github.com/votre-username/stamina.git
+cd stamina/frontend
 ```
 
-2. Installez les dépendances du frontend :
+2. Installez les dépendances :
 ```bash
-cd frontend
 npm install
 ```
 
-3. Installez les dépendances du backend :
+3. Lancez l'application en mode développement :
 ```bash
-cd backend
-npm install
-```
-
-4. Créez un fichier `.env` dans le dossier frontend avec les variables suivantes :
-```env
-NEXT_PUBLIC_ALCHEMY_API_KEY=votre_clé_api
-NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=votre_project_id
-```
-
-5. Lancez l'application en mode développement :
-```bash
-# Dans le dossier frontend
 npm run dev
 ```
 
 ## 📚 Structure du Projet
 
 ```
-howtoblockchain/
-├── frontend/               # Application Next.js
-│   ├── app/               # Pages et routes
-│   ├── components/        # Composants réutilisables
-│   └── public/           # Assets statiques
-│
-└── backend/               # Smart Contracts et tests
-    ├── contracts/        # Smart Contracts Solidity
-    ├── scripts/         # Scripts de déploiement
-    └── test/            # Tests unitaires
+stamina/
+└── frontend/               
+    ├── app/               # Pages et routes
+    │   ├── actualites/   # Section actualités
+    │   └── page.tsx      # Page d'accueil
+    ├── components/        # Composants réutilisables
+    │   ├── shared/       # Composants partagés
+    │   └── ui/           # Composants d'interface
+    ├── data/             # Données statiques
+    └── public/           # Assets statiques
 ```
-
-## 🔒 Sécurité
-
-- Utilisation exclusive du réseau de test Holesky
-- Smart Contracts audités et basés sur OpenZeppelin
-- Pas de manipulation de vrais fonds
-- Tests unitaires complets
 
 ## 🤝 Contribution
 
@@ -105,9 +73,7 @@ Les contributions sont les bienvenues ! N'hésitez pas à :
 
 Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
-## 🙋‍♂️ Support
+## 🙋‍♂️ Contact
 
-Pour toute question ou suggestion, n'hésitez pas à :
-- Ouvrir une issue
-- Nous contacter via [coming soon]
-- Contacter notre lead dev via X : @La_Kaarm
+Pour toute question ou suggestion :
+- Twitter : @La_Kaarm
