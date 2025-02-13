@@ -77,10 +77,10 @@ const GlowingEffect = memo(
 
           const currentAngle =
             parseFloat(element.style.getPropertyValue("--start")) || 0;
-          const targetAngle = Math.atan2(
-            mouseY - center[1],
-            mouseX - center[0]
-          );
+          let targetAngle =
+            (180 * Math.atan2(mouseY - center[1], mouseX - center[0])) /
+              Math.PI +
+            90;
 
           const angleDiff = ((targetAngle - currentAngle + 180) % 360) - 180;
           const newAngle = currentAngle + angleDiff;
@@ -123,7 +123,7 @@ const GlowingEffect = memo(
           className={cn(
             "pointer-events-none absolute -inset-px hidden rounded-[inherit] border opacity-0 transition-opacity",
             glow && "opacity-100",
-            variant === "white" && "border-white",
+            variant === "white" ? "border-white" : "border-neutral-800",
             disabled && "!block"
           )}
         />
