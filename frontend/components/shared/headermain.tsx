@@ -65,8 +65,8 @@ const HeaderMain = () => {
                             className={`${roboto.className} text-lg absolute left-1/2 transform -translate-x-1/2 md:hidden hover:opacity-80 transition-opacity`}
                         >
                             <div className="flex flex-col items-center">
-                                <span className="text-2xl font-bold text-neutral-200">Stamina</span>
-                                <span className="text-sm text-neutral-400">Blockchain Dev & Consulting</span>
+                                <span className="text-3xl font-bold text-neutral-200">Stamina</span>
+                                <span className="text-base text-neutral-400">Blockchain Dev & Consulting</span>
                             </div>
                         </Link>
 
