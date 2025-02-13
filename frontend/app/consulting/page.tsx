@@ -6,6 +6,14 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Quicksand, Inter } from "next/font/google";
 import HeaderMain from "@/components/shared/headermain";
+import { Card, CardContent } from "@/components/ui/card"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 const quicksand = Quicksand({ 
     subsets: ["latin"],
@@ -17,19 +25,55 @@ const inter = Inter({
     weight: ['400']
 });
 
+const presentations = [
+  {
+    title: "Blockchain : Fondamentaux et défis",
+    description: "Une introduction complète aux concepts de la blockchain et ses enjeux actuels.",
+    sommaire: [
+      "Introduction à la blockchain",
+      "Mécanismes de consensus",
+      "Smart contracts",
+      "Défis techniques et scalabilité",
+      "Cas d'usage entreprise"
+    ]
+  },
+  {
+    title: "La finance décentralisée",
+    description: "Exploration des protocoles DeFi et de leur impact sur le secteur financier.",
+    sommaire: [
+      "Principes de la DeFi",
+      "Protocoles de prêt",
+      "Exchanges décentralisés",
+      "Yield farming",
+      "Gestion des risques"
+    ]
+  },
+  {
+    title: "La blockchain à l'ère de la régulation",
+    description: "Analyse du cadre réglementaire et des perspectives d'évolution.",
+    sommaire: [
+      "Cadre réglementaire actuel",
+      "MiCA et réglementation EU",
+      "Conformité et KYC",
+      "Fiscalité des cryptoactifs",
+      "Perspectives futures"
+    ]
+  }
+];
+
 export default function ConsultingPage() {
     return (
         <main className="bg-neutral-950 min-h-screen">
             <HeaderMain />
             <div className="container mx-auto py-12 px-4">
-                <div className="max-w-3xl mx-auto">
-                    <Link href="/">
-                        <Button variant="outline" className="mb-8 flex items-center gap-2 bg-neutral-900 text-neutral-200 border-neutral-800 hover:bg-neutral-800">
-                            <ArrowLeft className="h-4 w-4" />
-                            Retour
-                        </Button>
-                    </Link>
+                <Link href="/" className="hidden md:block absolute left-8 top-24">
+                    <Button variant="outline" className="flex items-center gap-2 bg-neutral-900 text-neutral-200 border-neutral-800 hover:bg-neutral-800">
+                        <ArrowLeft className="h-4 w-4" />
+                        Retour
+                    </Button>
+                </Link>
 
+                <div className="max-w-3xl mx-auto">
                     <h1 className={`${quicksand.className} text-4xl md:text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600`}>
                         Services de Consulting Blockchain
                     </h1>
@@ -101,6 +145,39 @@ export default function ConsultingPage() {
                                     Veille technologique continue
                                 </li>
                             </ul>
+                        </div>
+
+                        <div className="space-y-6">
+                            <h3 className="text-xl font-semibold text-neutral-300">
+                                Nos présentations
+                            </h3>
+
+                            <Carousel className="w-full max-w-5xl mx-auto">
+                                <CarouselContent>
+                                    {presentations.map((pres, index) => (
+                                        <CarouselItem key={index} className="basis-1/2 pl-4">
+                                            <Card className="bg-neutral-900/30 border-neutral-800 h-[400px]">
+                                                <CardContent className="flex flex-col h-full p-8">
+                                                    <div className="mb-6">
+                                                        <h3 className="text-2xl font-bold text-neutral-200 mb-3">{pres.title}</h3>
+                                                        <p className="text-base text-neutral-400">{pres.description}</p>
+                                                    </div>
+                                                    <ul className="text-left text-sm text-neutral-500 space-y-3 mt-auto">
+                                                        {pres.sommaire.map((item, idx) => (
+                                                            <li key={idx} className="flex items-start gap-2">
+                                                                <span className="text-blue-400 text-[0.8rem] mt-1">•</span>
+                                                                <span>{item}</span>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </CardContent>
+                                            </Card>
+                                        </CarouselItem>
+                                    ))}
+                                </CarouselContent>
+                                <CarouselPrevious className="bg-neutral-900 border-neutral-800 text-neutral-400 hover:bg-neutral-800" />
+                                <CarouselNext className="bg-neutral-900 border-neutral-800 text-neutral-400 hover:bg-neutral-800" />
+                            </Carousel>
                         </div>
 
                         <div className="flex justify-center pt-8">

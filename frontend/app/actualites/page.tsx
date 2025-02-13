@@ -13,6 +13,7 @@ import {
   PaginationPrevious,
 } from "@/components/ui/custom-pagination";
 import HeaderMain from "@/components/shared/headermain";
+import { Button } from "@/components/ui/button";
 
 const ARTICLES_PER_PAGE = 6;
 
@@ -43,12 +44,11 @@ export default async function ActualitesPage({
     <div className="min-h-screen bg-neutral-950 py-8">
       <HeaderMain />
       <div className="max-w-7xl mx-auto px-4">
-        <Link 
-          href="/"
-          className="inline-flex items-center gap-2 text-neutral-400 hover:text-neutral-200 mb-6 group"
-        >
-          <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-          Retour à l&apos;accueil
+        <Link href="/" className="hidden md:block absolute left-8 top-24">
+          <Button variant="outline" className="flex items-center gap-2 bg-neutral-900 text-neutral-200 border-neutral-800 hover:bg-neutral-800">
+            <ArrowLeft className="h-4 w-4" />
+            Retour
+          </Button>
         </Link>
 
         <h1 className="text-3xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-bold mb-10">

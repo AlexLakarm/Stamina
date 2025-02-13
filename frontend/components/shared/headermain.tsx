@@ -1,7 +1,7 @@
 "use client"
 
 import { ModeToggle } from "@/components/ui/mode-toggle";
-import { Code, Briefcase, Mail, Book } from "lucide-react";
+import { Code, Briefcase, Mail, Book, GraduationCap } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
 import {useState } from 'react';
@@ -17,6 +17,7 @@ const navigation = [
   { name: 'Blockchain Development', href: '/dev', icon: Code },
   { name: 'Consulting', href: '/consulting', icon: Briefcase },
   { name: 'Actualités', href: '/actualites', icon: Book },
+  { name: 'How To Blockchain', href: '/howtoblockchain', icon: GraduationCap },
   { name: 'Nous contacter', href: '/contact', icon: Mail },
 ];
 

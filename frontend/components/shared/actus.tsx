@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { getLatestArticles} from "@/data/articles";
+import { ExternalLink } from "lucide-react";
 
 const BentoGrid = ({
   className,
@@ -106,13 +107,13 @@ const articles = [
 ];
 
 export default function Actus() {
-  const allArticles = articles; // Pour la version desktop
-  const mobileArticles = getLatestArticles(3); // 3 derniers articles pour mobile
+  const allArticles = articles;
+  const mobileArticles = getLatestArticles(3);
   
   return (
     <div className="relative py-16 bg-neutral-950">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-14 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600">
+        <h2 className="text-3xl md:text-5xl font-bold text-center mb-14 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600">
           Nos derniers articles et analyses
         </h2>
         
@@ -162,6 +163,16 @@ export default function Actus() {
               />
             ))}
           </BentoGrid>
+        </div>
+
+        {/* Ajout du bouton "Tous nos articles" */}
+        <div className="flex justify-center mt-12">
+          <Link href="/actualites">
+            <button className="px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:opacity-90 transition-opacity text-lg flex items-center gap-2">
+              Tous nos articles
+              <ExternalLink className="h-5 w-5" />
+            </button>
+          </Link>
         </div>
       </div>
     </div>

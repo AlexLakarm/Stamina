@@ -19,7 +19,7 @@ const Card = ({ className, children }: { className?: string; children: React.Rea
 
 export default function Activities() {
   return (
-    <div className="relative min-h-[40rem] sm:min-h-[50rem] w-full rounded-md bg-neutral-950 flex flex-col items-center justify-center antialiased py-8 md:py-16 overflow-hidden">
+    <div className="relative min-h-[30rem] sm:min-h-[30rem] w-full rounded-md bg-neutral-950 flex flex-col items-center justify-center antialiased py-8 md:py-16 overflow-hidden">
       <div className="absolute inset-0 w-full h-full">
         <BackgroundBeams className="w-full h-full bg-neutral-950">
           <></>

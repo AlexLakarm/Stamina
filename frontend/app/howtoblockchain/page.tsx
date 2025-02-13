@@ -7,8 +7,6 @@ import Link from "next/link";
 import { Quicksand, Inter } from "next/font/google";
 import HeaderMain from "@/components/shared/headermain";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
-import { LampContainer } from "@/components/ui/lamp";
-import { motion } from "framer-motion";
 
 const quicksand = Quicksand({
     subsets: ["latin"],
@@ -59,29 +57,6 @@ const GridItem = ({ area, icon, title, description }: GridItemProps) => {
 };
 
 export default function HowToBlockchainPage() {
-    const features = [
-        {
-            icon: <GraduationCap className="h-4 w-4 text-neutral-400" />,
-            title: "Création de Wallet",
-            description: "Apprenez à créer et gérer votre premier portefeuille crypto en toute sécurité."
-        },
-        {
-            icon: <Code className="h-4 w-4 text-neutral-400" />,
-            title: "Tokens de Test",
-            description: "Obtenez des cryptomonnaies de test gratuitement pour expérimenter sans risque."
-        },
-        {
-            icon: <Book className="h-4 w-4 text-neutral-400" />,
-            title: "DApps Interactives",
-            description: "Découvrez le fonctionnement des applications décentralisées à travers des exemples concrets."
-        },
-        {
-            icon: <Shield className="h-4 w-4 text-neutral-400" />,
-            title: "Création de NFTs",
-            description: "Créez vos premiers NFTs et comprenez les mécanismes de la propriété numérique."
-        }
-    ];
-
     return (
         <main className="bg-neutral-950 min-h-screen">
             <HeaderMain />

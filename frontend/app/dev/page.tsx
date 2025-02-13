@@ -22,14 +22,14 @@ export default function DevPage() {
     <main className="bg-neutral-950 min-h-screen">
       <HeaderMain />
       <div className="container mx-auto py-12 px-4">
-        <div className="max-w-3xl mx-auto">
-          <Link href="/">
-            <Button variant="outline" className="mb-8 flex items-center gap-2 bg-neutral-900 text-neutral-200 border-neutral-800 hover:bg-neutral-800">
-              <ArrowLeft className="h-4 w-4" />
-              Retour
-            </Button>
-          </Link>
+        <Link href="/" className="hidden md:block absolute left-8 top-24">
+          <Button variant="outline" className="flex items-center gap-2 bg-neutral-900 text-neutral-200 border-neutral-800 hover:bg-neutral-800">
+            <ArrowLeft className="h-4 w-4" />
+            Retour
+          </Button>
+        </Link>
 
+        <div className="max-w-3xl mx-auto">
           <h1 className={`${quicksand.className} text-4xl md:text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600`}>
             Services de Développement Blockchain
           </h1>

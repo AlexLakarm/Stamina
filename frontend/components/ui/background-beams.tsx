@@ -76,7 +76,7 @@ export const BackgroundBeams = ({
       <div
       ref={parentRef}
         className={cn(
-        "h-96 md:h-[40rem] bg-neutral-950 relative flex items-center w-full justify-center overflow-hidden",
+        "h-30 md:h-[45rem] bg-neutral-950 relative flex items-center w-full justify-center overflow-hidden",
         // h-screen if you want bigger
           className
         )}
