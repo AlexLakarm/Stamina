@@ -14,6 +14,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 const quicksand = Quicksand({ 
     subsets: ["latin"],
@@ -58,6 +59,17 @@ const presentations = [
       "Fiscalité des cryptoactifs",
       "Perspectives futures"
     ]
+  },
+  {
+    title: "Les NFT : la propriété sur la blockchain",
+    description: "Comprendre les enjeux et opportunités des tokens non-fongibles.",
+    sommaire: [
+      "Principes et définitions",
+      "Standards techniques (ERC-721, ERC-1155)",
+      "Domaines d'applications",
+      "Limites et controverses",
+      "Perspectives d'avenir"
+    ]
   }
 ];
 
@@ -75,81 +87,89 @@ export default function ConsultingPage() {
 
                 <div className="max-w-3xl mx-auto">
                     <h1 className={`${quicksand.className} text-4xl md:text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600`}>
-                        Services de Consulting Blockchain
+                        Consulting & Formation
                     </h1>
 
                     <div className={`${inter.className} space-y-8 text-lg text-neutral-400 leading-relaxed`}>
-                        <div className="bg-neutral-900/50 p-6 rounded-xl border border-neutral-800">
-                            <h2 className="text-2xl font-bold text-neutral-200 mb-4">Notre Approche</h2>
-                            <p>
-                                Nous accompagnons les entreprises dans leur transition vers la blockchain 
-                                avec une approche personnalisée et pragmatique. Notre expertise vous guide 
-                                à chaque étape de votre transformation numérique.
-                            </p>
+                        <div className="m-4 flex justify-center text-center">
+                            <HoverBorderGradient
+                                containerClassName="w-full rounded-xl"
+                                as="div"
+                                className="bg-black text-white flex flex-col space-y-4 p-8"
+                                duration={2}
+                            >
+                                <h2 className="text-2xl font-bold text-neutral-200">Notre Expertise</h2>
+                                <p className={`${inter.className} text-neutral-400 text-justify`}>
+                                    Nous accompagnons les entreprises et les professionnels dans leur compréhension 
+                                    de l'écosystème blockchain et crypto. Spécialisés dans le secteur financier, 
+                                    nous intervenons également auprès d'organisations de tous secteurs pour des missions 
+                                    de formation et de conseil stratégique.
+                                </p>
+                            </HoverBorderGradient>
                         </div>
 
                         <div className="space-y-6">
-                            <h3 className="text-xl font-semibold text-neutral-300">Nos Services de Consulting</h3>
+                            <h3 className="text-xl font-semibold text-neutral-300">Nos Services</h3>
                             <div className="grid gap-6 md:grid-cols-2">
                                 <div className="bg-neutral-900/30 p-5 rounded-lg border border-neutral-800">
-                                    <h4 className="text-neutral-200 font-medium mb-2">Stratégie Blockchain</h4>
+                                    <h4 className="text-neutral-200 font-medium mb-2">Conseil Stratégique</h4>
                                     <p className="text-sm text-neutral-400">
-                                        Évaluation des cas d'usage, analyse de faisabilité, et élaboration 
-                                        de feuilles de route stratégiques pour l'adoption de la blockchain.
+                                        Accompagnement des organisations dans leur approche de l'écosystème crypto, 
+                                        avec une expertise particulière pour le secteur financier.
                                     </p>
                                 </div>
                                 
                                 <div className="bg-neutral-900/30 p-5 rounded-lg border border-neutral-800">
                                     <h4 className="text-neutral-200 font-medium mb-2">Formation & Workshops</h4>
                                     <p className="text-sm text-neutral-400">
-                                        Sessions de formation sur mesure pour vos équipes, de l'introduction 
-                                        à la blockchain aux aspects techniques avancés.
+                                        Sessions pratiques et séminaires adaptés à votre contexte : découverte, 
+                                        manipulation des outils et cas d'usage sectoriels.
                                     </p>
                                 </div>
 
                                 <div className="bg-neutral-900/30 p-5 rounded-lg border border-neutral-800">
-                                    <h4 className="text-neutral-200 font-medium mb-2">Audit & Sécurité</h4>
+                                    <h4 className="text-neutral-200 font-medium mb-2">Veille & Analyse</h4>
                                     <p className="text-sm text-neutral-400">
-                                        Évaluation de la sécurité de vos smart contracts et infrastructures 
-                                        blockchain, recommandations et bonnes pratiques.
+                                        Décryptage des innovations blockchain et de leurs impacts potentiels 
+                                        sur votre activité et votre secteur.
                                     </p>
                                 </div>
 
                                 <div className="bg-neutral-900/30 p-5 rounded-lg border border-neutral-800">
-                                    <h4 className="text-neutral-200 font-medium mb-2">Accompagnement Projet</h4>
+                                    <h4 className="text-neutral-200 font-medium mb-2">Support Réglementaire</h4>
                                     <p className="text-sm text-neutral-400">
-                                        Support dans la gestion et le déploiement de vos projets blockchain, 
-                                        de la conception à la mise en production.
+                                        Accompagnement dans la compréhension du cadre réglementaire crypto 
+                                        et de ses implications pour votre activité.
                                     </p>
                                 </div>
                             </div>
                         </div>
 
                         <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 p-6 rounded-xl border border-blue-500/20">
-                            <h3 className="text-xl font-semibold text-neutral-200 mb-4">Pourquoi Nous Choisir ?</h3>
+                            <h3 className="text-xl font-semibold text-neutral-200 mb-4">Notre Approche</h3>
                             <ul className="space-y-3 text-neutral-400">
                                 <li className="flex items-center gap-2">
                                     <span className="text-blue-400">•</span>
-                                    Expertise technique approfondie en blockchain
+                                    Adaptation à votre contexte
                                 </li>
                                 <li className="flex items-center gap-2">
                                     <span className="text-blue-400">•</span>
-                                    Approche sur mesure adaptée à vos besoins
+                                    Formation pratique et interactive
                                 </li>
                                 <li className="flex items-center gap-2">
                                     <span className="text-blue-400">•</span>
-                                    Accompagnement de bout en bout
+                                    Expertise technique et sectorielle
                                 </li>
                                 <li className="flex items-center gap-2">
                                     <span className="text-blue-400">•</span>
-                                    Veille technologique continue
+                                    Accompagnement personnalisé
                                 </li>
                             </ul>
                         </div>
 
                         <div className="space-y-6">
                             <h3 className="text-xl font-semibold text-neutral-300">
-                                Nos présentations
+                                Exemples de présentations :
                             </h3>
 
                             <Carousel className="w-full max-w-5xl mx-auto">
@@ -180,11 +200,63 @@ export default function ConsultingPage() {
                             </Carousel>
                         </div>
 
+                        {/* Nouvelle section Focus Workshops */}
+                        <div className="mt-16 space-y-6">
+                            <h3 className="text-xl font-semibold text-neutral-300">
+                                Focus sur : les <span className="font-bold text-2xl">Workshops</span>
+                            </h3>
+                            
+                            <div className="bg-neutral-900/30 p-8 rounded-xl border border-neutral-800">
+                                <p className="text-neutral-400 mb-6">
+                                    Contrairement aux formations théoriques traditionnelles, nous proposons une approche 
+                                    unique : la blockchain par la pratique. Vos équipes manipulent directement sur un 
+                                    réseau de test, permettant une compréhension concrète sans aucun risque financier.
+                                </p>
+
+                                <div className="grid gap-4 md:grid-cols-2 mt-8">
+                                    <div className="space-y-4">
+                                        <h4 className="text-lg font-medium text-neutral-200">Manipulation Concrète</h4>
+                                        <ul className="space-y-3">
+                                            <li className="flex items-start gap-3">
+                                                <span className="text-blue-400 text-lg mt-0.5">•</span>
+                                                <span className="text-neutral-400">Création et utilisation d'un wallet Web3 (MetaMask)</span>
+                                            </li>
+                                            <li className="flex items-start gap-3">
+                                                <span className="text-blue-400 text-lg mt-0.5">•</span>
+                                                <span className="text-neutral-400">Achat et transfert de cryptomonnaies sur réseau de test</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div className="space-y-4">
+                                        <h4 className="text-lg font-medium text-neutral-200">Exploration Pratique</h4>
+                                        <ul className="space-y-3">
+                                            <li className="flex items-start gap-3">
+                                                <span className="text-blue-400 text-lg mt-0.5">•</span>
+                                                <span className="text-neutral-400">Création (mint) et gestion de NFTs</span>
+                                            </li>
+                                            <li className="flex items-start gap-3">
+                                                <span className="text-blue-400 text-lg mt-0.5">•</span>
+                                                <span className="text-neutral-400">Utilisation de protocoles DeFi (échange, prêt, yield)</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div className="mt-8 p-4 bg-blue-500/10 rounded-lg border border-blue-500/20">
+                                    <p className="text-neutral-300 italic">
+                                        "Une approche hands-on unique qui permet enfin de démystifier la blockchain 
+                                        par la pratique, au-delà des concepts théoriques habituels."
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
                         <div className="flex justify-center pt-8">
                             <Link href="/contact">
                                 <Button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-6 text-lg hover:opacity-90 transition-opacity">
                                     <span className={quicksand.className}>
-                                        Discuter de votre projet
+                                        Échanger sur vos besoins
                                     </span>
                                 </Button>
                             </Link>
