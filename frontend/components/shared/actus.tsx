@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { getLatestArticles} from "@/data/articles";
+import { getLatestArticles } from "@/data/articles";
 import { ExternalLink } from "lucide-react";
 
 const BentoGrid = ({
@@ -61,53 +61,8 @@ const BentoGridItem = ({
   );
 };
 
-const articles = [
-  {
-    id: '1',
-    title: 'Aave : Le Protocole de Prêt DeFi',
-    description: "Découvrez comment Aave révolutionne le prêt décentralisé avec ses pools de liquidité et ses taux d'intérêt dynamiques.",
-    imageUrl: '/images/aave.jpg',
-    slug: 'aave-protocol'
-  },
-  {
-    id: '2',
-    title: 'Bitcoin : La Révolution Monétaire',
-    description: 'Comprendre les fondamentaux de Bitcoin et son impact sur le système financier mondial.',
-    imageUrl: '/images/bitcoin.jpg',
-    slug: 'bitcoin-basics'
-  },
-  {
-    id: '3',
-    title: 'OpenSea : Le Marché NFT',
-    description: 'Guide complet sur OpenSea, la plus grande marketplace de NFTs et son fonctionnement.',
-    imageUrl: '/images/opensea.jpg',
-    slug: 'opensea-guide'
-  },
-  {
-    id: '4',
-    title: 'Solana : La Blockchain Ultra-Rapide',
-    description: "Plongez dans l'écosystème Solana, ses avantages en termes de rapidité et de coûts, ainsi que ses défis techniques.",
-    imageUrl: '/images/solana.jpg',
-    slug: 'solana-ecosystem'
-  },
-  {
-    id: '5',
-    title: "FTX : Les Leçons d'une Chute",
-    description: "Analyse des événements qui ont conduit à l'effondrement de FTX et les enseignements pour l'industrie crypto.",
-    imageUrl: '/images/ftx.jpg',
-    slug: 'ftx-collapse'
-  },
-  {
-    id: '6',
-    title: "Terra LUNA & UST : Anatomie d'un Crash",
-    description: "Retour sur la débâcle de Terra LUNA et UST : comprendre les risques des stablecoins algorithmiques.",
-    imageUrl: '/images/terra.jpg',
-    slug: 'terra-luna-crash'
-  }
-];
-
 export default function Actus() {
-  const allArticles = articles;
+  const allArticles = getLatestArticles(6);
   const mobileArticles = getLatestArticles(3);
   
   return (

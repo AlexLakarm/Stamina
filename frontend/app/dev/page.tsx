@@ -37,7 +37,7 @@ export default function DevPage() {
           <div className={`${inter.className} space-y-8 text-lg text-neutral-400 leading-relaxed`}>
             <div className="bg-neutral-900/50 p-6 rounded-xl border border-neutral-800">
               <h2 className="text-2xl font-bold text-neutral-200 mb-4">Notre Expertise</h2>
-              <p>
+              <p className="text-justify">
                 Nous développons des solutions blockchain innovantes sur les réseaux EVM (Ethereum Virtual Machine) 
                 et bientôt sur Solana. Notre équipe maîtrise les dernières technologies pour créer des applications 
                 décentralisées performantes et sécurisées.

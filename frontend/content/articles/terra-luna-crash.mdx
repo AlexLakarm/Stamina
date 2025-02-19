@@ -4,32 +4,66 @@ title: "Terra LUNA & UST : Anatomie d'un Crash"
 description: "Retour sur la débâcle de Terra LUNA et UST : comprendre les risques des stablecoins algorithmiques."
 imageUrl: "/images/terra.jpg"
 date: "2024-02-15"
-category: "Analyse"
+category: "Sécurité"
 readTime: "12 min"
+keywords: ["Terra Luna", "UST", "Anchor Protocol", "Crash cryptographique", "Stablecoin algorithmique"]
 ---
 
 # Terra LUNA & UST : Anatomie d'un Crash
 
 ## Introduction
 
-L'effondrement de Terra a révélé les faiblesses des stablecoins algorithmiques...
+Le monde des cryptomonnaies a été marqué par de nombreux événements, mais peu ont eu l'impact du crash de Terra Luna. Ce projet ambitieux, qui visait à révolutionner les paiements décentralisés, a connu une ascension fulgurante avant de s'effondrer brutalement en mai 2022. Cet article retrace l'histoire de Terra Luna, en mettant en lumière sa création, les mécanismes sous-jacents de son stablecoin UST, le rôle du protocole Anchor, et les événements qui ont conduit à son effondrement.
 
-## Le Mécanisme Terra-LUNA
+## 1. La Création de Terra Luna
 
-### Le Système de Mint-and-Burn
+### 1.1 Origines et Fondateurs
 
-Comment fonctionnait le mécanisme de stabilité...
+Terra Luna a été fondé en janvier 2018 par deux entrepreneurs sud-coréens : **Do Kwon** et **Daniel Shin**. Do Kwon, diplômé de l'Université de Stanford en informatique, avait précédemment travaillé chez Apple et Microsoft avant de lancer sa propre startup, Anyfi, spécialisée dans les solutions de communication décentralisées. De son côté, Daniel Shin est le fondateur de Ticket Monster (TMON), une plateforme majeure de commerce électronique en Corée du Sud, et de Fast Track Asia, un incubateur de startups. Ensemble, ils ont créé **Terraform Labs**, la société derrière la blockchain Terra. :contentReference[oaicite:0]{index=0}
 
-### Les Failles du Système
+### 1.2 La Blockchain Terra et le Token LUNA
 
-Les vulnérabilités qui ont mené à l'effondrement...
+La **blockchain Terra** a été conçue pour faciliter les paiements décentralisés en émettant des **stablecoins** indexés sur différentes monnaies fiduciaires. Le token natif de cette blockchain, le **LUNA**, joue un rôle central dans la stabilité de ces stablecoins et dans la gouvernance du réseau. Les détenteurs de LUNA peuvent participer aux décisions du réseau et sont récompensés pour leur engagement. :contentReference[oaicite:1]{index=1}
 
-## Impact sur le Marché
+## 2. Le Mécanisme de l'UST et le Protocole Anchor
 
-1. Conséquences immédiates
-2. Effet domino sur l'écosystème
-3. Changements réglementaires
+### 2.1 Comprendre l'UST
 
-## Leçons pour l'Avenir
+L'**UST (TerraUSD)** était un stablecoin algorithmique conçu pour maintenir une parité 1:1 avec le dollar américain, sans être adossé à des réserves fiduciaires. Ce mécanisme reposait sur une relation étroite avec le token **LUNA**, qui jouait un rôle d’absorbeur de volatilité.
 
-Les enseignements pour le développement futur des stablecoins... 
+La stabilité de l’UST était maintenue grâce à un arbitrage économique ouvert à tous les utilisateurs :
+
+- Lorsque l’UST était **supérieur à 1$**, les utilisateurs pouvaient brûler **1$ de LUNA** pour émettre **1 UST**, qu’ils revendaient ensuite sur le marché, réalisant ainsi un profit tout en augmentant l’offre d’UST, ce qui devait faire baisser son prix.
+- Lorsque l’UST était **inférieur à 1$**, les utilisateurs étaient incités à brûler **1 UST** pour récupérer **1$ en LUNA**, ce qui réduisait l’offre d’UST et devait mécaniquement faire remonter son prix vers 1$.
+
+Ce système fonctionnait grâce aux acteurs du marché cherchant à tirer profit de ces écarts, censés ramener l’UST vers sa parité de 1$. Cependant, cette stabilité dépendait entièrement de la confiance des utilisateurs et de la liquidité du token **LUNA**.
+
+### 2.2 Le Protocole Anchor et son Rendement de 20%
+
+Le **protocole Anchor** était une plateforme d'épargne et de prêt sur la blockchain Terra qui offrait un rendement annuel de 20% aux déposants d'UST. Ce taux attractif a rapidement attiré de nombreux investisseurs. Anchor générait ces rendements en prêtant les UST déposés à des emprunteurs qui fournissaient des garanties sous forme d'actifs de preuve d'enjeu, tels que le bLUNA (Bonded LUNA) ou le bETH (Bonded Ethereum). Les intérêts payés par les emprunteurs, combinés aux récompenses de staking des garanties, alimentaient les rendements des déposants. Cependant, ce modèle dépendait d'un équilibre entre les dépôts et les emprunts. En janvier 2022, Anchor gérait plus de 5 milliards de dollars en dépôts, tandis que les emprunts s'élevaient à environ 1,28 milliard de dollars, créant un déséquilibre préoccupant. :contentReference[oaicite:3]{index=3}
+
+## 3. Le Crash de Terra Luna
+
+### 3.1 Chronologie des Événements
+
+En mai 2022, l'écosystème Terra a été confronté à une série d'événements déstabilisants :
+
+- **7 mai 2022** : Des transactions massives sur le pool UST de Curve Finance ont entraîné une diminution significative de la liquidité, provoquant une légère déviation de l'UST par rapport au dollar. :contentReference[oaicite:4]{index=4}
+
+- **8-9 mai 2022** : Face à la perte de parité de l'UST, de nombreux investisseurs ont retiré leurs fonds du protocole Anchor, amplifiant la pression sur l'UST et le LUNA.
+
+- **10 mai 2022** : Malgré les tentatives de la Luna Foundation Guard (LFG) d'utiliser ses réserves de bitcoins pour stabiliser l'UST, le stablecoin a continué de chuter, atteignant 0,67 dollar. :contentReference[oaicite:5]{index=5}
+
+- **11 mai 2022** : L'UST a plongé à 0,23 dollar, entraînant une hyperinflation du LUNA en raison du mécanisme de stabilisation, ce qui a conduit à une perte de confiance massive des investisseurs.
+
+### 3.2 Le Cercle Vicieux du Depeg de l'UST
+
+Le mécanisme de stabilisation de l'UST impliquait la conversion d'UST en LUNA lorsque l'UST perdait sa parité avec le dollar. Cependant, lors de la chute de l'UST, ce mécanisme a conduit à une création excessive de LUNA, provoquant une hyperinflation et une dévaluation rapide du token. Cette spirale inflationniste a exacerbé la perte de confiance des investisseurs, accélérant davantage la chute de l'écosystème Terra. :contentReference[oaicite:6]{index=6}
+
+### Conclusion
+
+Le crash de Terra Luna restera l'un des événements les plus marquants de l'histoire des cryptomonnaies. Ce projet, qui promettait un stablecoin algorithmique innovant, s'est effondré en quelques jours sous l'effet d'un engrenage destructeur entre l’UST et LUNA. L’absence de réserves solides, la dépendance excessive au rendement d’Anchor et la panique des investisseurs ont mis en lumière les failles d’un système basé uniquement sur la confiance du marché.
+
+Cet effondrement a eu des répercussions bien au-delà de l’écosystème Terra, accélérant la chute d’autres protocoles et accentuant la défiance envers les stablecoins algorithmiques. Il est survenu dans un contexte plus large de **bear market en 2022**, marqué par l’effondrement de plusieurs acteurs majeurs du secteur, la chute des prix du Bitcoin et de l’Ethereum, ainsi qu’un durcissement réglementaire.
+
+Ce crash soulève des questions essentielles sur la viabilité des stablecoins décentralisés et la nécessité d’une meilleure gestion des risques dans l’écosystème crypto. Alors que les régulateurs scrutent de plus en plus les stablecoins, le secteur devra évoluer pour regagner la confiance des utilisateurs et proposer des alternatives plus robustes aux monnaies traditionnelles.
