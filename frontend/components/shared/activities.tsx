@@ -38,9 +38,9 @@ export default function Activities() {
               <div className="p-8 flex flex-col h-full">
                 <div>
                   <h2 className="text-2xl md:text-3xl font-bold text-neutral-200 mb-4">
-                    Blockchain Development
+                    Développement Blockchain
                   </h2>
-                  <p className="text-neutral-400 text-base md:text-lg">
+                  <p className="text-neutral-400 text-base md:text-lg text-justify">
                     Développement de solutions blockchain sur mesure, smart contracts, 
                     et applications décentralisées (dApps). Notre expertise technique 
                     vous accompagne dans votre transition vers Web3.
@@ -63,7 +63,7 @@ export default function Activities() {
                   <h2 className="text-2xl md:text-3xl font-bold text-neutral-200 mb-4">
                     Consulting
                   </h2>
-                  <p className="text-neutral-400 text-base md:text-lg">
+                  <p className="text-neutral-400 text-base md:text-lg text-justify">
                     Conseil stratégique pour l&apos;intégration de la blockchain dans votre entreprise. 
                     Nous vous guidons dans la transformation digitale et l&apos;adoption des technologies 
                     blockchain.
