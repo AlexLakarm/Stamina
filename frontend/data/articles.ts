@@ -203,24 +203,70 @@ Le mécanisme de consensus de Solana combine plusieurs innovations...
     slug: "ftx-collapse",
     date: "2024-02-20",
     category: "Analyse",
-    readTime: "10 min",
-    content: `
-# La Chute de FTX
+    keywords: ["FTX", "Sam Bankman-Fried", "crypto crash", "exchange centralisé", "bear market 2022", "faillite FTX", "CEX", "Alameda Research"],
+    readTime: "15 min",
+    content: `# FTX : L'Ascension et la Chute de l'Exchange Crypto
 
-## Les Signes Avant-Coureurs
-Les premiers indices d'une situation problématique sont apparus...
+## Introduction
 
-## L'Effondrement
-La succession rapide d'événements qui ont précipité la chute...
+FTX était l'un des plus grands **exchanges centralisés** de cryptomonnaies avant de s'effondrer brutalement en novembre 2022. Son fondateur, **Sam Bankman-Fried (SBF)**, était perçu comme un génie de la finance crypto avant que des révélations choquantes sur la gestion de FTX ne fassent éclater l'affaire.
 
-## Leçons à Retenir
-1. Importance de la transparence
-2. Dangers de la centralisation excessive
-3. Nécessité d'une régulation adaptée
+L'affaire FTX a ébranlé l'écosystème crypto, provoquant une perte de confiance massive et renforçant la nécessité d'une meilleure régulation des plateformes centralisées.
 
-## Impact sur l'Industrie
-Les changements fondamentaux dans l'approche de la gestion des échanges...
-`
+## Qu'est-ce qu'un Exchange Centralisé (CEX) ?
+
+Un **exchange centralisé (CEX)** est une plateforme qui facilite l'achat, la vente et le trading de cryptomonnaies tout en contrôlant les fonds des utilisateurs. Contrairement aux **DEX (exchanges décentralisés)**, les CEX fonctionnent comme des banques traditionnelles, offrant plus de **liquidité** et une meilleure **accessibilité**, mais avec un **risque de gestion opaque**.
+Le CEX le plus connu en France est **Binance**.
+
+## La Montée de FTX
+
+Fondé en **2019**, FTX s'est rapidement imposé comme un leader du marché grâce à son innovation et ses produits financiers avancés. Quelques chiffres clés avant sa chute :
+
+- **Valorisation :** 32 milliards de dollars début 2022.
+- **Utilisateurs :** Plus d'un million de traders actifs.
+- **Partenariats :** Sponsoring de la FTX Arena (stade NBA des Miami Heat) et deals avec des célébrités comme Tom Brady.
+
+FTX était perçu comme un **géant indestructible**, mais en coulisses, une tempête se préparait.
+
+## Chronologie de la Chute
+
+### 2 Novembre 2022 : Les Premières Révélations
+Un rapport d'**Alameda Research** (le fonds de SBF) révèle que la majorité de ses actifs repose sur **FTT**, le token de FTX. Un signe inquiétant de fragilité financière.
+
+### 6 Novembre 2022 : Binance Allume l'Étincelle
+**CZ (Changpeng Zhao), PDG de Binance**, annonce sur Twitter :
+> "Due to recent revelations, we have decided to liquidate our remaining FTT holdings."
+
+Cette déclaration provoque une **panique massive**, entraînant des **retraits de milliards de dollars** sur FTX.
+
+### 8 Novembre 2022 : Gel des Retraits
+FTX annonce ne plus pouvoir honorer les demandes de retraits. SBF tente de rassurer avec un tweet désormais mythique :
+> "FTX is fine. Assets are fine."
+
+Quelques heures plus tard, il supprime son tweet…
+
+### 9 Novembre 2022 : Binance Abandonne le Rachat
+Binance, qui envisageait de sauver FTX, se rétracte en déclarant :
+> "The issues are beyond our control or ability to help."
+
+FTX est désormais **au bord du gouffre**.
+
+### 11 Novembre 2022 : Faillite Officielle
+FTX et Alameda Research déposent le **chapitre 11** (faillite aux États-Unis). Sam Bankman-Fried **démissionne**.
+
+### Après la Chute : Arrestation et Enquête
+- **Décembre 2022 :** SBF est arrêté aux Bahamas.
+- **2023 :** En attente de son procès pour fraude massive.
+
+## Conséquences du Crash FTX
+
+1. **Effondrement du Marché** : Bitcoin chute sous les **16 000$**, accentuant le **bear market**.
+2. **Perte de Confiance** : Des millions d'investisseurs perdent leurs fonds, renforçant la méfiance envers les CEX.
+3. **Renforcement de la Régulation** : Les gouvernements accélèrent la mise en place de cadres réglementaires plus stricts.
+
+## Conclusion
+
+L'affaire FTX restera dans l'histoire comme l'un des plus grands **scandales de la crypto**. Elle rappelle l'importance de la transparence, de la **décentralisation** et de la gestion prudente des actifs.`
   },
   {
     id: "6",
