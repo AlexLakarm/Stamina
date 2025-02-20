@@ -37,7 +37,7 @@ export default function DevPage() {
           <div className={`${inter.className} space-y-8 text-lg text-neutral-400 leading-relaxed`}>
             <div className="bg-neutral-900/50 p-6 rounded-xl border border-blue-500/40 shadow-[0_0_15px_rgba(59,130,246,0.15)]">
               <h2 className="text-2xl font-bold text-neutral-200 mb-4">Notre Expertise</h2>
-              <p className="text-justify">
+              <p>
                 Nous développons des solutions blockchain innovantes sur les réseaux EVM (Ethereum Virtual Machine) 
                 et bientôt sur Solana. Notre équipe maîtrise les dernières technologies pour créer des applications 
                 décentralisées performantes et sécurisées.
@@ -48,32 +48,32 @@ export default function DevPage() {
               <h3 className="text-xl font-semibold text-neutral-300">Nos Services de Développement</h3>
               <div className="grid gap-6 md:grid-cols-2">
                 <div className="bg-neutral-900/30 p-5 rounded-lg border border-neutral-800">
-                  <h4 className="text-neutral-200 font-medium mb-2">Smart Contracts EVM</h4>
-                  <p className="text-sm text-neutral-400">
+                  <h4 className="text-neutral-200 font-medium mb-2 text-lg md:text-base">Smart Contracts EVM</h4>
+                  <p className="text-neutral-400 text-base md:text-sm">
                     Développement de contrats intelligents en Solidity pour Ethereum et réseaux compatibles. 
                     Tests approfondis et audit de sécurité inclus.
                   </p>
                 </div>
                 
                 <div className="bg-neutral-900/30 p-5 rounded-lg border border-neutral-800">
-                  <h4 className="text-neutral-200 font-medium mb-2">DApps & Frontend</h4>
-                  <p className="text-sm text-neutral-400">
+                  <h4 className="text-neutral-200 font-medium mb-2 text-lg md:text-base">DApps & Frontend</h4>
+                  <p className="text-neutral-400 text-base md:text-sm">
                     Applications web3 modernes avec React/Next.js. Intégration wallet, 
                     interactions blockchain et expérience utilisateur optimisée.
                   </p>
                 </div>
 
                 <div className="bg-neutral-900/30 p-5 rounded-lg border border-neutral-800">
-                  <h4 className="text-neutral-200 font-medium mb-2">Tokens & NFTs</h4>
-                  <p className="text-sm text-neutral-400">
+                  <h4 className="text-neutral-200 font-medium mb-2 text-lg md:text-base">Tokens & NFTs</h4>
+                  <p className="text-neutral-400 text-base md:text-sm">
                     Création de tokens ERC-20/ERC-721/ERC-1155 personnalisés. 
                     Smart contracts, marketplace et outils de gestion sur mesure.
                   </p>
                 </div>
 
                 <div className="bg-neutral-900/30 p-5 rounded-lg border border-neutral-800">
-                  <h4 className="text-neutral-200 font-medium mb-2">DeFi & DAO</h4>
-                  <p className="text-sm text-neutral-400">
+                  <h4 className="text-neutral-200 font-medium mb-2 text-lg md:text-base">DeFi & DAO</h4>
+                  <p className="text-neutral-400 text-base md:text-sm">
                     Développement de protocoles DeFi et systèmes de gouvernance DAO. 
                     Staking, farming, voting et treasury management.
                   </p>

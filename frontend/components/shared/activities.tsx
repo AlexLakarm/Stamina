@@ -37,11 +37,11 @@ export default function Activities() {
           Nos Services
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-16 md:mb-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-16">
           {/* Carte Blockchain Development */}
           <Link href="/dev" className="h-full">
-            <Card className="group cursor-pointer min-h-[320px]">
-              <div className="p-8 flex flex-col h-full">
+            <Card className="group cursor-pointer h-full">
+              <div className="p-6 md:p-8 flex flex-col h-full">
                 <div>
                   <h2 className="text-2xl md:text-3xl font-bold text-neutral-200 mb-4">
                     Développement Blockchain
@@ -52,8 +52,8 @@ export default function Activities() {
                     vous accompagne dans votre transition vers le Web3.
                   </p>
                 </div>
-                <div className="mt-auto pt-8">
-                  <button className="w-full px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:opacity-90 transition-opacity text-base md:text-lg">
+                <div className="mt-8">
+                  <button className="w-full px-6 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:opacity-90 transition-opacity text-lg">
                     En savoir plus
                   </button>
                 </div>
@@ -63,20 +63,20 @@ export default function Activities() {
 
           {/* Carte Consulting */}
           <Link href="/consulting" className="h-full">
-            <Card className="group cursor-pointer min-h-[320px]">
-              <div className="p-8 flex flex-col h-full">
+            <Card className="group cursor-pointer h-full">
+              <div className="p-6 md:p-8 flex flex-col h-full">
                 <div>
-                  <h2 className="text-2xl md:text-3xl font-bold text-neutral-200 mb-4">
+                  <h2 className="text-3xl md:text-4xl font-bold text-neutral-200 mb-4">
                     Consulting & Formation
                   </h2>
-                  <p className="text-neutral-400 text-base md:text-lg">
+                  <p className="text-neutral-400 text-lg md:text-xl">
                     Formation pratique et conseil stratégique pour comprendre la blockchain. 
                     Workshops interactifs, accompagnement réglementaire et veille technologique 
                     adaptés à votre secteur d'activité.
                   </p>
                 </div>
-                <div className="mt-auto pt-8">
-                  <button className="w-full px-6 py-3 rounded-lg bg-gradient-to-r from-green-500 to-teal-500 text-white hover:opacity-90 transition-opacity text-base md:text-lg">
+                <div className="mt-8">
+                  <button className="w-full px-6 py-4 rounded-lg bg-gradient-to-r from-green-500 to-teal-500 text-white hover:opacity-90 transition-opacity text-lg md:text-xl">
                     Découvrir nos services
                   </button>
                 </div>

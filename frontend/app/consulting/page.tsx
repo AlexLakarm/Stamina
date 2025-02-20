@@ -93,7 +93,7 @@ export default function ConsultingPage() {
                     <div className={`${inter.className} space-y-8 text-lg text-neutral-400 leading-relaxed`}>
                         <div className="bg-neutral-900/50 p-6 rounded-xl border border-blue-500/40 shadow-[0_0_15px_rgba(59,130,246,0.15)]">
                             <h2 className="text-2xl font-bold text-neutral-200 mb-4">Notre Expertise</h2>
-                            <p className="text-justify">
+                            <p>
                                 Nous accompagnons les entreprises et les professionnels dans leur compréhension 
                                 de l'écosystème blockchain et crypto. Spécialisés dans le secteur financier, 
                                 nous intervenons également auprès d'organisations de tous secteurs pour des missions 
@@ -105,32 +105,32 @@ export default function ConsultingPage() {
                             <h3 className="text-xl font-semibold text-neutral-300">Nos Services</h3>
                             <div className="grid gap-6 md:grid-cols-2">
                                 <div className="bg-neutral-900/30 p-5 rounded-lg border border-neutral-800">
-                                    <h4 className="text-neutral-200 font-medium mb-2">Conseil Stratégique</h4>
-                                    <p className="text-sm text-neutral-400">
+                                    <h4 className="text-neutral-200 font-medium mb-2 text-lg md:text-base">Conseil Stratégique</h4>
+                                    <p className="text-neutral-400 text-base md:text-sm">
                                         Accompagnement des organisations dans leur approche de l'écosystème crypto, 
                                         avec une expertise particulière pour le secteur financier.
                                     </p>
                                 </div>
                                 
                                 <div className="bg-neutral-900/30 p-5 rounded-lg border border-neutral-800">
-                                    <h4 className="text-neutral-200 font-medium mb-2">Formation & Workshops</h4>
-                                    <p className="text-sm text-neutral-400">
+                                    <h4 className="text-neutral-200 font-medium mb-2 text-lg md:text-base">Formation & Workshops</h4>
+                                    <p className="text-neutral-400 text-base md:text-sm">
                                         Sessions pratiques et séminaires adaptés à votre contexte : découverte, 
                                         manipulation des outils et cas d'usage sectoriels.
                                     </p>
                                 </div>
 
                                 <div className="bg-neutral-900/30 p-5 rounded-lg border border-neutral-800">
-                                    <h4 className="text-neutral-200 font-medium mb-2">Veille & Analyse</h4>
-                                    <p className="text-sm text-neutral-400">
+                                    <h4 className="text-neutral-200 font-medium mb-2 text-lg md:text-base">Veille & Analyse</h4>
+                                    <p className="text-neutral-400 text-base md:text-sm">
                                         Décryptage des innovations blockchain et de leurs impacts potentiels 
                                         sur votre activité et votre secteur.
                                     </p>
                                 </div>
 
                                 <div className="bg-neutral-900/30 p-5 rounded-lg border border-neutral-800">
-                                    <h4 className="text-neutral-200 font-medium mb-2">Support Réglementaire</h4>
-                                    <p className="text-sm text-neutral-400">
+                                    <h4 className="text-neutral-200 font-medium mb-2 text-lg md:text-base">Support Réglementaire</h4>
+                                    <p className="text-neutral-400 text-base md:text-sm">
                                         Accompagnement dans la compréhension du cadre réglementaire crypto 
                                         et de ses implications pour votre activité.
                                     </p>
@@ -165,32 +165,67 @@ export default function ConsultingPage() {
                                 Exemples de présentations :
                             </h3>
 
-                            <Carousel className="w-full max-w-5xl mx-auto">
-                                <CarouselContent>
-                                    {presentations.map((pres, index) => (
-                                        <CarouselItem key={index} className="basis-1/2 pl-4">
-                                            <Card className="bg-neutral-900/30 border-neutral-800 h-[400px]">
-                                                <CardContent className="flex flex-col h-full p-8">
-                                                    <div className="mb-6">
-                                                        <h3 className="text-2xl font-bold text-neutral-200 mb-3">{pres.title}</h3>
-                                                        <p className="text-base text-neutral-400">{pres.description}</p>
-                                                    </div>
-                                                    <ul className="text-left text-sm text-neutral-500 space-y-3 mt-auto">
-                                                        {pres.sommaire.map((item, idx) => (
-                                                            <li key={idx} className="flex items-start gap-2">
-                                                                <span className="text-blue-400 text-[0.8rem] mt-1">•</span>
-                                                                <span>{item}</span>
-                                                            </li>
-                                                        ))}
-                                                    </ul>
-                                                </CardContent>
-                                            </Card>
-                                        </CarouselItem>
-                                    ))}
-                                </CarouselContent>
-                                <CarouselPrevious className="bg-neutral-900 border-neutral-800 text-neutral-400 hover:bg-neutral-800" />
-                                <CarouselNext className="bg-neutral-900 border-neutral-800 text-neutral-400 hover:bg-neutral-800" />
-                            </Carousel>
+                            {/* Version Desktop */}
+                            <div className="hidden md:block">
+                                <Carousel className="w-full max-w-5xl mx-auto">
+                                    <CarouselContent>
+                                        {presentations.map((pres, index) => (
+                                            <CarouselItem key={index} className="basis-1/2 pl-4">
+                                                <Card className="bg-neutral-900/30 border-neutral-800 h-[400px]">
+                                                    <CardContent className="flex flex-col h-full p-8">
+                                                        <div className="mb-6">
+                                                            <h3 className="text-2xl font-bold text-neutral-200 mb-3">{pres.title}</h3>
+                                                            <p className="text-base text-neutral-400">{pres.description}</p>
+                                                        </div>
+                                                        <ul className="text-left text-sm text-neutral-500 space-y-3 mt-auto">
+                                                            {pres.sommaire.map((item, idx) => (
+                                                                <li key={idx} className="flex items-start gap-2">
+                                                                    <span className="text-blue-400 text-[0.8rem] mt-1">•</span>
+                                                                    <span>{item}</span>
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    </CardContent>
+                                                </Card>
+                                            </CarouselItem>
+                                        ))}
+                                    </CarouselContent>
+                                    <CarouselPrevious className="bg-neutral-900 border-neutral-800 text-neutral-400 hover:bg-neutral-800" />
+                                    <CarouselNext className="bg-neutral-900 border-neutral-800 text-neutral-400 hover:bg-neutral-800" />
+                                </Carousel>
+                            </div>
+
+                            {/* Version Mobile */}
+                            <div className="block md:hidden">
+                                <Carousel className="w-full mx-auto">
+                                    <CarouselContent>
+                                        {presentations.map((pres, index) => (
+                                            <CarouselItem key={index}>
+                                                <Card className="bg-neutral-900/30 border-neutral-800 h-[400px]">
+                                                    <CardContent className="flex flex-col h-full p-6">
+                                                        <div className="mb-6">
+                                                            <h3 className="text-2xl font-bold text-neutral-200 mb-3">{pres.title}</h3>
+                                                            <p className="text-base text-neutral-400">{pres.description}</p>
+                                                        </div>
+                                                        <ul className="text-left text-base text-neutral-500 space-y-3 mt-auto">
+                                                            {pres.sommaire.map((item, idx) => (
+                                                                <li key={idx} className="flex items-start gap-2">
+                                                                    <span className="text-blue-400 text-base mt-1">•</span>
+                                                                    <span>{item}</span>
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    </CardContent>
+                                                </Card>
+                                            </CarouselItem>
+                                        ))}
+                                    </CarouselContent>
+                                    <div className="flex justify-center gap-4 mt-4">
+                                        <CarouselPrevious className="static bg-neutral-900 border-neutral-800 text-neutral-400 hover:bg-neutral-800 translate-y-0" />
+                                        <CarouselNext className="static bg-neutral-900 border-neutral-800 text-neutral-400 hover:bg-neutral-800 translate-y-0" />
+                                    </div>
+                                </Carousel>
+                            </div>
                         </div>
 
                         {/* Nouvelle section Focus Workshops */}
