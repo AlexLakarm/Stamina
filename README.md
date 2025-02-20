@@ -1,15 +1,22 @@
 # Stamina 🚀
 
-Une plateforme d'actualités et d'analyses sur la blockchain, la DeFi et le Web3.
+Site web de Stamina, société spécialisée dans le développement blockchain et le consulting Web3.
 
-## 🎯 Objectif
+## 🎯 Notre Mission
 
-Stamina a pour mission d'informer et d'éduquer sur les dernières actualités et innovations dans l'écosystème blockchain. Notre approche éditoriale permet aux lecteurs de :
+Stamina accompagne les entreprises dans leur transition vers le Web3 à travers deux axes principaux :
 
-- Comprendre les fondamentaux de la blockchain
-- Suivre l'actualité DeFi
-- Analyser les événements majeurs du secteur
-- Découvrir les projets innovants
+### 💻 Développement Blockchain
+- Smart contracts sur réseaux EVM
+- Applications décentralisées (dApps)
+- Tokens & NFTs
+- Solutions DeFi & DAO
+
+### 📚 Consulting & Formation
+- Conseil stratégique blockchain
+- Formation et workshops
+- Veille technologique
+- Support réglementaire
 
 ## 🛠 Technologies Utilisées
 
@@ -18,16 +25,16 @@ Stamina a pour mission d'informer et d'éduquer sur les dernières actualités e
 - TypeScript
 - Tailwind CSS
 - Framer Motion
-- React Markdown
+- Shadcn/ui
 
-## 🚀 Démarrage
+## 🚀 Installation
 
 ### Prérequis
 - Node.js (v18+)
 - npm ou yarn
 - Git
 
-### Installation
+### Démarrage
 
 1. Clonez le repository :
 ```bash
@@ -51,6 +58,8 @@ npm run dev
 stamina/
 └── frontend/               
     ├── app/               # Pages et routes
+    │   ├── dev/          # Section développement
+    │   ├── consulting/   # Section consulting
     │   ├── actualites/   # Section actualités
     │   └── page.tsx      # Page d'accueil
     ├── components/        # Composants réutilisables
@@ -75,5 +84,6 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
 ## 🙋‍♂️ Contact
 
-Pour toute question ou suggestion :
+Pour toute demande de développement ou de consulting :
+- Email : contact@staminadev.com
 - Twitter : @La_Kaarm
