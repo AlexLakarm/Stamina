@@ -66,17 +66,17 @@ export default function Activities() {
             <Card className="group cursor-pointer h-full">
               <div className="p-6 md:p-8 flex flex-col h-full">
                 <div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-neutral-200 mb-4">
-                    Consulting & Formation
+                  <h2 className="text-2xl md:text-3xl font-bold text-neutral-200 mb-4">
+                    Consulting &amp; Formation
                   </h2>
-                  <p className="text-neutral-400 text-lg md:text-xl">
+                  <p className="text-neutral-400 text-base md:text-lg">
                     Formation pratique et conseil stratégique pour comprendre la blockchain. 
                     Workshops interactifs, accompagnement réglementaire et veille technologique 
-                    adaptés à votre secteur d'activité.
+                    adaptés à votre secteur d&apos;activité.
                   </p>
                 </div>
                 <div className="mt-8">
-                  <button className="w-full px-6 py-4 rounded-lg bg-gradient-to-r from-green-500 to-teal-500 text-white hover:opacity-90 transition-opacity text-lg md:text-xl">
+                  <button className="w-full px-6 py-4 rounded-lg bg-gradient-to-r from-green-500 to-teal-500 text-white hover:opacity-90 transition-opacity text-lg">
                     Découvrir nos services
                   </button>
                 </div>

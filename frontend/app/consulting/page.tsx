@@ -14,7 +14,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
+
 
 const quicksand = Quicksand({ 
     subsets: ["latin"],
