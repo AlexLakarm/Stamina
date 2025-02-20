@@ -33,16 +33,23 @@ export default async function ActualitesPage({
 }: PageProps) {
   const resolvedParams = await searchParams;
   const currentPage = Number(resolvedParams.page) || 1;
-  const totalPages = Math.ceil(articles.length / ARTICLES_PER_PAGE);
 
-  // Trier les articles par date (plus récent en premier)
+  // Trier les articles par date
   const sortedArticles = [...articles].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 
-  // Pagination
+  // Filtrer les articles par catégorie
+  const filteredArticles = resolvedParams.category && resolvedParams.category !== "Toutes catégories"
+    ? sortedArticles.filter(article => article.category === resolvedParams.category)
+    : sortedArticles;
+
+  // Calculer le nombre total de pages après filtrage
+  const totalPages = Math.ceil(filteredArticles.length / ARTICLES_PER_PAGE);
+
+  // Pagination sur les articles filtrés
   const startIndex = (currentPage - 1) * ARTICLES_PER_PAGE;
-  const paginatedArticles = sortedArticles.slice(
+  const paginatedArticles = filteredArticles.slice(
     startIndex,
     startIndex + ARTICLES_PER_PAGE
   );
@@ -71,10 +78,7 @@ export default async function ActualitesPage({
         />
 
         <BentoGrid>
-          {(resolvedParams.category && resolvedParams.category !== "Toutes catégories"
-            ? paginatedArticles.filter(article => article.category === resolvedParams.category)
-            : paginatedArticles
-          ).map((article) => (
+          {paginatedArticles.map((article) => (
             <BentoGridItem
               key={article.id}
               title={article.title}
