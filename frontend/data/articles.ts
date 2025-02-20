@@ -8,6 +8,7 @@ export interface Article {
   category: string; // Pour filtrer par catégorie si besoin
   readTime?: string; // Temps de lecture estimé (optionnel)
   content: string; // Ajout du contenu
+  keywords?: string[]; // Keywords for SEO
 }
 
 export const articles: Article[] = [
@@ -19,21 +20,64 @@ export const articles: Article[] = [
     slug: "aave-protocol",
     date: "2024-03-15",
     category: "DeFi",
-    readTime: "5 min",
-    content: `
-# Introduction
+    keywords: ["Aave", "DeFi", "prêt crypto", "emprunt décentralisé", "liquidité blockchain", "smart contracts"],
+    readTime: "8 min",
+    content: `# Aave : Le Protocole de Prêt Décentralisé
 
-Aave est l'un des protocoles de prêt les plus importants de l'écosystème DeFi...
+## Introduction
 
-## Comment fonctionne Aave ?
+Aave est un **protocole de finance décentralisée (DeFi)** permettant aux utilisateurs d'emprunter et de prêter des cryptomonnaies sans intermédiaire. Lancé en 2020 sur Ethereum, Aave repose sur des **smart contracts** qui automatisent et sécurisent les transactions.
 
-Le protocole utilise des "pools de liquidité" où les utilisateurs peuvent...
+Grâce à ce système, les utilisateurs peuvent **déposer des actifs pour générer des intérêts** ou **emprunter des fonds en utilisant des collatéraux** sans passer par une institution financière traditionnelle.
 
-## Les avantages d'Aave
+## Les Fondamentaux du Protocole Aave
 
-1. Taux d'intérêt dynamiques
-2. Multiples types d'actifs
-3. Sécurité renforcée`
+### Les Pools de Liquidité
+
+Aave fonctionne grâce à des **pools de liquidité** où les prêteurs déposent leurs cryptos. Ces fonds sont ensuite accessibles aux emprunteurs, qui doivent déposer une garantie (collatéral) pour obtenir un prêt.
+
+- Les dépôts génèrent des intérêts pour les prêteurs.
+- Les emprunteurs paient un taux d'intérêt pour accéder aux fonds.
+- La liquidité est assurée par un système d'incitations dynamiques.
+
+### Les Taux d'Intérêt Dynamiques
+
+Aave utilise un **système de taux d'intérêt algorithmiques** qui s'adapte en fonction de l'offre et de la demande sur chaque actif.
+
+- **Taux stable** : plus prévisible, idéal pour des stratégies long terme.
+- **Taux variable** : ajuste automatiquement les intérêts selon les conditions du marché.
+
+## Focus sur la Décentralisation
+
+Aave est entièrement **décentralisé** et géré par une **organisation autonome décentralisée (DAO)**. Les détenteurs du jeton **AAVE** participent aux décisions du protocole, garantissant une gouvernance communautaire.
+
+Contrairement aux systèmes bancaires traditionnels où une **entité centrale contrôle les prêts**, Aave fonctionne sur la blockchain Ethereum avec une **transparence totale et une résistance à la censure**.
+
+Avantages :
+
+- **Aucune autorité centrale** : n'importe qui peut emprunter ou prêter sans validation KYC.
+- **Sécurité renforcée** : audit constant des smart contracts.
+- **Accès global** : utilisation possible depuis n'importe où sans restriction bancaire.
+
+## La Notion de Prêt Flash (Flash Loans)
+
+Aave introduit une innovation majeure : les **prêts flash**. Ces prêts permettent d'emprunter sans collatéral à condition que le montant soit remboursé **dans la même transaction**.
+
+Cas d'usage :
+- **Arbitrage** : exploiter les différences de prix entre plateformes.
+- **Refinancement de dette** : restructurer un prêt sans coût initial.
+- **Exécution automatisée de stratégies DeFi**.
+
+## AAVE : Le Jeton de Gouvernance
+
+Le jeton **AAVE** joue un rôle clé dans l'écosystème :
+- **Participation à la gouvernance** : votes sur les propositions d'évolution du protocole.
+- **Staking et sécurité** : dépôt des tokens dans un pool pour assurer la stabilité du réseau.
+- **Réduction des frais** : certains frais sont réduits pour les détenteurs de AAVE.
+
+## Conclusion
+
+Aave révolutionne le prêt et l'emprunt en supprimant les intermédiaires et en permettant une gestion **transparente et automatisée** des liquidités. Avec son modèle décentralisé et ses innovations comme les **prêts flash**, Aave est un acteur majeur de la DeFi.`
   },
   {
     id: "2",
@@ -42,22 +86,66 @@ Le protocole utilise des "pools de liquidité" où les utilisateurs peuvent...
     imageUrl: "/images/bitcoin.jpg",
     slug: "bitcoin-basics",
     date: "2024-03-10",
-    category: "Crypto",
+    category: "Fondamentaux",
+    keywords: ["Bitcoin", "cryptomonnaie", "blockchain", "monnaie numérique", "décentralisation", "minage Bitcoin"],
     readTime: "7 min",
-    content: `
-# Introduction
+    content: `# Bitcoin : La Révolution Monétaire
 
-Bitcoin, créé en 2009 par Satoshi Nakamoto, représente la première application réussie de la technologie blockchain...
+## Introduction
+
+Bitcoin, créé en 2009 par un individu ou un groupe sous le pseudonyme **Satoshi Nakamoto**, représente la première monnaie numérique décentralisée. Reposant sur la technologie **blockchain**, il permet des transactions sécurisées sans intermédiaire.
+
+Contrairement aux monnaies traditionnelles contrôlées par des banques centrales, **Bitcoin fonctionne sur un réseau pair-à-pair (P2P)**, offrant ainsi une alternative aux systèmes financiers classiques.
 
 ## Les Fondamentaux du Bitcoin
 
-La blockchain Bitcoin est un registre distribué qui enregistre toutes les transactions...
+### La Blockchain Bitcoin
+
+La **blockchain Bitcoin** est un registre distribué qui enregistre de manière immuable l'historique des transactions. Chaque transaction est regroupée dans un **bloc**, qui est validé par un processus cryptographique avant d'être ajouté à la chaîne existante.
+
+### Le Minage et la Preuve de Travail
+
+Le minage est le mécanisme qui sécurise le réseau Bitcoin et garantit son bon fonctionnement. Les mineurs utilisent de la puissance de calcul pour résoudre des **problèmes mathématiques complexes** (preuve de travail ou *Proof of Work*). En retour, ils sont récompensés en **bitcoins nouvellement émis** et par les frais de transaction.
+
+Tous les **210 000 blocs** (environ tous les 4 ans), la récompense des mineurs est divisée par deux, un phénomène appelé **halving**, qui réduit l'émission de nouveaux bitcoins et contribue à leur rareté.
+
+## Focus sur la Décentralisation
+
+Bitcoin repose sur un **réseau décentralisé**, où la blockchain est partagée et synchronisée sur des milliers d'ordinateurs, appelés **nœuds**, répartis partout dans le monde. Ces machines peuvent être des serveurs dédiés, des ordinateurs personnels ou même des appareils plus spécialisés comme les Raspberry Pi.
+
+Contrairement à un système centralisé stocké sur un **serveur privé comme ceux d'Amazon ou de Google**, cette approche présente plusieurs avantages majeurs :
+
+- **Résilience** : Aucune entité unique ne peut éteindre ou censurer le réseau.
+- **Sécurité** : Les données ne sont pas vulnérables à une seule attaque ciblée.
+- **Transparence** : Tout le monde peut vérifier l'historique des transactions en temps réel.
+
+Cette structure fait de Bitcoin un système **fiable et résistant aux manipulations externes**.
+
+## Bitcoin : L'Or Numérique
+
+Bitcoin est souvent comparé à l'**or numérique**, et ce pour plusieurs raisons :
+
+- **Rareté** : Le nombre total de bitcoins est plafonné à **21 millions**, ce qui le rend rare et précieux, tout comme l'or.
+- **Stockage de valeur** : Bitcoin est considéré comme une réserve de valeur à long terme, permettant de protéger son patrimoine contre l'inflation.
+- **Portabilité** : Contrairement à l'or physique, Bitcoin peut être transféré facilement et rapidement, n'importe où dans le monde.
+- **Divisibilité** : Chaque bitcoin est divisible en **100 millions de satoshis**, ce qui le rend accessible même pour de petites transactions.
+
+Ces caractéristiques font de Bitcoin une alternative moderne aux **métaux précieux**, utilisée comme une valeur refuge face aux incertitudes économiques.
 
 ## Impact sur le Système Financier
 
-1. Désintermédiation bancaire
-2. Souveraineté financière
-3. Résistance à la censure`
+### 1. Désintermédiation bancaire
+Bitcoin permet des transactions **sans intermédiaire**, réduisant ainsi la dépendance aux banques traditionnelles et limitant les frais de transaction.
+
+### 2. Souveraineté financière
+Chaque individu peut posséder et stocker ses bitcoins sans dépendre d'une autorité centrale. **La possession des clés privées garantit un contrôle total sur les fonds.**
+
+### 3. Résistance à la censure
+Bitcoin est conçu pour être **résistant à la censure** : aucune entité ne peut empêcher une transaction légitime d'être confirmée sur le réseau.
+
+## Conclusion
+
+Bitcoin redéfinit notre conception de la monnaie et des systèmes financiers en offrant une alternative **décentralisée, sécurisée et accessible**. Son adoption croissante laisse entrevoir un futur où chacun peut gérer sa propre richesse sans dépendre d'un tiers de confiance.`
   },
   {
     id: "3",

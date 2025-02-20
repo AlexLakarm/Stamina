@@ -15,6 +15,7 @@ import {
 import HeaderMain from "@/components/shared/headermain";
 import { Button } from "@/components/ui/button";
 import { Quicksand } from "next/font/google";
+import { CategoryFilters } from "@/components/actualites/category-filters";
 
 const quicksand = Quicksand({ 
   subsets: ["latin"],
@@ -46,6 +47,9 @@ export default async function ActualitesPage({
     startIndex + ARTICLES_PER_PAGE
   );
 
+  // Extraire les catégories uniques des articles
+  const categories = ["Toutes catégories", ...new Set(articles.map(article => article.category))];
+
   return (
     <div className="min-h-screen bg-neutral-950 py-8">
       <HeaderMain />
@@ -61,8 +65,16 @@ export default async function ActualitesPage({
           Actualités &amp; Analyses
         </h1>
 
+        <CategoryFilters 
+          categories={categories} 
+          currentCategory={resolvedParams.category as string} 
+        />
+
         <BentoGrid>
-          {paginatedArticles.map((article) => (
+          {(resolvedParams.category && resolvedParams.category !== "Toutes catégories"
+            ? articles.filter(article => article.category === resolvedParams.category)
+            : articles
+          ).map((article) => (
             <BentoGridItem
               key={article.id}
               title={article.title}
