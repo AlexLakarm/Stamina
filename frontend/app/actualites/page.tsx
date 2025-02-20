@@ -72,8 +72,8 @@ export default async function ActualitesPage({
 
         <BentoGrid>
           {(resolvedParams.category && resolvedParams.category !== "Toutes catégories"
-            ? articles.filter(article => article.category === resolvedParams.category)
-            : articles
+            ? paginatedArticles.filter(article => article.category === resolvedParams.category)
+            : paginatedArticles
           ).map((article) => (
             <BentoGridItem
               key={article.id}
