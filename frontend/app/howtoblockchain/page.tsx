@@ -69,10 +69,8 @@ export default function HowToBlockchainPage() {
                 </Link>
 
                 <div className="max-w-3xl mx-auto">
-                    <h1 className={`${quicksand.className} text-4xl md:text-5xl font-bold text-center mb-12`}>
-                        <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600">
-                            Focus sur : How To <span className="font-extrabold">Blockchain</span>
-                        </span>
+                    <h1 className={`${quicksand.className} text-4xl md:text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-white via-neutral-200 to-white drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]`}>
+                        Focus sur : How To <span className="font-extrabold">Blockchain</span>
                     </h1>
 
                     <div className={`${inter.className} space-y-8 text-lg text-neutral-400 leading-relaxed`}>

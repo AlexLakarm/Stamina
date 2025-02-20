@@ -3,6 +3,12 @@ import React from "react";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { Quicksand } from "next/font/google";
+
+const quicksand = Quicksand({ 
+  subsets: ["latin"],
+  weight: ['700']
+});
 
 const Card = ({ className, children }: { className?: string; children: React.ReactNode }) => {
   return (
@@ -27,7 +33,7 @@ export default function Activities() {
       </div>
       
       <div className="relative max-w-6xl mx-auto p-4 z-10">
-        <h1 className="text-3xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold mb-8 md:mb-16">
+        <h1 className={`${quicksand.className} text-3xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-white via-neutral-200 to-white drop-shadow-[0_0_30px_rgba(255,255,255,0.2)] text-center font-bold mb-8 md:mb-16`}>
           Nos Services
         </h1>
 

@@ -86,26 +86,19 @@ export default function ConsultingPage() {
                 </Link>
 
                 <div className="max-w-3xl mx-auto">
-                    <h1 className={`${quicksand.className} text-4xl md:text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600`}>
+                    <h1 className={`${quicksand.className} text-4xl md:text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-white via-neutral-200 to-white drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]`}>
                         Consulting & Formation
                     </h1>
 
                     <div className={`${inter.className} space-y-8 text-lg text-neutral-400 leading-relaxed`}>
-                        <div className="m-4 flex justify-center text-center">
-                            <HoverBorderGradient
-                                containerClassName="w-full rounded-xl"
-                                as="div"
-                                className="bg-black text-white flex flex-col space-y-4 p-8"
-                                duration={2}
-                            >
-                                <h2 className="text-2xl font-bold text-neutral-200">Notre Expertise</h2>
-                                <p className={`${inter.className} text-neutral-400 text-justify`}>
-                                    Nous accompagnons les entreprises et les professionnels dans leur compréhension 
-                                    de l'écosystème blockchain et crypto. Spécialisés dans le secteur financier, 
-                                    nous intervenons également auprès d'organisations de tous secteurs pour des missions 
-                                    de formation et de conseil stratégique.
-                                </p>
-                            </HoverBorderGradient>
+                        <div className="bg-neutral-900/50 p-6 rounded-xl border border-blue-500/40 shadow-[0_0_15px_rgba(59,130,246,0.15)]">
+                            <h2 className="text-2xl font-bold text-neutral-200 mb-4">Notre Expertise</h2>
+                            <p className="text-justify">
+                                Nous accompagnons les entreprises et les professionnels dans leur compréhension 
+                                de l'écosystème blockchain et crypto. Spécialisés dans le secteur financier, 
+                                nous intervenons également auprès d'organisations de tous secteurs pour des missions 
+                                de formation et de conseil stratégique.
+                            </p>
                         </div>
 
                         <div className="space-y-6">

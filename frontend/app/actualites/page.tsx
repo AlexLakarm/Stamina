@@ -14,6 +14,12 @@ import {
 } from "@/components/ui/custom-pagination";
 import HeaderMain from "@/components/shared/headermain";
 import { Button } from "@/components/ui/button";
+import { Quicksand } from "next/font/google";
+
+const quicksand = Quicksand({ 
+  subsets: ["latin"],
+  weight: ['700']
+});
 
 const ARTICLES_PER_PAGE = 6;
 
@@ -51,7 +57,7 @@ export default async function ActualitesPage({
           </Button>
         </Link>
 
-        <h1 className="text-3xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-bold mb-10">
+        <h1 className={`${quicksand.className} text-4xl md:text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-white via-neutral-200 to-white drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]`}>
           Actualités &amp; Analyses
         </h1>
 

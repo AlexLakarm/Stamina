@@ -30,12 +30,12 @@ export default function DevPage() {
         </Link>
 
         <div className="max-w-3xl mx-auto">
-          <h1 className={`${quicksand.className} text-4xl md:text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600`}>
-            Services de Développement Blockchain
+          <h1 className={`${quicksand.className} text-4xl md:text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-white via-neutral-200 to-white drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]`}>
+            Développement Blockchain
           </h1>
 
           <div className={`${inter.className} space-y-8 text-lg text-neutral-400 leading-relaxed`}>
-            <div className="bg-neutral-900/50 p-6 rounded-xl border border-neutral-800">
+            <div className="bg-neutral-900/50 p-6 rounded-xl border border-blue-500/40 shadow-[0_0_15px_rgba(59,130,246,0.15)]">
               <h2 className="text-2xl font-bold text-neutral-200 mb-4">Notre Expertise</h2>
               <p className="text-justify">
                 Nous développons des solutions blockchain innovantes sur les réseaux EVM (Ethereum Virtual Machine) 

@@ -5,6 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { getLatestArticles } from "@/data/articles";
 import { ExternalLink } from "lucide-react";
+import { Quicksand } from "next/font/google";
+
+const quicksand = Quicksand({ 
+  subsets: ["latin"],
+  weight: ['700']
+});
 
 const BentoGrid = ({
   className,
@@ -68,7 +74,7 @@ export default function Actus() {
   return (
     <div className="relative py-16 bg-neutral-950">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl md:text-5xl font-bold text-center mb-14 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600">
+        <h2 className={`${quicksand.className} text-3xl md:text-5xl font-bold text-center mb-14 bg-clip-text text-transparent bg-gradient-to-r from-white via-neutral-200 to-white drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]`}>
           Nos derniers articles et analyses
         </h2>
         
