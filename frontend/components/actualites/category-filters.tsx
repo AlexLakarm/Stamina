@@ -2,16 +2,14 @@
 
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
-import { useRouter } from "next/navigation";
 
 interface CategoryFiltersProps {
   categories: string[];
-  currentCategory?: string;
+  currentCategory: string;
+  onChange: (category: string) => void;
 }
 
-export function CategoryFilters({ categories, currentCategory }: CategoryFiltersProps) {
-  const router = useRouter();
-
+export function CategoryFilters({ categories, currentCategory, onChange }: CategoryFiltersProps) {
   return (
     <div className="flex flex-wrap gap-3 justify-center mb-10">
       {categories.map((category) => (
@@ -25,11 +23,7 @@ export function CategoryFilters({ categories, currentCategory }: CategoryFilters
               : "hover:bg-neutral-800 border-neutral-700"
           )}
           onClick={() => {
-            if (category === "Toutes catégories") {
-              router.push("/actualites");
-            } else {
-              router.push(`/actualites?category=${category}`);
-            }
+            onChange(category);
           }}
         >
           {category}

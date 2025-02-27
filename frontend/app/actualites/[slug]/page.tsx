@@ -23,6 +23,13 @@ export async function generateMetadata({
   };
 }
 
+export async function generateStaticParams() {
+    // Utiliser le même tableau d'articles que celui utilisé dans l'application
+    return articles.map((article) => ({
+        slug: article.slug,
+    }));
+}
+
 export default async function Page({
   params,
 }: {

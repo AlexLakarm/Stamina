@@ -1,21 +1,22 @@
+"use client";
+
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import { articles } from "@/data/articles";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import {
   CustomPagination as Pagination,
   PaginationContent,
   PaginationEllipsis,
   PaginationItem,
   PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
 } from "@/components/ui/custom-pagination";
 import HeaderMain from "@/components/shared/headermain";
 import { Button } from "@/components/ui/button";
 import { Quicksand } from "next/font/google";
 import { CategoryFilters } from "@/components/actualites/category-filters";
+import { useState } from 'react';
 
 const quicksand = Quicksand({ 
   subsets: ["latin"],
@@ -24,15 +25,15 @@ const quicksand = Quicksand({
 
 const ARTICLES_PER_PAGE = 6;
 
-interface PageProps {
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
-}
+export default function Page() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [currentCategory, setCurrentCategory] = useState("Toutes catégories");
 
-export default async function ActualitesPage({
-  searchParams,
-}: PageProps) {
-  const resolvedParams = await searchParams;
-  const currentPage = Number(resolvedParams.page) || 1;
+  // Fonction pour gérer le changement de catégorie
+  const handleCategoryChange = (category: string) => {
+    setCurrentCategory(category);
+    setCurrentPage(1); // Réinitialiser à la première page
+  };
 
   // Trier les articles par date
   const sortedArticles = [...articles].sort(
@@ -40,8 +41,8 @@ export default async function ActualitesPage({
   );
 
   // Filtrer les articles par catégorie
-  const filteredArticles = resolvedParams.category && resolvedParams.category !== "Toutes catégories"
-    ? sortedArticles.filter(article => article.category === resolvedParams.category)
+  const filteredArticles = currentCategory !== "Toutes catégories"
+    ? sortedArticles.filter(article => article.category === currentCategory)
     : sortedArticles;
 
   // Calculer le nombre total de pages après filtrage
@@ -53,9 +54,6 @@ export default async function ActualitesPage({
     startIndex,
     startIndex + ARTICLES_PER_PAGE
   );
-
-  // Extraire les catégories uniques des articles
-  const categories = ["Toutes catégories", ...new Set(articles.map(article => article.category))];
 
   return (
     <div className="min-h-screen bg-neutral-950 py-8">
@@ -73,8 +71,9 @@ export default async function ActualitesPage({
         </h1>
 
         <CategoryFilters 
-          categories={categories} 
-          currentCategory={resolvedParams.category as string} 
+          categories={["Toutes catégories", ...new Set(articles.map(article => article.category))]} 
+          currentCategory={currentCategory}
+          onChange={handleCategoryChange}
         />
 
         <BentoGrid>
@@ -107,15 +106,18 @@ export default async function ActualitesPage({
               <PaginationContent>
                 {currentPage > 1 && (
                   <PaginationItem>
-                    <PaginationPrevious 
-                      href={`/actualites?page=${currentPage - 1}`} 
-                    />
+                    <PaginationLink 
+                      href="#"
+                      onClick={() => setCurrentPage(currentPage - 1)}
+                    >
+                      <ArrowLeft className="h-4 w-4" />
+                      Précédent
+                    </PaginationLink>
                   </PaginationItem>
                 )}
 
                 {[...Array(totalPages)].map((_, i) => {
                   const pageNumber = i + 1;
-                  // Ne retourner que si nous avons un href valide
                   if (
                     pageNumber === 1 ||
                     pageNumber === totalPages ||
@@ -124,7 +126,8 @@ export default async function ActualitesPage({
                     return (
                       <PaginationItem key={pageNumber}>
                         <PaginationLink
-                          href={`/actualites?page=${pageNumber}`}
+                          href="#"
+                          onClick={() => setCurrentPage(pageNumber)}
                           isActive={pageNumber === currentPage}
                         >
                           {pageNumber}
@@ -132,7 +135,6 @@ export default async function ActualitesPage({
                       </PaginationItem>
                     );
                   }
-                  // Ne pas retourner de PaginationLink pour les ellipsis
                   if (
                     pageNumber === currentPage - 2 ||
                     pageNumber === currentPage + 2
@@ -148,9 +150,13 @@ export default async function ActualitesPage({
 
                 {currentPage < totalPages && (
                   <PaginationItem>
-                    <PaginationNext 
-                      href={`/actualites?page=${currentPage + 1}`} 
-                    />
+                    <PaginationLink 
+                      href="#"
+                      onClick={() => setCurrentPage(currentPage + 1)}
+                    >
+                      Suivant
+                      <ArrowRight className="h-4 w-4" />
+                    </PaginationLink>
                   </PaginationItem>
                 )}
               </PaginationContent>
