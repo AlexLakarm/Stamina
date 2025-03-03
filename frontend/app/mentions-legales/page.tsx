@@ -26,11 +26,9 @@ export default function MentionsLegalesPage() {
               Le site staminadev.com est édité par :<br />
               STAMINA DEV<br />
               Société par actions simplifiée unipersonnelle (SASU)<br />
-              Au capital social de 1 000,00 €<br />
-              SIREN : 940 472 335<br />
+              Au capital social de 1 000 €<br />
               SIRET : 940 472 335 00014<br />
               RCS : 940 472 335 R.C.S. Quimper<br />
-              N° TVA Intracommunautaire : FR36940472335<br />
               Siège social : 3 CHEMIN DE KERLOUIC, 29710 PLONEIS<br />
               Directeur de la publication : Alexandre KERMAREC
             </p>
