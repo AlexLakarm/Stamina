@@ -56,19 +56,21 @@ export default function Page() {
   );
 
   return (
-    <div className="min-h-screen bg-neutral-950 py-8">
+    <main className="bg-neutral-950 min-h-screen">
       <HeaderMain />
-      <div className="max-w-7xl mx-auto px-4">
-        <Link href="/" className="hidden md:block absolute left-8 top-24">
-          <Button variant="outline" className="flex items-center gap-2 bg-neutral-900 text-neutral-200 border-neutral-800 hover:bg-neutral-800">
-            <ArrowLeft className="h-4 w-4" />
-            Retour
-          </Button>
-        </Link>
-
-        <h1 className={`${quicksand.className} text-4xl md:text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-white via-neutral-200 to-white drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]`}>
-          Actualités &amp; Analyses
-        </h1>
+      <div className="container mx-auto py-12 px-4">
+        <div className="flex items-center justify-between mb-12">
+          <Link href="/" className="hidden md:inline-flex">
+            <Button variant="outline" className="flex items-center gap-2 bg-neutral-900 text-neutral-200 border-neutral-800 hover:bg-neutral-800">
+              <ArrowLeft className="h-4 w-4" />
+              Retour
+            </Button>
+          </Link>
+          <h1 className={`${quicksand.className} text-4xl md:text-5xl font-bold text-center flex-grow bg-clip-text text-transparent bg-gradient-to-r from-white via-neutral-200 to-white drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]`}>
+            Actualités &amp; Analyses
+          </h1>
+          <div className="hidden md:block w-[88px]"></div>
+        </div>
 
         <CategoryFilters 
           categories={["Toutes catégories", ...new Set(articles.map(article => article.category))]} 
@@ -164,6 +166,6 @@ export default function Page() {
           </div>
         )}
       </div>
-    </div>
+    </main>
   );
 }
