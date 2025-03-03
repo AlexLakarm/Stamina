@@ -14,7 +14,7 @@ const roboto = Roboto({
 });
 
 const navigation = [
-  { name: 'Blockchain Development', href: '/dev', icon: Code },
+  { name: 'Développement Blockchain', href: '/dev', icon: Code },
   { name: 'Consulting', href: '/consulting', icon: Briefcase },
   { name: 'Actualités', href: '/actualites', icon: Book },
   { name: 'How To Blockchain', href: '/howtoblockchain', icon: GraduationCap },

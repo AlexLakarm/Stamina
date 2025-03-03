@@ -7,7 +7,7 @@ import { Roboto } from "next/font/google";
 
 const roboto = Roboto({ 
   subsets: ["latin"],
-  weight: ['100', '700']
+  weight: ['300', '700']
 });
 
 export default function Footer() {
@@ -63,13 +63,8 @@ export default function Footer() {
                     </Link>
                   </li>
                   <li className="block md:hidden">
-                    <Link href="/confidentialite" className="text-neutral-400 hover:text-neutral-200 text-sm">
-                      Confidentialité
-                    </Link>
-                  </li>
-                  <li className="block md:hidden">
-                    <Link href="/cgv" className="text-neutral-400 hover:text-neutral-200 text-sm">
-                      CGV
+                    <Link href="/rgpd" className="text-neutral-400 hover:text-neutral-200 text-sm">
+                      RGPD
                     </Link>
                   </li>
                 </ul>
@@ -108,13 +103,8 @@ export default function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/confidentialite" className="text-neutral-400 hover:text-neutral-200 text-sm">
-                      Politique de confidentialité
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/cgv" className="text-neutral-400 hover:text-neutral-200 text-sm">
-                      CGV
+                    <Link href="/rgpd" className="text-neutral-400 hover:text-neutral-200 text-sm">
+                      RGPD
                     </Link>
                   </li>
                 </ul>
