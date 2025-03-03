@@ -1,6 +1,5 @@
 "use client"
 
-import { ModeToggle } from "@/components/ui/mode-toggle";
 import { Code, Briefcase, Mail, Book, GraduationCap } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
@@ -32,7 +31,6 @@ const HeaderMain = () => {
                     <div className="flex items-center justify-between">
                         {/* Logo et titre à gauche */}
                         <div className="flex items-center gap-4">
-                            <ModeToggle />
                             <div className="hidden md:block">
                                 <Link href="/" className={`${roboto.className} hover:opacity-80 transition-opacity`}>
                                     <div className="flex flex-col">

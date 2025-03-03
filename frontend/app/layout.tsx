@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr" suppressHydrationWarning className="h-full">
+    <html lang="fr" suppressHydrationWarning className="h-full dark">
       <head>
         {/* Google Tag Manager */}
         <Script
@@ -50,8 +50,9 @@ export default function RootLayout({
 
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="dark"
+          enableSystem={false}
+          forcedTheme="dark"
           disableTransitionOnChange
         >
           <CustomRainbowKitProvider>
