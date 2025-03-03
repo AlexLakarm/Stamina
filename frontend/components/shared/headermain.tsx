@@ -10,7 +10,7 @@ import NextImage from 'next/image';
 
 const roboto = Roboto({ 
   subsets: ["latin"],
-  weight: ['100', '700']
+  weight: ['300', '700']
 });
 
 const navigation = [
@@ -37,7 +37,7 @@ const HeaderMain = () => {
                                 <Link href="/" className={`${roboto.className} hover:opacity-80 transition-opacity`}>
                                     <div className="flex flex-col">
                                         <span className="text-2xl lg:text-3xl font-bold text-neutral-200">Stamina</span>
-                                        <span className="text-sm lg:text-base text-neutral-400">Blockchain Dev & Consulting</span>
+                                        <span className="text-sm lg:text-base text-neutral-300 font-normal">Blockchain Dev & Consulting</span>
                                     </div>
                                 </Link>
                             </div>
@@ -66,7 +66,7 @@ const HeaderMain = () => {
                         >
                             <div className="flex flex-col items-center">
                                 <span className="text-3xl font-bold text-neutral-200">Stamina</span>
-                                <span className="text-base text-neutral-400">Blockchain Dev & Consulting</span>
+                                <span className="text-base text-neutral-300 font-normal">Blockchain Dev & Consulting</span>
                             </div>
                         </Link>
 
