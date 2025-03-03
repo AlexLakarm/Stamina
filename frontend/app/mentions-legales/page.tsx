@@ -38,7 +38,7 @@ export default function MentionsLegalesPage() {
             <h2 className="text-xl font-semibold text-white mb-4">2. Activité</h2>
             <p className="space-y-2">
               Code NAF : 62.02A - Conseil en systèmes et logiciels informatiques<br />
-              Activité principale : Activité de conseil, audit, formation et prestations de services notamment dans le domaine de l'informatique ; Développement, édition et vente de logiciels, sites web et d'applications web et mobiles.
+              Activité principale : Activité de conseil, audit, formation et prestations de services notamment dans le domaine de l&apos;informatique ; Développement, édition et vente de logiciels, sites web et d&apos;applications web et mobiles.
             </p>
           </section>
 
@@ -55,7 +55,7 @@ export default function MentionsLegalesPage() {
           <section>
             <h2 className="text-xl font-semibold text-white mb-4">4. Propriété intellectuelle</h2>
             <p>
-              L'ensemble du contenu de ce site (structure, textes, logos, images, etc.) est la propriété exclusive de STAMINA DEV. 
+              L&apos;ensemble du contenu de ce site (structure, textes, logos, images, etc.) est la propriété exclusive de STAMINA DEV. 
               Toute reproduction, représentation, modification, publication, transmission, ou exploitation totale ou partielle des contenus 
               à des fins autres que personnelles, est strictement interdite sans autorisation expresse écrite.
             </p>
@@ -65,7 +65,7 @@ export default function MentionsLegalesPage() {
             <h2 className="text-xl font-semibold text-white mb-4">5. Contact</h2>
             <p>
               Pour toute question concernant ces mentions légales, vous pouvez nous contacter via le formulaire de contact 
-              disponible sur le site ou par courrier à l'adresse du siège social.
+              disponible sur le site ou par courrier à l&apos;adresse du siège social.
             </p>
           </section>
         </div>

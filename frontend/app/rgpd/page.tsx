@@ -35,7 +35,7 @@ export default function RGPDPage() {
               <li>Données de contact (via le formulaire) : nom, prénom, email</li>
               <li>Données de connexion : adresse IP, données de navigation</li>
               <li>Cookies techniques essentiels au fonctionnement du site</li>
-              <li>Cookies d'analyse d'audience (via Google Analytics)</li>
+              <li>Cookies d&apos;analyse d&apos;audience (via Google Analytics)</li>
             </ul>
           </section>
 
@@ -45,7 +45,7 @@ export default function RGPDPage() {
             <ul className="list-disc pl-6 space-y-2">
               <li>Répondre à vos demandes de contact</li>
               <li>Améliorer votre expérience de navigation</li>
-              <li>Analyser l'utilisation du site</li>
+              <li>Analyser l&apos;utilisation du site</li>
               <li>Assurer la sécurité du site</li>
             </ul>
           </section>
@@ -55,15 +55,15 @@ export default function RGPDPage() {
             <p className="mb-4">Le traitement de vos données est fondé sur :</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Votre consentement pour les cookies non essentiels</li>
-              <li>Notre intérêt légitime pour l'amélioration de nos services</li>
-              <li>L'exécution de mesures précontractuelles lors de vos demandes de contact</li>
+              <li>Notre intérêt légitime pour l&apos;amélioration de nos services</li>
+              <li>L&apos;exécution de mesures précontractuelles lors de vos demandes de contact</li>
             </ul>
           </section>
 
           <section>
             <h2 className="text-xl font-semibold text-white mb-4">5. Destinataires des données</h2>
             <p>
-              Vos données sont destinées à STAMINA DEV et à ses sous-traitants techniques (hébergeur, outils d'analyse). 
+              Vos données sont destinées à STAMINA DEV et à ses sous-traitants techniques (hébergeur, outils d&apos;analyse). 
               Nous ne vendons ni ne partageons vos données avec des tiers à des fins commerciales.
             </p>
           </section>
@@ -73,7 +73,7 @@ export default function RGPDPage() {
             <ul className="list-disc pl-6 space-y-2">
               <li>Données de formulaire : 3 ans à compter du dernier contact</li>
               <li>Cookies : 13 mois maximum</li>
-              <li>Données d'analyse : 14 mois maximum</li>
+              <li>Données d&apos;analyse : 14 mois maximum</li>
             </ul>
           </section>
 
@@ -83,12 +83,12 @@ export default function RGPDPage() {
               Conformément au RGPD, vous disposez des droits suivants concernant vos données personnelles :
             </p>
             <ul className="list-disc pl-6 space-y-2">
-              <li>Droit d'accès</li>
+              <li>Droit d&apos;accès</li>
               <li>Droit de rectification</li>
-              <li>Droit à l'effacement</li>
+              <li>Droit à l&apos;effacement</li>
               <li>Droit à la limitation du traitement</li>
               <li>Droit à la portabilité</li>
-              <li>Droit d'opposition</li>
+              <li>Droit d&apos;opposition</li>
             </ul>
           </section>
 
@@ -96,7 +96,7 @@ export default function RGPDPage() {
             <h2 className="text-xl font-semibold text-white mb-4">8. Contact</h2>
             <p>
               Pour exercer vos droits ou pour toute question relative à la protection de vos données, 
-              vous pouvez nous contacter via le formulaire de contact du site ou par courrier à l'adresse du siège social.
+              vous pouvez nous contacter via le formulaire de contact du site ou par courrier à l&apos;adresse du siège social.
               En cas de difficulté, vous pouvez également saisir la CNIL (www.cnil.fr).
             </p>
           </section>
