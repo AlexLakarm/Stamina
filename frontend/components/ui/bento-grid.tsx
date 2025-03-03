@@ -1,54 +1,57 @@
-import { cn } from "@/lib/utils";
+"use client";
 
-export const BentoGrid = ({
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+
+interface BentoGridItemProps {
+  title: React.ReactNode;
+  description: React.ReactNode;
+  header: React.ReactNode;
+  className?: string;
+  href?: string;
+}
+
+export function BentoGridItem({
+  title,
+  description,
+  header,
+  className,
+  href,
+}: BentoGridItemProps) {
+  const content = (
+    <div className={cn(
+      "group/bento relative overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900/50 hover:bg-neutral-900/75 transition-colors",
+      className
+    )}>
+      {header}
+      <div className="p-4">
+        <h3 className="font-semibold text-zinc-200 tracking-wide mt-2 group-hover/bento:text-white transition-colors">
+          {title}
+        </h3>
+        <p className="mt-2 text-sm text-zinc-400 group-hover/bento:text-zinc-300 transition-colors">
+          {description}
+        </p>
+      </div>
+    </div>
+  );
+
+  if (href) {
+    return <Link href={href}>{content}</Link>;
+  }
+
+  return content;
+}
+
+export function BentoGrid({
   className,
   children,
 }: {
   className?: string;
   children?: React.ReactNode;
-}) => {
+}) {
   return (
-    <div
-      className={cn(
-        "grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto ",
-        className
-      )}
-    >
+    <div className={cn("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4", className)}>
       {children}
     </div>
   );
-};
-
-export const BentoGridItem = ({
-  className,
-  title,
-  description,
-  header,
-  icon,
-}: {
-  className?: string;
-  title?: string | React.ReactNode;
-  description?: string | React.ReactNode;
-  header?: React.ReactNode;
-  icon?: React.ReactNode;
-}) => {
-  return (
-    <div
-      className={cn(
-        "row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4",
-        className
-      )}
-    >
-      {header}
-      <div className="group-hover/bento:translate-x-2 transition duration-200">
-        {icon}
-        <div className="font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2">
-          {title}
-        </div>
-        <div className="font-sans font-normal text-neutral-600 text-xs dark:text-neutral-300">
-          {description}
-        </div>
-      </div>
-    </div>
-  );
-};
+}

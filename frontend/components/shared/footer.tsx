@@ -2,7 +2,7 @@
 
 import { Vortex } from "@/components/ui/vortex"
 import Link from "next/link";
-import { Mail, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Linkedin } from "lucide-react";
 import { Roboto } from "next/font/google";
 
 const roboto = Roboto({ 
@@ -81,14 +81,8 @@ export default function Footer() {
                   Nous contacter
                 </Link>
                 <div className="mt-4 flex items-center gap-4">
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-neutral-200">
-                    <Github className="h-5 w-5" />
-                  </a>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-neutral-200">
+                  <a href="https://www.linkedin.com/in/alexandre-kermarec-22b3a731" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-neutral-200">
                     <Linkedin className="h-5 w-5" />
-                  </a>
-                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-neutral-200">
-                    <Twitter className="h-5 w-5" />
                   </a>
                 </div>
               </div>

@@ -37,7 +37,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} min-h-screen flex flex-col`}>
+      <body className={`${inter.className} min-h-screen flex flex-col dark`}>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe 
@@ -52,7 +52,6 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="dark"
           enableSystem={false}
-          forcedTheme="dark"
           disableTransitionOnChange
         >
           <CustomRainbowKitProvider>
