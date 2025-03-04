@@ -14,21 +14,22 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: "1",
-    title: "Aave : Le Protocole de Prêt DeFi",
-    description: "Découvrez comment Aave révolutionne le prêt décentralisé avec ses pools de liquidité et ses taux d'intérêt dynamiques.",
+    title: "Aave : Le Protocole leader de la DeFi",
+    description: "Partez à la découverte d'Aave, l’un des protocoles DeFi les plus réputés et sécurisés, pionnier dans l’utilisation des pools de liquidité et désormais déployé sur plusieurs blockchains.",
     imageUrl: "/images/aave.jpg",
     slug: "aave-protocol",
     date: "2024-03-15",
     category: "DeFi",
     keywords: ["Aave", "DeFi", "prêt crypto", "emprunt décentralisé", "liquidité blockchain", "smart contracts"],
-    readTime: "8 min",
+    readTime: "10 min",
     content: `# Aave : Le Protocole de Prêt Décentralisé
 
 ## Introduction
 
-Aave est un **protocole de finance décentralisée (DeFi)** permettant aux utilisateurs d'emprunter et de prêter des cryptomonnaies sans intermédiaire. Lancé en 2020 sur Ethereum, Aave repose sur des **smart contracts** qui automatisent et sécurisent les transactions.
+Aave est l'un des **protocoles pionniers de finance décentralisée (DeFi)** permettant aux utilisateurs d'emprunter et de prêter des cryptomonnaies sans intermédiaire. Lancé en 2020 sur Ethereum, Aave repose sur des **smart contracts** qui automatisent et sécurisent les transactions.
 
-Grâce à ce système, les utilisateurs peuvent **déposer des actifs pour générer des intérêts** ou **emprunter des fonds en utilisant des collatéraux** sans passer par une institution financière traditionnelle.
+Grâce à ce système, les utilisateurs peuvent **déposer des actifs pour générer des intérêts** ou **emprunter des fonds en utilisant des collatéraux** sans passer par une institution financière traditionnelle. Avec plus de 8 milliards de dollars en actifs déposés (Total Value Locked), Aave est l'un des protocoles DeFi les plus populaires. Le protocole est notamment en concurrence avec Compound, Uniswap et MakerDAO.
+A noter qu'Aave est aussi l'un des premiers à être devenu "multichain", le protocole est en effet déployé sur Avalanche, Base, Optimism et bien d'autres blockchains. Malgré cela ses services ne se sont jamais étendus à Solana, pourtant l'une des blockchain les plus populaires du moment, à cause de contraintes techniques.
 
 ## Les Fondamentaux du Protocole Aave
 
@@ -47,11 +48,19 @@ Aave utilise un **système de taux d'intérêt algorithmiques** qui s'adapte en 
 - **Taux stable** : plus prévisible, idéal pour des stratégies long terme.
 - **Taux variable** : ajuste automatiquement les intérêts selon les conditions du marché.
 
+### Le Système de Collatéralisation
+
+Le protocole Aave repose sur un système de collatéralisation, où les emprunteurs doivent déposer des actifs en garantie pour obtenir un prêt. Si la valeur du collatéral chute en dessous d’un certain seuil (Loan-to-Value, LTV), une liquidation peut être déclenchée. Cela signifie qu’une partie des fonds déposés est vendue par des liquidateurs pour rembourser une portion de la dette, évitant ainsi un défaut de paiement et protégeant la solvabilité du protocole. Les liquidateurs reçoivent une prime en échange de leur intervention, ce qui incite les acteurs du marché à maintenir l'équilibre du système.
+
+### Le Safety Module (SM)
+
+Pour renforcer la sécurité du protocole en cas de défaillance systémique ou de pertes importantes, Aave a mis en place un Safety Module (SM). Ce fonds de sûreté est alimenté principalement par des tokens AAVE, déposés par les utilisateurs en échange de récompenses. En cas d’événement critique, jusqu’à 30 % des fonds du Safety Module peuvent être liquidés pour combler un éventuel déficit du protocole. Ce mécanisme vise à garantir la résilience d'Aave face aux risques extrêmes et à renforcer la confiance des utilisateurs dans la stabilité de la plateforme.
+
 ## Focus sur la Décentralisation
 
-Aave est entièrement **décentralisé** et géré par une **organisation autonome décentralisée (DAO)**. Les détenteurs du jeton **AAVE** participent aux décisions du protocole, garantissant une gouvernance communautaire.
+Aave est entièrement **décentralisé** et géré par une **organisation autonome décentralisée (DAO)**. Les détenteurs du jeton **$AAVE** participent aux décisions du protocole, garantissant une gouvernance communautaire.
 
-Contrairement aux systèmes bancaires traditionnels où une **entité centrale contrôle les prêts**, Aave fonctionne sur la blockchain Ethereum avec une **transparence totale et une résistance à la censure**.
+Contrairement aux systèmes bancaires traditionnels où une **entité centrale contrôle les prêts**, Aave fonctionne sur la blockchain Ethereum (ou autre blockcahin reposant sur la même technologie) avec une **transparence totale et une résistance à la censure**.
 
 Avantages :
 
@@ -59,14 +68,20 @@ Avantages :
 - **Sécurité renforcée** : audit constant des smart contracts.
 - **Accès global** : utilisation possible depuis n'importe où sans restriction bancaire.
 
-## La Notion de Prêt Flash (Flash Loans)
+## La Notion de Flash Loans (Prêts Flash)
 
-Aave introduit une innovation majeure : les **prêts flash**. Ces prêts permettent d'emprunter sans collatéral à condition que le montant soit remboursé **dans la même transaction**.
+### Qu'est-ce qu'un flash loan ?
 
-Cas d'usage :
+Aave introduit une innovation majeure : les **flash loans**. Ces prêts permettent d'emprunter sans collatéral à condition que le montant soit remboursé **dans la même transaction**.
+
+Les cas d'usage :
 - **Arbitrage** : exploiter les différences de prix entre plateformes.
 - **Refinancement de dette** : restructurer un prêt sans coût initial.
 - **Exécution automatisée de stratégies DeFi**.
+
+### Limites et dérives
+
+Si les flash loans offrent de nombreuses opportunités aux traders et aux développeurs DeFi, ils sont aussi détournés à des fins malveillantes. Leur principal risque réside dans leur exploitation pour orchestrer des attaques complexes. Un attaquant peut, par exemple, emprunter une somme massive via un prêt flash et l’utiliser pour manipuler temporairement les prix d’un actif sur un protocole mal sécurisé (via une manipulation d’oracle ou une attaque de gouvernance). Cette distorsion artificielle lui permet ensuite d’exploiter des vulnérabilités et d’en tirer profit avant que les marchés ne retrouvent leur équilibre. De nombreux hacks notables dans la DeFi, causant des pertes de plusieurs millions de dollars, ont été facilités par ce type de mécanisme. Ainsi, bien que puissants, les prêts flash soulignent l'importance d'une sécurité rigoureuse dans l’écosystème DeFi.
 
 ## AAVE : Le Jeton de Gouvernance
 
@@ -77,11 +92,12 @@ Le jeton **AAVE** joue un rôle clé dans l'écosystème :
 
 ## Conclusion
 
-Aave révolutionne le prêt et l'emprunt en supprimant les intermédiaires et en permettant une gestion **transparente et automatisée** des liquidités. Avec son modèle décentralisé et ses innovations comme les **prêts flash**, Aave est un acteur majeur de la DeFi.`
+Aave a profondément transformé le secteur du prêt et de l'emprunt en DeFi en offrant une alternative décentralisée aux institutions financières traditionnelles. Son modèle basé sur des pools de liquidité et des taux d'intérêt dynamiques permet une gestion plus flexible et transparente des actifs. Des innovations comme les flash loans et le Safety Module renforcent la résilience du protocole et ouvrent de nouvelles perspectives pour les utilisateurs. Toutefois, bien que le protocole soit devenu un acteur incontournable de la DeFi, il n’est pas exempt de risques, notamment en raison des dérives potentielles liées à l’utilisation des flash loans pour des attaques malveillantes. 
+Aave reste néanmoins un pionnier, offrant des solutions solides dans l'écosystème en constante évolution de la finance décentralisée.`
   },
   {
     id: "2",
-    title: "Bitcoin : La Révolution Monétaire",
+    title: "Bitcoin : Là où tout a commencé",
     description: "Comprendre les fondamentaux de Bitcoin et son impact sur le système financier mondial.",
     imageUrl: "/images/bitcoin.jpg",
     slug: "bitcoin-basics",
@@ -89,7 +105,7 @@ Aave révolutionne le prêt et l'emprunt en supprimant les intermédiaires et en
     category: "Fondamentaux",
     keywords: ["Bitcoin", "cryptomonnaie", "blockchain", "monnaie numérique", "décentralisation", "minage Bitcoin"],
     readTime: "7 min",
-    content: `# Bitcoin : La Révolution Monétaire
+    content: `# Bitcoin : Là où tout a commencé
 
 ## Introduction
 
