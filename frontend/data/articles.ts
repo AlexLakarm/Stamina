@@ -104,38 +104,56 @@ Aave reste néanmoins un pionnier, offrant des solutions solides dans l'écosyst
     date: "2024-03-10",
     category: "Fondamentaux",
     keywords: ["Bitcoin", "cryptomonnaie", "blockchain", "monnaie numérique", "décentralisation", "minage Bitcoin"],
-    readTime: "7 min",
+    readTime: "8 min",
     content: `# Bitcoin : Là où tout a commencé
 
-## Introduction
+## Introduction  
 
-Bitcoin, créé en 2009 par un individu ou un groupe sous le pseudonyme **Satoshi Nakamoto**, représente la première monnaie numérique décentralisée. Reposant sur la technologie **blockchain**, il permet des transactions sécurisées sans intermédiaire.
+Bitcoin est né en **2008** avec la publication de son **white paper**, un document fondateur rédigé par un individu ou un groupe sous le pseudonyme **Satoshi Nakamoto**. Ce texte, intitulé *"Bitcoin: A Peer-to-Peer Electronic Cash System"*, décrit un système monétaire numérique fonctionnant sans intermédiaire, basé sur un réseau **décentralisé et sécurisé par la blockchain**.  
 
-Contrairement aux monnaies traditionnelles contrôlées par des banques centrales, **Bitcoin fonctionne sur un réseau pair-à-pair (P2P)**, offrant ainsi une alternative aux systèmes financiers classiques.
+Lancé officiellement en **2009**, Bitcoin a marqué le début d’une révolution financière en permettant des transactions **sécurisées, transparentes et résistantes à la censure**. Contrairement aux monnaies fiduciaires contrôlées par les banques centrales, il repose sur un réseau **pair-à-pair (P2P)**, où chaque utilisateur peut envoyer et recevoir des fonds sans intermédiaire.  
+
+Satoshi Nakamoto a échangé avec la communauté Bitcoin jusqu’en **2010**, sa dernière trace publique étant un message posté sur le forum Bitcointalk en décembre de cette année. Depuis, son identité reste un mystère, renforçant encore l’aura mythique de Bitcoin, qui continue d’évoluer indépendamment de son créateur.
 
 ## Les Fondamentaux du Bitcoin
 
 ### La Blockchain Bitcoin
 
-La **blockchain Bitcoin** est un registre distribué qui enregistre de manière immuable l'historique des transactions. Chaque transaction est regroupée dans un **bloc**, qui est validé par un processus cryptographique avant d'être ajouté à la chaîne existante.
+La **blockchain Bitcoin** est un registre distribué qui enregistre de manière **immuable** l'historique des transactions. Chaque transaction est regroupée dans un **bloc**, qui est validé par un processus cryptographique avant d'être ajouté à la chaîne existante.  
 
-### Le Minage et la Preuve de Travail
+Historiquement, Bitcoin a été principalement utilisé comme un **registre de transactions financières**, garantissant la transparence et la sécurité des échanges. Cependant, son usage s’est diversifié avec l’émergence des **inscriptions** (*inscriptions*), introduites par le protocole **Ordinals**.  
 
-Le minage est le mécanisme qui sécurise le réseau Bitcoin et garantit son bon fonctionnement. Les mineurs utilisent de la puissance de calcul pour résoudre des **problèmes mathématiques complexes** (preuve de travail ou *Proof of Work*). En retour, ils sont récompensés en **bitcoins nouvellement émis** et par les frais de transaction.
+Les inscriptions permettent d'**ancrer des données arbitraires sur la blockchain Bitcoin**, comme des images, du texte ou des smart contracts simplifiés, en exploitant l’espace disponible dans les transactions SegWit et Taproot. Cette innovation a ouvert la voie à de nouvelles applications, notamment les **NFTs sur Bitcoin** et d'autres formes d'actifs numériques directement inscrits sur la blockchain, tout en respectant son infrastructure décentralisée et sécurisée.
 
-Tous les **210 000 blocs** (environ tous les 4 ans), la récompense des mineurs est divisée par deux, un phénomène appelé **halving**, qui réduit l'émission de nouveaux bitcoins et contribue à leur rareté.
+### Le Minage et la Preuve de Travail  
 
-## Focus sur la Décentralisation
+Le **minage** est le mécanisme qui sécurise le réseau Bitcoin et garantit son bon fonctionnement. Les mineurs utilisent de la puissance de calcul pour résoudre des **problèmes mathématiques complexes** (*preuve de travail* ou **Proof of Work** : POW). En retour, ils sont récompensés en **bitcoins nouvellement émis** ainsi que par les **frais de transaction**.  
 
-Bitcoin repose sur un **réseau décentralisé**, où la blockchain est partagée et synchronisée sur des milliers d'ordinateurs, appelés **nœuds**, répartis partout dans le monde. Ces machines peuvent être des serveurs dédiés, des ordinateurs personnels ou même des appareils plus spécialisés comme les Raspberry Pi.
+À ses débuts, il était possible de miner avec un simple **ordinateur personnel**. Aujourd’hui, le minage est principalement réalisé par des **machines spécialisées** appelées **ASICs** (*Application-Specific Integrated Circuits*), conçues exclusivement pour exécuter l’algorithme de hachage SHA-256 utilisé par Bitcoin. Cette évolution a entraîné une **industrialisation du minage**, désormais dominé par de grandes **fermes de minage** situées notamment aux **États-Unis**, au **Kazakhstan** et en **Russie**. Le minage par des particuliers existe toujours, mais il est devenu **marginal** en raison des **coûts élevés de l’électricité et du matériel**.  
 
-Contrairement à un système centralisé stocké sur un **serveur privé comme ceux d'Amazon ou de Google**, cette approche présente plusieurs avantages majeurs :
+Tous les **210 000 blocs** (environ tous les **4 ans**), la récompense des mineurs est divisée par deux lors d’un événement appelé **halving**. Ce processus réduit progressivement l’émission de nouveaux bitcoins et renforce leur **rareté**.  
 
-- **Résilience** : Aucune entité unique ne peut éteindre ou censurer le réseau.
-- **Sécurité** : Les données ne sont pas vulnérables à une seule attaque ciblée.
-- **Transparence** : Tout le monde peut vérifier l'historique des transactions en temps réel.
+- **2009** : 50 BTC par bloc  
+- **2012** : 25 BTC  
+- **2016** : 12,5 BTC  
+- **2020** : 6,25 BTC  
+- **2024** : 3,125 BTC  
 
-Cette structure fait de Bitcoin un système **fiable et résistant aux manipulations externes**.
+Ce mécanisme est essentiel pour assurer la **déflation programmée** du Bitcoin et renforcer son attrait en tant que **réserve de valeur**.
+
+## Focus sur la Décentralisation  
+
+Bitcoin repose sur un **réseau décentralisé**, où la **blockchain** est partagée et synchronisée sur des milliers d'ordinateurs, appelés **nœuds**, répartis partout dans le monde. Ces nœuds jouent un rôle essentiel en validant et en relayant les transactions, garantissant ainsi l'intégrité du réseau.  
+
+Les **nœuds Bitcoin** sont généralement exécutés sur des **serveurs dédiés**, des **ordinateurs personnels** avec une bonne capacité de stockage, ou sur des **infrastructures cloud spécialisées**. Bien que certains passionnés utilisent des appareils comme les **Raspberry Pi** pour héberger un nœud léger (*pruned node*), leur puissance de calcul et leur stockage limité ne permettent pas toujours d’exécuter un **nœud complet** sans solutions de stockage externe.  
+
+Contrairement à un système centralisé stocké sur un **serveur privé comme ceux d'Amazon ou de Google**, cette architecture **décentralisée** offre plusieurs avantages majeurs :  
+
+- **Résilience** : Aucune entité unique ne peut éteindre ou censurer le réseau.  
+- **Sécurité** : Les données ne sont pas vulnérables à une seule attaque ciblée.  
+- **Transparence** : Tout le monde peut vérifier l'historique des transactions en temps réel.  
+
+Grâce à cette structure, Bitcoin constitue un système **fiable, résistant aux manipulations externes et à la censure**. 🚀
 
 ## Bitcoin : L'Or Numérique
 
@@ -145,6 +163,8 @@ Bitcoin est souvent comparé à l'**or numérique**, et ce pour plusieurs raison
 - **Stockage de valeur** : Bitcoin est considéré comme une réserve de valeur à long terme, permettant de protéger son patrimoine contre l'inflation.
 - **Portabilité** : Contrairement à l'or physique, Bitcoin peut être transféré facilement et rapidement, n'importe où dans le monde.
 - **Divisibilité** : Chaque bitcoin est divisible en **100 millions de satoshis**, ce qui le rend accessible même pour de petites transactions.
+
+Sa distribution est également un atout important, la majorité des bitcoins ont déjà été minés et les unités restantes le seront de façon équitable via les récompenses de minage.
 
 Ces caractéristiques font de Bitcoin une alternative moderne aux **métaux précieux**, utilisée comme une valeur refuge face aux incertitudes économiques.
 
@@ -161,7 +181,9 @@ Bitcoin est conçu pour être **résistant à la censure** : aucune entité ne p
 
 ## Conclusion
 
-Bitcoin redéfinit notre conception de la monnaie et des systèmes financiers en offrant une alternative **décentralisée, sécurisée et accessible**. Son adoption croissante laisse entrevoir un futur où chacun peut gérer sa propre richesse sans dépendre d'un tiers de confiance.`
+Bitcoin est la première véritable monnaie numérique, conçue sur la base du white paper révolutionnaire de Satoshi Nakamoto. En introduisant la première blockchain fonctionnelle, il a posé les fondations d’une technologie aujourd’hui adoptée bien au-delà des cryptomonnaies, avec des applications dans la finance, la logistique et bien d'autres secteurs.
+
+Longtemps perçu comme un simple actif spéculatif, Bitcoin est désormais comparé à l’or numérique, une réserve de valeur reconnue mondialement. Son adoption institutionnelle s’accélère, illustrée par l’approbation d’ETF Bitcoin et l’intérêt croissant des grandes institutions financières. Son prix, qui a récemment franchi la barre symbolique des 100 000 dollars, témoigne de cette reconnaissance grandissante et du rôle central qu’il pourrait jouer dans l’économie numérique du futur.`
   },
   {
     id: "3",
