@@ -26,7 +26,7 @@ export function ArticleLayout({ article }: { article: Article }) {
         <div className="prose prose-invert prose-lg max-w-none">
           <ReactMarkdown
             components={{
-              h1: ({ children }) => <h1 className="text-3xl font-bold mb-6 mt-8">{children}</h1>,
+              h1: () => null,
               h2: ({ children }) => <h2 className="text-2xl font-bold mb-4 mt-8">{children}</h2>,
               h3: ({ children }) => <h3 className="text-xl font-bold mb-3 mt-6">{children}</h3>,
               p: ({ children }) => <p className="mb-4 text-neutral-300 leading-relaxed">{children}</p>,
