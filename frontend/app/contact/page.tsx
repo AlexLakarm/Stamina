@@ -9,6 +9,9 @@ import { Quicksand } from "next/font/google";
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Image from "next/image";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { BottomGradient, LabelInputContainer } from "@/components/ui/form-utils";
 
 const quicksand = Quicksand({ 
   subsets: ["latin"],
@@ -54,11 +57,17 @@ export default function ContactPage() {
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     try {
+      console.log('Sending data:', data); // Debug log
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
+      
+      if (!response.ok) {
+        const errorData = await response.json();
+        console.error('API Error:', errorData); // Debug log
+      }
       
       if (response.ok) {
         setSubmitStatus('success');
@@ -66,7 +75,8 @@ export default function ContactPage() {
       } else {
         setSubmitStatus('error');
       }
-    } catch {
+    } catch (error) {
+      console.error('Submit error:', error); // Debug log
       setSubmitStatus('error');
     }
     setIsSubmitting(false);
@@ -76,7 +86,7 @@ export default function ContactPage() {
     <main className="bg-neutral-950 min-h-screen">
       <HeaderMain />
       <div className="container mx-auto py-12 px-4">
-        <Link href="/" className="hidden md:block absolute left-8 top-24">
+        <Link href="/" className="hidden md:block absolute left-8 top-24 z-10">
           <Button variant="outline" className="flex items-center gap-2 bg-neutral-900 text-neutral-200 border-neutral-800 hover:bg-neutral-800">
             <ArrowLeft className="h-4 w-4" />
             Retour
@@ -95,101 +105,110 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 max-w-2xl mx-auto">
-          <div>
-            <label className="block text-sm font-medium text-white">Type de contact</label>
-            <select 
-              {...register("type", { required: "Veuillez sélectionner un type de contact" })}
-              className="mt-1 block w-full rounded-md border-gray-700 bg-neutral-900 text-white p-2"
+        <div className="max-w-md w-full mx-auto rounded-xl p-4 md:p-8 shadow-input bg-black/40 border border-neutral-800/50">
+          <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
+            <LabelInputContainer>
+              <Label htmlFor="type">Type de contact</Label>
+              <select 
+                id="type"
+                {...register("type", { required: "Veuillez sélectionner un type de contact" })}
+                className="flex w-full rounded-md border-none bg-neutral-900 px-3 py-2 text-sm shadow-input text-white"
+              >
+                <option value="consulting">Consulting Blockchain</option>
+                <option value="dev">Développement</option>
+                <option value="general">Contact Général</option>
+              </select>
+              {errors.type && (
+                <p className="text-sm text-red-500">{errors.type.message}</p>
+              )}
+            </LabelInputContainer>
+
+            <LabelInputContainer>
+              <Label htmlFor="name">Nom complet</Label>
+              <Input 
+                id="name" 
+                placeholder="John Doe" 
+                type="text"
+                {...register("name", { required: "Le nom est requis" })}
+              />
+              {errors.name && (
+                <p className="text-sm text-red-500">{errors.name.message}</p>
+              )}
+            </LabelInputContainer>
+
+            <LabelInputContainer>
+              <Label htmlFor="email">Email</Label>
+              <Input 
+                id="email" 
+                placeholder="john@example.com" 
+                type="email"
+                {...register("email", { 
+                  required: "L'email est requis",
+                  pattern: {
+                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                    message: "Adresse email invalide"
+                  }
+                })}
+              />
+              {errors.email && (
+                <p className="text-sm text-red-500">{errors.email.message}</p>
+              )}
+            </LabelInputContainer>
+
+            <LabelInputContainer>
+              <Label htmlFor="subject">Sujet</Label>
+              <Input 
+                id="subject" 
+                placeholder="Sujet de votre message" 
+                type="text"
+                {...register("subject", { required: "Le sujet est requis" })}
+              />
+              {errors.subject && (
+                <p className="text-sm text-red-500">{errors.subject.message}</p>
+              )}
+            </LabelInputContainer>
+
+            <LabelInputContainer>
+              <Label htmlFor="message">Message</Label>
+              <textarea
+                id="message"
+                rows={4}
+                className="flex w-full rounded-md border-none bg-neutral-800 px-3 py-2 text-sm shadow-input placeholder:text-neutral-400 text-white"
+                placeholder="Votre message..."
+                {...register("message", { 
+                  required: "Le message est requis",
+                  minLength: {
+                    value: 10,
+                    message: "Le message doit contenir au moins 10 caractères"
+                  }
+                })}
+              />
+              {errors.message && (
+                <p className="text-sm text-red-500">{errors.message.message}</p>
+              )}
+            </LabelInputContainer>
+
+            <button
+              className="relative group/btn w-full bg-gradient-to-br from-neutral-900 to-black text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff20_inset,0px_-1px_0px_0px_#ffffff20_inset] disabled:opacity-50"
+              type="submit"
+              disabled={isSubmitting}
             >
-              <option value="consulting">Consulting Blockchain</option>
-              <option value="dev">Développement</option>
-              <option value="general">Contact Général</option>
-            </select>
-            {errors.type && (
-              <p className="mt-1 text-sm text-red-500">{errors.type.message}</p>
+              {isSubmitting ? "Envoi en cours..." : "Envoyer →"}
+              <BottomGradient />
+            </button>
+
+            {submitStatus === 'success' && (
+              <div className="p-4 bg-green-900/50 text-green-300 rounded-md">
+                Message envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.
+              </div>
             )}
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-white">Nom</label>
-            <input
-              type="text"
-              {...register("name", { required: "Le nom est requis" })}
-              className="mt-1 block w-full rounded-md border-gray-700 bg-neutral-900 text-white p-2"
-            />
-            {errors.name && (
-              <p className="mt-1 text-sm text-red-500">{errors.name.message}</p>
+            {submitStatus === 'error' && (
+              <div className="p-4 bg-red-900/50 text-red-300 rounded-md">
+                Une erreur est survenue. Veuillez réessayer plus tard.
+              </div>
             )}
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-white">Email</label>
-            <input
-              type="email"
-              {...register("email", { 
-                required: "L'email est requis",
-                pattern: {
-                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                  message: "Adresse email invalide"
-                }
-              })}
-              className="mt-1 block w-full rounded-md border-gray-700 bg-neutral-900 text-white p-2"
-            />
-            {errors.email && (
-              <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>
-            )}
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-white">Sujet</label>
-            <input
-              type="text"
-              {...register("subject", { required: "Le sujet est requis" })}
-              className="mt-1 block w-full rounded-md border-gray-700 bg-neutral-900 text-white p-2"
-            />
-            {errors.subject && (
-              <p className="mt-1 text-sm text-red-500">{errors.subject.message}</p>
-            )}
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-white">Message</label>
-            <textarea
-              {...register("message", { 
-                required: "Le message est requis",
-                minLength: {
-                  value: 10,
-                  message: "Le message doit contenir au moins 10 caractères"
-                }
-              })}
-              rows={6}
-              className="mt-1 block w-full rounded-md border-gray-700 bg-neutral-900 text-white p-2"
-            />
-            {errors.message && (
-              <p className="mt-1 text-sm text-red-500">{errors.message.message}</p>
-            )}
-          </div>
-
-          <Button 
-            type="submit" 
-            disabled={isSubmitting}
-            className="w-full"
-          >
-            {isSubmitting ? 'Envoi en cours...' : 'Envoyer'}
-          </Button>
-
-          {submitStatus === 'success' && (
-            <div className="p-4 bg-green-900/50 text-green-300 rounded-md">
-              Message envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.
-            </div>
-          )}
-          {submitStatus === 'error' && (
-            <div className="p-4 bg-red-900/50 text-red-300 rounded-md">
-              Une erreur est survenue. Veuillez réessayer plus tard.
-            </div>
-          )}
-        </form>
+          </form>
+        </div>
 
         <div className="max-w-3xl mx-auto mt-24 px-4">
           <h2 className={`${quicksand.className} text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-white via-neutral-200 to-white`}>

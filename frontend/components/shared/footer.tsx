@@ -43,7 +43,7 @@ export default function Footer() {
                 <ul className="space-y-2">
                   <li>
                     <Link href="/dev" className="text-neutral-400 hover:text-neutral-200 text-sm">
-                      Blockchain Development
+                      Développement Blockchain
                     </Link>
                   </li>
                   <li>

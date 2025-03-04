@@ -59,7 +59,7 @@ export default function Page() {
     <main className="bg-neutral-950 min-h-screen">
       <HeaderMain />
       <div className="container mx-auto py-12 px-4">
-        <Link href="/" className="hidden md:block absolute left-8 top-24">
+        <Link href="/" className="hidden md:block absolute left-8 top-24 z-10">
           <Button variant="outline" className="flex items-center gap-2 bg-neutral-900 text-neutral-200 border-neutral-800 hover:bg-neutral-800">
             <ArrowLeft className="h-4 w-4" />
             Retour

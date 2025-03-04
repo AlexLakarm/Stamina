@@ -48,8 +48,8 @@ export default function Activities() {
                   </h2>
                   <p className="text-neutral-400 text-base md:text-lg">
                     Développement de solutions blockchain sur mesure, smart contracts, 
-                    et applications décentralisées (dApps). Notre expertise technique 
-                    vous accompagne dans votre transition vers le Web3.
+                    et applications décentralisées. Notre expertise technique 
+                    vous accompagne dans vos projets sur evm et bientôt sur Solana.
                   </p>
                 </div>
                 <div className="mt-8">

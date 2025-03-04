@@ -51,7 +51,7 @@ export default function DevPage() {
                   <h4 className="text-neutral-200 font-medium mb-2 text-lg md:text-base">Smart Contracts EVM</h4>
                   <p className="text-neutral-400 text-base md:text-sm">
                     Développement de contrats intelligents en Solidity pour Ethereum et réseaux compatibles. 
-                    Tests approfondis et audit de sécurité inclus.
+                    Tests unitaires et audit de sécurité inclus.
                   </p>
                 </div>
                 
@@ -97,7 +97,7 @@ export default function DevPage() {
                   <h4 className="text-neutral-200 font-medium mb-2">Frontend & Backend</h4>
                   <ul className="space-y-2 text-sm">
                     <li>• React & Next.js</li>
-                    <li>• TypeScript</li>
+                    <li>• TypeScript & Tailwind CSS</li>
                     <li>• Node.js</li>
                     <li>• The Graph & IPFS</li>
                   </ul>

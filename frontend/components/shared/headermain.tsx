@@ -3,7 +3,7 @@
 import { Code, Briefcase, Mail, Book, GraduationCap } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
-import {useState } from 'react';
+import {useState, useEffect } from 'react';
 import { Roboto } from "next/font/google";
 import NextImage from 'next/image';
 
@@ -23,12 +23,32 @@ const navigation = [
 const HeaderMain = () => {
     const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
+
+    useEffect(() => {
+        const controlNavbar = () => {
+            if (window.scrollY > lastScrollY) { // scroll vers le bas
+                setIsVisible(false);
+            } else { // scroll vers le haut
+                setIsVisible(true);
+            }
+            setLastScrollY(window.scrollY);
+        };
+
+        window.addEventListener('scroll', controlNavbar);
+        return () => {
+            window.removeEventListener('scroll', controlNavbar);
+        };
+    }, [lastScrollY]);
 
     return (
         <>
-            <header className="border-b border-neutral-800 fixed top-0 left-0 right-0 bg-neutral-950 z-50">
+            <header className={`border-b border-neutral-800 fixed top-0 left-0 right-0 bg-neutral-950 z-50 transition-transform duration-300 ${
+                isVisible ? 'translate-y-0' : '-translate-y-full'
+            }`}>
                 <div className="container mx-auto px-4 py-2 lg:py-3">
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mr-6 ml-6">
                         {/* Logo et titre à gauche */}
                         <div className="flex items-center gap-4">
                             <div className="hidden md:block">
