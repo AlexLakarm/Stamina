@@ -210,6 +210,7 @@ export default function ConsultingPage() {
                         Consulting & Formation
                     </h1>
 
+
                     <div className={`${inter.className} space-y-8 text-lg text-neutral-400 leading-relaxed`}>
                         <div className="bg-neutral-900/50 p-6 rounded-xl border border-blue-500/40 shadow-[0_0_15px_rgba(59,130,246,0.15)]">
                             <h2 className="text-2xl font-bold text-neutral-200 mb-4">Notre Expertise</h2>
