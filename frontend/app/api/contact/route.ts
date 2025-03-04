@@ -62,12 +62,9 @@ export async function POST(req: Request) {
       throw emailError;
     }
   } catch (error) {
-    console.error('API Error:', error);
+    console.error('API Error:', error); // Debug log
     return NextResponse.json(
-      { 
-        error: 'Failed to send email', 
-        details: error instanceof Error ? error.message : 'Unknown error'
-      },
+      { error: 'Failed to send email', details: error.message },
       { status: 500 }
     );
   }

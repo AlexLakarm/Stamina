@@ -197,20 +197,18 @@ export default function ConsultingPage() {
     return (
         <div className="min-h-screen bg-neutral-950">
             <HeaderMain />
-            <div className="max-w-[1920px] mx-auto px-4 pt-20">
-                <Link href="/" className="hidden md:block absolute left-8 top-24">
-                    <Button variant="outline" className="flex items-center gap-2 bg-neutral-900 text-neutral-200 border-neutral-800 hover:bg-neutral-800">
-                        <ArrowLeft className="h-4 w-4" />
-                        Retour
-                    </Button>
-                </Link>
+            <div className="max-w-[1920px] mx-auto px-4 pt-12">
+            <Link href="/" className="hidden md:block absolute left-8 top-24 z-10">
+          <Button variant="outline" className="flex items-center gap-2 bg-neutral-900 text-neutral-200 border-neutral-800 hover:bg-neutral-800">
+            <ArrowLeft className="h-4 w-4" />
+            Retour
+          </Button>
+        </Link>
 
                 <div className="max-w-3xl mx-auto">
-                    <h1 className={`${quicksand.className} text-4xl md:text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-white via-neutral-200 to-white drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]`}>
-                        Consulting & Formation
-                    </h1>
-
-
+                <h1 className={`${quicksand.className} text-4xl md:text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-white via-neutral-200 to-white drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]`}>
+                    Consulting & Formation
+                </h1>
                     <div className={`${inter.className} space-y-8 text-lg text-neutral-400 leading-relaxed`}>
                         <div className="bg-neutral-900/50 p-6 rounded-xl border border-blue-500/40 shadow-[0_0_15px_rgba(59,130,246,0.15)]">
                             <h2 className="text-2xl font-bold text-neutral-200 mb-4">Notre Expertise</h2>
