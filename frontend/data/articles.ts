@@ -201,11 +201,11 @@ Longtemps perçu comme un simple actif spéculatif, Bitcoin est désormais compa
 
 Les **NFTs (Non-Fungible Tokens)** ont transformé le monde du numérique en permettant de **certifier la propriété d'actifs uniques** sur la blockchain. Ces jetons sont utilisés pour représenter des œuvres d'art, des objets de collection, des terrains virtuels et bien plus encore.
 
-Dans cet écosystème, **OpenSea** s'est imposée comme la **plus grande marketplace NFT**, jouant un rôle clé dans l'explosion du marché en **2021**.
+Dans cet écosystème, **OpenSea** s'est imposée comme une **marketplace NFT pionnière**, jouant un rôle clé dans l'explosion du marché en **2021**.
 
 ## OpenSea : Présentation de la Marketplace
 
-Fondée en **2017**, OpenSea est une plateforme qui permet aux utilisateurs d'acheter, vendre et échanger des NFTs sur différentes blockchains, principalement **Ethereum, Polygon et Solana**. Grâce à son interface intuitive, elle est devenue la référence pour les collectionneurs et créateurs de NFTs.
+Fondée en **2017**, OpenSea est une plateforme qui permet aux utilisateurs d'acheter, vendre et échanger des NFTs sur différentes blockchains, son marché principal restan **Ethereum**. Grâce à son interface intuitive, elle est devenue la référence pour les collectionneurs et créateurs de NFTs.
 
 ### Pourquoi OpenSea a dominé le marché en 2021 ?
 
@@ -233,7 +233,8 @@ Malgré son succès, OpenSea a fait face à plusieurs défis :
 
 ## Conclusion
 
-OpenSea reste aujourd'hui une référence incontournable dans le monde des NFTs. Bien que le marché ait évolué, la plateforme continue d'innover et d'adapter son modèle face aux nouveaux défis.`
+Si OpenSea a longtemps été une référence incontournable dans le monde des NFTs, son influence a été remise en question par l'émergence de plateformes plus décentralisées comme Blur, Tensor (pour Solana), et Magic Eden, qui séduisent de plus en plus de créateurs et de collectionneurs grâce à des frais réduits et une meilleure intégration aux écosystèmes blockchain. Face à cette concurrence accrue et à l'évolution des standards du marché, OpenSea doit continuellement innover pour rester pertinent.  
+`
   },
   {
     id: "4",
@@ -304,7 +305,7 @@ Contrairement à Ethereum et aux blockchains compatibles EVM, Solana utilise **R
 
 ## Conclusion
 
-Solana s'impose comme **l'une des blockchains les plus prometteuses du bullrun 2024-2025**. Avec son **écosystème DeFi en pleine expansion, sa domination sur les meme coins et sa technologie avancée**, elle est aujourd'hui incontournable dans l'univers crypto.`
+Solana s'impose comme **l'une des blockchains les plus prometteuses en 2025**. Avec son **écosystème DeFi en pleine expansion, sa domination sur les meme coins et sa technologie avancée**, elle est aujourd'hui incontournable dans l'univers crypto.`
   },
   {
     id: "5",
