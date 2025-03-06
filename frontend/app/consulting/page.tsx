@@ -222,8 +222,8 @@ export default function ConsultingPage() {
 
                         <div className="space-y-6">
                             <h3 className="text-xl font-semibold text-neutral-300">Nos Services</h3>
-                            <div className="grid gap-6 md:grid-cols-2">
-                                <div className="bg-neutral-900/30 p-5 rounded-lg border border-neutral-800">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div className="p-6 rounded-xl bg-neutral-900/50 border border-neutral-400/50 hover:border-neutral-200/50 transition-colors">
                                     <h4 className="text-neutral-200 font-medium mb-2 text-xl md:text-lg">Conseil Stratégique</h4>
                                     <p className="text-neutral-400 text-lg md:text-base">
                                         Accompagnement des organisations dans leur approche de l'écosystème crypto, 
@@ -231,7 +231,7 @@ export default function ConsultingPage() {
                                     </p>
                                 </div>
                                 
-                                <div className="bg-neutral-900/30 p-5 rounded-lg border border-neutral-800">
+                                <div className="p-6 rounded-xl bg-neutral-900/50 border border-neutral-400/50 hover:border-neutral-200/50 transition-colors">
                                     <h4 className="text-neutral-200 font-medium mb-2 text-xl md:text-lg">Formation & Workshops</h4>
                                     <p className="text-neutral-400 text-lg md:text-base">
                                         Sessions pratiques et séminaires adaptés à votre contexte : découverte, 
@@ -239,7 +239,7 @@ export default function ConsultingPage() {
                                     </p>
                                 </div>
 
-                                <div className="bg-neutral-900/30 p-5 rounded-lg border border-neutral-800">
+                                <div className="p-6 rounded-xl bg-neutral-900/50 border border-neutral-400/50 hover:border-neutral-200/50 transition-colors">
                                     <h4 className="text-neutral-200 font-medium mb-2 text-xl md:text-lg">Veille & Analyse</h4>
                                     <p className="text-neutral-400 text-lg md:text-base">
                                         Décryptage des innovations blockchain et de leurs impacts potentiels 
@@ -247,7 +247,7 @@ export default function ConsultingPage() {
                                     </p>
                                 </div>
 
-                                <div className="bg-neutral-900/30 p-5 rounded-lg border border-neutral-800">
+                                <div className="p-6 rounded-xl bg-neutral-900/50 border border-neutral-400/50 hover:border-neutral-200/50 transition-colors">
                                     <h4 className="text-neutral-200 font-medium mb-2 text-xl md:text-lg">Support Réglementaire</h4>
                                     <p className="text-neutral-400 text-lg md:text-base">
                                         Accompagnement dans la compréhension du cadre réglementaire crypto 
