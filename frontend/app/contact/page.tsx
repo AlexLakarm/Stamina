@@ -238,11 +238,11 @@ export default function ContactPage() {
               </p>
               
               <p>
-                Pour répondre à vos besoins je m'appuie d'abord sur mes expériences dans le milieu bancaire au Crédit Mutuel Arkéa puis au Crédit Agricole du Finistère mais aussi sur mes récentes certifications spécifiques à la blockchain.
+                Pour répondre à vos besoins je m'appuie sur mon profil hybride : après plusieurs années d'expériences accumulées au sein d'établisement bancaire régionaux, j'ai confirmé un attrait certain pour les technologies blockchain et le développement web via une formation spécifique chez un acteur de référence dans le domaine.
               </p>
               
               <p>
-                Je suis en effet certifié en développement blockchain par l'école Alyra depuis Janvier 2025. La maîtrise du développement d'une application décentralisée me permet de connaître en profondeur cet écosystème et les technologies qui le rendent aussi attractif.
+                Je suis en effet certifié en développement blockchain par l'école Alyra et France Compétences depuis Janvier 2025. La maîtrise du développement d'une application décentralisée me permet de connaître en profondeur cet écosystème et les technologies qui le rendent aussi attractif.
               </p>
               
               <p>
