@@ -258,7 +258,7 @@ Avec la montée en puissance des **meme coins et applications DeFi** sur son ré
 
 - **Vitesse et Scalabilité** : Solana peut traiter jusqu'à **65 000 transactions par seconde (TPS)**, bien au-delà des blockchains concurrentes.
 - **Frais ultra-faibles** : Une transaction coûte en moyenne **moins d'un centime**, rendant le réseau accessible à tous.
-- **Décentralisation et Sécurité** : Un réseau de **plusieurs milliers de validateurs** répartis dans le monde garantit une forte résilience.
+- **Décentralisation et Sécurité** : Un réseau de **plusieurs milliers de validateurs** répartis dans le monde garantit une forte résilience. Ce point fait toutefois l'objet de critiques légitimes, la blockchain étant moins décentralisée que d'autres blockchains concurrentes : le nombre de validateurs effectifs est assez faible et les barrières à l'entrée sont elevées. 
 - **Expérience utilisateur fluide** : Solana élimine les problèmes de congestion et offre une UX optimisée.
 
 ## Historique et Développement de Solana
@@ -266,6 +266,31 @@ Avec la montée en puissance des **meme coins et applications DeFi** sur son ré
 Solana a été fondée en **2017** par **Anatoly Yakovenko**, un ancien ingénieur de Qualcomm, avec l'objectif de créer une blockchain rapide et performante. Après son lancement officiel en **2020**, la plateforme a connu une adoption massive en **2021**, notamment grâce à l'essor des NFTs et de la DeFi.
 
 Malgré un ralentissement lors du bear market de 2022-2023, où **le prix du SOL est tombé sous les 10$**, **Solana est revenue en force en 2024**, atteignant un **plus haut de 293$ début 2025**, portée par une communauté active et de nombreux projets innovants.
+
+## Consensus et Validation
+
+Solana repose sur un mécanisme de consensus hybride combinant **Preuve d'Enjeu (Proof of Stake, PoS)** et **Preuve d'Histoire (Proof of History, PoH)** pour garantir la sécurité et la rapidité du réseau.
+
+### Proof of Stake (PoS) : un consensus basé sur le staking
+
+Le Proof of Stake est un mécanisme où les validateurs sont sélectionnés pour produire des blocs en fonction du montant de SOL qu'ils ont mis en jeu (*staké*). Contrairement aux blockchains fonctionnant sur le Proof of Work (PoW), comme Bitcoin, qui nécessitent une puissance de calcul élevée pour résoudre des puzzles cryptographiques, le PoS permet de sécuriser le réseau avec une consommation énergétique bien plus faible.
+
+Actuellement, Solana compte **1 319 validateurs actifs** (au 7 mars 2025), répartis à travers le monde. Ces validateurs sont responsables de la production et de la validation des blocs en fonction de leur participation au staking. Cependant, malgré ce nombre significatif, **la répartition du pouvoir de validation reste inégale**, car une partie importante du staking est concentrée entre quelques acteurs majeurs, soulevant des interrogations sur la véritable décentralisation du réseau.
+
+### Proof of History (PoH) : un horodatage cryptographique pour accélérer le consensus
+
+L'une des innovations majeures de Solana est son mécanisme de **Proof of History (PoH)**. Contrairement aux blockchains classiques où chaque bloc doit être validé de manière séquentielle par le réseau entier avant de passer au suivant, Solana utilise un système d’horodatage cryptographique permettant d’organiser les transactions **avant** même qu'elles ne soient validées.
+
+Le PoH fonctionne comme une **horloge cryptographique vérifiable**, générant une séquence de timestamps indépendants des nœuds du réseau. Cela permet aux validateurs de traiter les transactions en parallèle au lieu d'attendre une synchronisation globale, ce qui réduit drastiquement les temps de confirmation et améliore la scalabilité du réseau.
+
+Grâce à cette approche, Solana peut atteindre **des milliers de transactions par seconde (TPS)**, bien au-delà des capacités des blockchains traditionnelles. Cependant, cette performance a un coût :
+
+- **Des exigences matérielles élevées** pour les validateurs, nécessitant un matériel puissant (CPU, RAM et stockage rapide) pour suivre le rythme du réseau.
+- **Un coût d'exploitation important**, rendant la validation plus accessible aux grands opérateurs qu'aux individus indépendants.
+
+### Impact sur la décentralisation
+
+Bien que Solana bénéficie d’un grand nombre de validateurs par rapport à certaines blockchains, la concentration du stake et les contraintes matérielles limitent l’accès à la validation, **favorisant les acteurs disposant d’importantes ressources financières**. Cela pose des défis en termes de décentralisation, certains considérant que le réseau est plus centralisé que ses concurrents comme Ethereum.
 
 ## SOL : Le Token de Solana
 
@@ -275,7 +300,7 @@ Le token natif **SOL** joue un rôle clé dans l'écosystème Solana :
 - Il est utilisé pour le **staking**, permettant aux validateurs de sécuriser la blockchain.
 - Il alimente les applications DeFi et NFT construites sur Solana.
 
-En 2024, la demande en SOL a explosé avec l'essor des **meme coins et des applications DeFi**.
+En 2024, la demande en SOL a explosé avec l'essor des **meme coins et des applications DeFi**, un juste retour des choses avec le crash de 2022 et le scandale de FTX.
 
 ## Solana et le Bullrun 2024-2025
 
@@ -293,11 +318,13 @@ Solana héberge une **DeFi florissante**, avec des protocoles innovants :
 - **Kamino** : Un optimiseur de liquidité pour les utilisateurs DeFi.
 - **Sanctum** : Un protocole spécialisé dans les **LST (Liquid Staking Tokens)**, permettant aux utilisateurs de staker leurs SOL tout en conservant une liquidité active. Les LST permettent aux investisseurs de générer des rendements tout en utilisant leurs actifs stakés dans l'écosystème DeFi.
 
-Ces projets renforcent la position de Solana en tant que leader dans l'espace DeFi.
+Ces projets ont permis à Solana de devenir au fil des mois le principal outsider d'Ethereum sur la DeFi, avec des volumes de transactions parfois même supérieurs à la blockchain pionnière.
+
+Cela est d'autant plus vrai que ces protocoles ne se contentent pas de copier des fonctionnaités (comme les "forks" ou copies souvent vues sur les blockchain evm) mais innovent à l'image de Sanctum dernièrement.
 
 ## Développement sur Solana : Une Alternative à l'EVM
 
-Contrairement à Ethereum et aux blockchains compatibles EVM, Solana utilise **Rust** comme langage principal pour les smart contracts. Cela offre plusieurs avantages :
+Contrairement à Ethereum et aux blockchains compatibles EVM, Solana utilise **Rust** comme langage principal pour ses programs (équivalent des smart contracts sur Ethereum). Cela offre plusieurs avantages :
 
 - **Optimisation des performances** : Rust permet d'écrire du code efficace et sécurisé.
 - **Moins de congestion** : L'architecture de Solana évite les ralentissements observés sur Ethereum.
