@@ -75,7 +75,7 @@ export default function Footer() {
                 <h4 className="text-neutral-200 font-bold mb-4">Contact</h4>
                 <Link 
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-neutral-900 text-neutral-200 hover:bg-neutral-800 transition-colors text-sm"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-neutral-900 text-neutral-200 hover:bg-neutral-800 transition-colors text-sm border border-purple-800 hover:border-purple-500"
                 >
                   <Mail className="h-4 w-4" />
                   Nous contacter

@@ -93,19 +93,19 @@ export default function ContactPage() {
           </Button>
         </Link>
 
-        <h1 className={`${quicksand.className} text-4xl md:text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-white via-neutral-200 to-white drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]`}>
-          Contactez-nous
-        </h1>
+        <h1 className={`${quicksand.className} text-4xl md:text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-white via-neutral-100 to-white drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]`}>
+            Contactez-nous
+          </h1>
 
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <p className="text-neutral-300">
+          <p className="text-neutral-200 text-base md:text-lg lg:text-xl">
             Vous avez un projet blockchain ? Nous avons l'expertise ! 
             Que ce soit pour du conseil, du développement ou toute autre demande, 
             Stamina vous accompagne dans votre aventure Web3.
           </p>
         </div>
 
-        <div className="max-w-md w-full mx-auto rounded-xl p-4 md:p-8 shadow-input bg-black/40 border border-neutral-800/50">
+        <div className="max-w-md w-full mx-auto rounded-xl p-4 md:p-8 shadow-input bg-black/40 border border-indigo-800/50 transition-colors duration-300">
           <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
             <LabelInputContainer>
               <Label htmlFor="type">Type de contact</Label>
@@ -208,7 +208,7 @@ export default function ContactPage() {
               </div>
             )}
           </form>
-        </div>
+            </div>
 
         <div className="max-w-3xl mx-auto mt-24 px-4">
           <h2 className={`${quicksand.className} text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-white via-neutral-200 to-white`}>
@@ -225,7 +225,7 @@ export default function ContactPage() {
                 className="rounded-full object-cover w-full h-full"
               />
             </div>
-            
+
             <div className="space-y-4 flex-grow relative">
               <span className="absolute -left-8 -top-8 text-6xl text-blue-800 opacity-80">"</span>
               
@@ -234,15 +234,16 @@ export default function ContactPage() {
               </p>
               
               <p>
-                Je n'ai pas choisi ce nom au hasard. Stamina signifie endurance, persévérance. Ces notions font particulièrement écho en moi du fait de mon expérience sportive mais aussi car ce sont des qualités essentielles lorsque l'on initie une aventure entrepreneuriale.
+                Je n'ai pas choisi ce nom au hasard. Stamina signifie endurance, persévérance. Ces notions font particulièrement écho en moi, issues de mon parcours sportif mais aussi essentielles dans toute aventure entrepreneuriale.
               </p>
               
               <p>
-                Pour répondre à vos besoins je m'appuie sur mon profil hybride : après plusieurs années d'expériences accumulées au sein d'établisement bancaire régionaux, j'ai confirmé un attrait certain pour les technologies blockchain et le développement web via une formation spécifique chez un acteur de référence dans le domaine.
+                Pour répondre à vos besoins je m'appuie sur un profil hybride. Après plusieurs années d'expérience au sein d'établissements bancaires, j'ai choisi de me spécialiser dans le développement web et les technologies blockchain. Une formation ciblée auprès d'un acteur de référence m'a permis de concrétiser cette transition.
               </p>
-              
+            
               <p>
-                Je suis en effet certifié en développement blockchain par l'école Alyra et France Compétences depuis Janvier 2025. La maîtrise du développement d'une application décentralisée me permet de connaître en profondeur cet écosystème et les technologies qui le rendent aussi attractif.
+                Je suis en effet certifié en développement blockchain par l'école Alyra et France Compétences.
+                La maîtrise du développement d'une application décentralisée me permet de connaître en profondeur cet écosystème et les technologies qui le rendent aussi attractif.
               </p>
               
               <p>

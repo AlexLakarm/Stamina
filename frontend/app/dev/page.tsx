@@ -34,13 +34,15 @@ export default function DevPage() {
             Développement Blockchain
           </h1>
 
-          <div className={`${inter.className} space-y-8 text-lg text-neutral-400 leading-relaxed`}>
-            <div className="bg-neutral-900/50 p-6 rounded-xl border border-blue-500/40 shadow-[0_0_15px_rgba(59,130,246,0.15)]">
-              <h2 className="text-2xl font-bold text-neutral-200 mb-4">Notre Expertise</h2>
-              <p>
-                Nous développons des solutions blockchain innovantes sur les réseaux EVM (Ethereum Virtual Machine) 
+          <div className={`${inter.className} space-y-8 text-lg text-neutral-300 leading-relaxed`}>
+            <div className="bg-indigo-500/10 p-6 rounded-xl border border-indigo-400/40 shadow-[0_0_15px_rgba(102,102,255,0.3)]">
+              <h2 className="text-2xl md:text-3xl font-bold text-neutral-200 mb-4">
+                Notre Expertise
+              </h2>
+              <p className="text-neutral-300 text-base md:text-lg">
+                Nous développons des applications décentralisées (DApps) sur les réseaux EVM (Ethereum Virtual Machine) 
                 et bientôt sur Solana. Notre équipe maîtrise les dernières technologies pour créer des applications 
-                décentralisées performantes et sécurisées.
+                performantes et sécurisées.
               </p>
             </div>
 
@@ -48,34 +50,34 @@ export default function DevPage() {
               <h3 className="text-xl font-semibold text-neutral-300">Nos Services de Développement</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="p-6 rounded-xl bg-neutral-900/50 border border-neutral-400/50 hover:border-neutral-200/50 transition-colors">
-                  <h4 className="text-neutral-200 font-medium mb-2 text-lg md:text-base">Smart Contracts EVM</h4>
-                  <p className="text-neutral-400 text-base md:text-sm">
-                    Développement de contrats intelligents en Solidity pour Ethereum et réseaux compatibles. 
+                  <h4 className="text-neutral-200 font-medium mb-2 text-xl md:text-lg">Smart Contracts EVM</h4>
+                  <p className="text-neutral-400 text-lg md:text-base">
+                    Développement de contrats intelligents en Solidity pour Ethereum et réseaux compatibles (Avalanche, Arbitrum, Optimism, etc.). 
                     Tests unitaires et audit de sécurité inclus.
                   </p>
                 </div>
                 
                 <div className="p-6 rounded-xl bg-neutral-900/50 border border-neutral-400/50 hover:border-neutral-200/50 transition-colors">
-                  <h4 className="text-neutral-200 font-medium mb-2 text-lg md:text-base">DApps & Frontend</h4>
-                  <p className="text-neutral-400 text-base md:text-sm">
-                    Applications web3 modernes avec React/Next.js. Intégration wallet, 
-                    interactions blockchain et expérience utilisateur optimisée.
+                  <h4 className="text-neutral-200 font-medium mb-2 text-xl md:text-lg">DApps & Frontend</h4>
+                  <p className="text-neutral-400 text-lg md:text-base">
+                    Applications web3 modernes et intuitives. Intégration wallet, 
+                    interactions smart contracts et expérience utilisateur optimisée.
                   </p>
                 </div>
 
                 <div className="p-6 rounded-xl bg-neutral-900/50 border border-neutral-400/50 hover:border-neutral-200/50 transition-colors">
-                  <h4 className="text-neutral-200 font-medium mb-2 text-lg md:text-base">Tokens & NFTs</h4>
-                  <p className="text-neutral-400 text-base md:text-sm">
-                    Création de tokens ERC-20/ERC-721/ERC-1155 personnalisés. 
-                    Smart contracts, marketplace et outils de gestion sur mesure.
+                  <h4 className="text-neutral-200 font-medium mb-2 text-xl md:text-lg">Tokenisation</h4>
+                  <p className="text-neutral-400 text-lg md:text-base">
+                    Création de tokens personnalisés (ERC20, ERC721, ERC1155). 
+                    Mécaniques de staking, vesting et gouvernance.
                   </p>
                 </div>
 
                 <div className="p-6 rounded-xl bg-neutral-900/50 border border-neutral-400/50 hover:border-neutral-200/50 transition-colors">
-                  <h4 className="text-neutral-200 font-medium mb-2 text-lg md:text-base">DeFi & DAO</h4>
-                  <p className="text-neutral-400 text-base md:text-sm">
-                    Développement de protocoles DeFi et systèmes de gouvernance DAO. 
-                    Staking, farming, voting et treasury management.
+                  <h4 className="text-neutral-200 font-medium mb-2 text-xl md:text-lg">Audit & Sécurité</h4>
+                  <p className="text-neutral-400 text-lg md:text-base">
+                    Revue de code, tests de sécurité et optimisation des smart contracts. 
+                    Protection contre les vulnérabilités courantes.
                   </p>
                 </div>
               </div>

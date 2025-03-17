@@ -15,7 +15,7 @@ export const articles: Article[] = [
   {
     id: "1",
     title: "Aave : Le Protocole leader de la DeFi",
-    description: "Partez à la découverte d'Aave, l’un des protocoles DeFi les plus réputés et sécurisés, pionnier dans l’utilisation des pools de liquidité et désormais déployé sur plusieurs blockchains.",
+    description: "Partez à la découverte d'Aave, l'un des protocoles DeFi les plus réputés et sécurisés, pionnier dans l'utilisation des pools de liquidité et désormais déployé sur plusieurs blockchains.",
     imageUrl: "/images/aave.jpg",
     slug: "aave-protocol",
     date: "2024-03-15",
@@ -28,8 +28,7 @@ export const articles: Article[] = [
 
 Aave est l'un des **protocoles pionniers de finance décentralisée (DeFi)** permettant aux utilisateurs d'emprunter et de prêter des cryptomonnaies sans intermédiaire. Lancé en 2020 sur Ethereum, Aave repose sur des **smart contracts** qui automatisent et sécurisent les transactions.
 
-Grâce à ce système, les utilisateurs peuvent **déposer des actifs pour générer des intérêts** ou **emprunter des fonds en utilisant des collatéraux** sans passer par une institution financière traditionnelle. Avec plus de 8 milliards de dollars en actifs déposés (Total Value Locked), Aave est l'un des protocoles DeFi les plus populaires. Le protocole est notamment en concurrence avec Compound, Uniswap et MakerDAO.
-A noter qu'Aave est aussi l'un des premiers à être devenu "multichain", le protocole est en effet déployé sur Avalanche, Base, Optimism et bien d'autres blockchains. Malgré cela ses services ne se sont jamais étendus à Solana, pourtant l'une des blockchain les plus populaires du moment, à cause de contraintes techniques.
+Grâce à ce système, les utilisateurs peuvent **déposer des actifs pour générer des intérêts** ou **emprunter des fonds en utilisant des collatéraux** sans passer par une institution financière traditionnelle. Avec plus de 8 milliards de dollars en actifs déposés (Total Value Locked), Aave est l'un des protocoles DeFi les plus populaires. Le protocole est notamment en concurrence avec Compound, Uniswap et MakerDAO. A noter qu'Aave est aussi l'un des premiers à être devenu "multichain", le protocole est en effet déployé sur Avalanche, Base, Optimism et bien d'autres blockchains. Malgré cela ses services ne se sont jamais étendus à Solana, pourtant l'une des blockchain les plus populaires du moment, à cause de contraintes techniques.
 
 ## Les Fondamentaux du Protocole Aave
 
@@ -50,11 +49,11 @@ Aave utilise un **système de taux d'intérêt algorithmiques** qui s'adapte en 
 
 ### Le Système de Collatéralisation
 
-Le protocole Aave repose sur un système de collatéralisation, où les emprunteurs doivent déposer des actifs en garantie pour obtenir un prêt. Si la valeur du collatéral chute en dessous d’un certain seuil (Loan-to-Value, LTV), une liquidation peut être déclenchée. Cela signifie qu’une partie des fonds déposés est vendue par des liquidateurs pour rembourser une portion de la dette, évitant ainsi un défaut de paiement et protégeant la solvabilité du protocole. Les liquidateurs reçoivent une prime en échange de leur intervention, ce qui incite les acteurs du marché à maintenir l'équilibre du système.
+Le protocole Aave repose sur un système de collatéralisation, où les emprunteurs doivent déposer des actifs en garantie pour obtenir un prêt. Si la valeur du collatéral chute en dessous d'un certain seuil (Loan-to-Value, LTV), une liquidation peut être déclenchée. Cela signifie qu'une partie des fonds déposés est vendue par des liquidateurs pour rembourser une portion de la dette, évitant ainsi un défaut de paiement et protégeant la solvabilité du protocole. Les liquidateurs reçoivent une prime en échange de leur intervention, ce qui incite les acteurs du marché à maintenir l'équilibre du système.
 
 ### Le Safety Module (SM)
 
-Pour renforcer la sécurité du protocole en cas de défaillance systémique ou de pertes importantes, Aave a mis en place un Safety Module (SM). Ce fonds de sûreté est alimenté principalement par des tokens AAVE, déposés par les utilisateurs en échange de récompenses. En cas d’événement critique, jusqu’à 30 % des fonds du Safety Module peuvent être liquidés pour combler un éventuel déficit du protocole. Ce mécanisme vise à garantir la résilience d'Aave face aux risques extrêmes et à renforcer la confiance des utilisateurs dans la stabilité de la plateforme.
+Pour renforcer la sécurité du protocole en cas de défaillance systémique ou de pertes importantes, Aave a mis en place un Safety Module (SM). Ce fonds de sûreté est alimenté principalement par des tokens AAVE, déposés par les utilisateurs en échange de récompenses. En cas d'événement critique, jusqu'à 30 % des fonds du Safety Module peuvent être liquidés pour combler un éventuel déficit du protocole. Ce mécanisme vise à garantir la résilience d'Aave face aux risques extrêmes et à renforcer la confiance des utilisateurs dans la stabilité de la plateforme.
 
 ## Focus sur la Décentralisation
 
@@ -81,7 +80,7 @@ Les cas d'usage :
 
 ### Limites et dérives
 
-Si les flash loans offrent de nombreuses opportunités aux traders et aux développeurs DeFi, ils sont aussi détournés à des fins malveillantes. Leur principal risque réside dans leur exploitation pour orchestrer des attaques complexes. Un attaquant peut, par exemple, emprunter une somme massive via un prêt flash et l’utiliser pour manipuler temporairement les prix d’un actif sur un protocole mal sécurisé (via une manipulation d’oracle ou une attaque de gouvernance). Cette distorsion artificielle lui permet ensuite d’exploiter des vulnérabilités et d’en tirer profit avant que les marchés ne retrouvent leur équilibre. De nombreux hacks notables dans la DeFi, causant des pertes de plusieurs millions de dollars, ont été facilités par ce type de mécanisme. Ainsi, bien que puissants, les prêts flash soulignent l'importance d'une sécurité rigoureuse dans l’écosystème DeFi.
+Si les flash loans offrent de nombreuses opportunités aux traders et aux développeurs DeFi, ils sont aussi détournés à des fins malveillantes. Leur principal risque réside dans leur exploitation pour orchestrer des attaques complexes. Un attaquant peut, par exemple, emprunter une somme massive via un prêt flash et l'utiliser pour manipuler temporairement les prix d'un actif sur un protocole mal sécurisé (via une manipulation d'oracle ou une attaque de gouvernance). Cette distorsion artificielle lui permet ensuite d'exploiter des vulnérabilités et d'en tirer profit avant que les marchés ne retrouvent leur équilibre. De nombreux hacks notables dans la DeFi, causant des pertes de plusieurs millions de dollars, ont été facilités par ce type de mécanisme. Ainsi, bien que puissants, les prêts flash soulignent l'importance d'une sécurité rigoureuse dans l'écosystème DeFi.
 
 ## AAVE : Le Jeton de Gouvernance
 
@@ -92,7 +91,7 @@ Le jeton **AAVE** joue un rôle clé dans l'écosystème :
 
 ## Conclusion
 
-Aave a profondément transformé le secteur du prêt et de l'emprunt en DeFi en offrant une alternative décentralisée aux institutions financières traditionnelles. Son modèle basé sur des pools de liquidité et des taux d'intérêt dynamiques permet une gestion plus flexible et transparente des actifs. Des innovations comme les flash loans et le Safety Module renforcent la résilience du protocole et ouvrent de nouvelles perspectives pour les utilisateurs. Toutefois, bien que le protocole soit devenu un acteur incontournable de la DeFi, il n’est pas exempt de risques, notamment en raison des dérives potentielles liées à l’utilisation des flash loans pour des attaques malveillantes. 
+Aave a profondément transformé le secteur du prêt et de l'emprunt en DeFi en offrant une alternative décentralisée aux institutions financières traditionnelles. Son modèle basé sur des pools de liquidité et des taux d'intérêt dynamiques permet une gestion plus flexible et transparente des actifs. Des innovations comme les flash loans et le Safety Module renforcent la résilience du protocole et ouvrent de nouvelles perspectives pour les utilisateurs. Toutefois, bien que le protocole soit devenu un acteur incontournable de la DeFi, il n'est pas exempt de risques, notamment en raison des dérives potentielles liées à l'utilisation des flash loans pour des attaques malveillantes. 
 Aave reste néanmoins un pionnier, offrant des solutions solides dans l'écosystème en constante évolution de la finance décentralisée.`
   },
   {
@@ -111,9 +110,9 @@ Aave reste néanmoins un pionnier, offrant des solutions solides dans l'écosyst
 
 Bitcoin est né en **2008** avec la publication de son **white paper**, un document fondateur rédigé par un individu ou un groupe sous le pseudonyme **Satoshi Nakamoto**. Ce texte, intitulé *"Bitcoin: A Peer-to-Peer Electronic Cash System"*, décrit un système monétaire numérique fonctionnant sans intermédiaire, basé sur un réseau **décentralisé et sécurisé par la blockchain**.  
 
-Lancé officiellement en **2009**, Bitcoin a marqué le début d’une révolution financière en permettant des transactions **sécurisées, transparentes et résistantes à la censure**. Contrairement aux monnaies fiduciaires contrôlées par les banques centrales, il repose sur un réseau **pair-à-pair (P2P)**, où chaque utilisateur peut envoyer et recevoir des fonds sans intermédiaire.  
+Lancé officiellement en **2009**, Bitcoin a marqué le début d'une révolution financière en permettant des transactions **sécurisées, transparentes et résistantes à la censure**. Contrairement aux monnaies fiduciaires contrôlées par les banques centrales, il repose sur un réseau **pair-à-pair (P2P)**, où chaque utilisateur peut envoyer et recevoir des fonds sans intermédiaire.  
 
-Satoshi Nakamoto a échangé avec la communauté Bitcoin jusqu’en **2010**, sa dernière trace publique étant un message posté sur le forum Bitcointalk en décembre de cette année. Depuis, son identité reste un mystère, renforçant encore l’aura mythique de Bitcoin, qui continue d’évoluer indépendamment de son créateur.
+Satoshi Nakamoto a échangé avec la communauté Bitcoin jusqu'en **2010**, sa dernière trace publique étant un message posté sur le forum Bitcointalk en décembre de cette année. Depuis, son identité reste un mystère, renforçant encore l'aura mythique de Bitcoin, qui continue d'évoluer indépendamment de son créateur.
 
 ## Les Fondamentaux du Bitcoin
 
@@ -121,17 +120,17 @@ Satoshi Nakamoto a échangé avec la communauté Bitcoin jusqu’en **2010**, sa
 
 La **blockchain Bitcoin** est un registre distribué qui enregistre de manière **immuable** l'historique des transactions. Chaque transaction est regroupée dans un **bloc**, qui est validé par un processus cryptographique avant d'être ajouté à la chaîne existante.  
 
-Historiquement, Bitcoin a été principalement utilisé comme un **registre de transactions financières**, garantissant la transparence et la sécurité des échanges. Cependant, son usage s’est diversifié avec l’émergence des **inscriptions** (*inscriptions*), introduites par le protocole **Ordinals**.  
+Historiquement, Bitcoin a été principalement utilisé comme un **registre de transactions financières**, garantissant la transparence et la sécurité des échanges. Cependant, son usage s'est diversifié avec l'émergence des **inscriptions** (*inscriptions*), introduites par le protocole **Ordinals**.  
 
-Les inscriptions permettent d'**ancrer des données arbitraires sur la blockchain Bitcoin**, comme des images, du texte ou des smart contracts simplifiés, en exploitant l’espace disponible dans les transactions SegWit et Taproot. Cette innovation a ouvert la voie à de nouvelles applications, notamment les **NFTs sur Bitcoin** et d'autres formes d'actifs numériques directement inscrits sur la blockchain, tout en respectant son infrastructure décentralisée et sécurisée.
+Les inscriptions permettent d'**ancrer des données arbitraires sur la blockchain Bitcoin**, comme des images, du texte ou des smart contracts simplifiés, en exploitant l'espace disponible dans les transactions SegWit et Taproot. Cette innovation a ouvert la voie à de nouvelles applications, notamment les **NFTs sur Bitcoin** et d'autres formes d'actifs numériques directement inscrits sur la blockchain, tout en respectant son infrastructure décentralisée et sécurisée.
 
 ### Le Minage et la Preuve de Travail  
 
 Le **minage** est le mécanisme qui sécurise le réseau Bitcoin et garantit son bon fonctionnement. Les mineurs utilisent de la puissance de calcul pour résoudre des **problèmes mathématiques complexes** (*preuve de travail* ou **Proof of Work** : POW). En retour, ils sont récompensés en **bitcoins nouvellement émis** ainsi que par les **frais de transaction**.  
 
-À ses débuts, il était possible de miner avec un simple **ordinateur personnel**. Aujourd’hui, le minage est principalement réalisé par des **machines spécialisées** appelées **ASICs** (*Application-Specific Integrated Circuits*), conçues exclusivement pour exécuter l’algorithme de hachage SHA-256 utilisé par Bitcoin. Cette évolution a entraîné une **industrialisation du minage**, désormais dominé par de grandes **fermes de minage** situées notamment aux **États-Unis**, au **Kazakhstan** et en **Russie**. Le minage par des particuliers existe toujours, mais il est devenu **marginal** en raison des **coûts élevés de l’électricité et du matériel**.  
+À ses débuts, il était possible de miner avec un simple **ordinateur personnel**. Aujourd'hui, le minage est principalement réalisé par des **machines spécialisées** appelées **ASICs** (*Application-Specific Integrated Circuits*), conçues exclusivement pour exécuter l'algorithme de hachage SHA-256 utilisé par Bitcoin. Cette évolution a entraîné une **industrialisation du minage**, désormais dominé par de grandes **fermes de minage** situées notamment aux **États-Unis**, au **Kazakhstan** et en **Russie**. Le minage par des particuliers existe toujours, mais il est devenu **marginal** en raison des **coûts élevés de l'électricité et du matériel**.  
 
-Tous les **210 000 blocs** (environ tous les **4 ans**), la récompense des mineurs est divisée par deux lors d’un événement appelé **halving**. Ce processus réduit progressivement l’émission de nouveaux bitcoins et renforce leur **rareté**.  
+Tous les **210 000 blocs** (environ tous les **4 ans**), la récompense des mineurs est divisée par deux lors d'un événement appelé **halving**. Ce processus réduit progressivement l'émission de nouveaux bitcoins et renforce leur **rareté**.  
 
 - **2009** : 50 BTC par bloc  
 - **2012** : 25 BTC  
@@ -145,7 +144,7 @@ Ce mécanisme est essentiel pour assurer la **déflation programmée** du Bitcoi
 
 Bitcoin repose sur un **réseau décentralisé**, où la **blockchain** est partagée et synchronisée sur des milliers d'ordinateurs, appelés **nœuds**, répartis partout dans le monde. Ces nœuds jouent un rôle essentiel en validant et en relayant les transactions, garantissant ainsi l'intégrité du réseau.  
 
-Les **nœuds Bitcoin** sont généralement exécutés sur des **serveurs dédiés**, des **ordinateurs personnels** avec une bonne capacité de stockage, ou sur des **infrastructures cloud spécialisées**. Bien que certains passionnés utilisent des appareils comme les **Raspberry Pi** pour héberger un nœud léger (*pruned node*), leur puissance de calcul et leur stockage limité ne permettent pas toujours d’exécuter un **nœud complet** sans solutions de stockage externe.  
+Les **nœuds Bitcoin** sont généralement exécutés sur des **serveurs dédiés**, des **ordinateurs personnels** avec une bonne capacité de stockage, ou sur des **infrastructures cloud spécialisées**. Bien que certains passionnés utilisent des appareils comme les **Raspberry Pi** pour héberger un nœud léger (*pruned node*), leur puissance de calcul et leur stockage limité ne permettent pas toujours d'exécuter un **nœud complet** sans solutions de stockage externe.  
 
 Contrairement à un système centralisé stocké sur un **serveur privé comme ceux d'Amazon ou de Google**, cette architecture **décentralisée** offre plusieurs avantages majeurs :  
 
@@ -181,9 +180,9 @@ Bitcoin est conçu pour être **résistant à la censure** : aucune entité ne p
 
 ## Conclusion
 
-Bitcoin est la première véritable monnaie numérique, conçue sur la base du white paper révolutionnaire de Satoshi Nakamoto. En introduisant la première blockchain fonctionnelle, il a posé les fondations d’une technologie aujourd’hui adoptée bien au-delà des cryptomonnaies, avec des applications dans la finance, la logistique et bien d'autres secteurs.
+Bitcoin est la première véritable monnaie numérique, conçue sur la base du white paper révolutionnaire de Satoshi Nakamoto. En introduisant la première blockchain fonctionnelle, il a posé les fondations d'une technologie aujourd'hui adoptée bien au-delà des cryptomonnaies, avec des applications dans la finance, la logistique et bien d'autres secteurs.
 
-Longtemps perçu comme un simple actif spéculatif, Bitcoin est désormais comparé à l’or numérique, une réserve de valeur reconnue mondialement. Son adoption institutionnelle s’accélère, illustrée par l’approbation d’ETF Bitcoin et l’intérêt croissant des grandes institutions financières. Son prix, qui a récemment franchi la barre symbolique des 100 000 dollars, témoigne de cette reconnaissance grandissante et du rôle central qu’il pourrait jouer dans l’économie numérique du futur.`
+Longtemps perçu comme un simple actif spéculatif, Bitcoin est désormais comparé à l'or numérique, une réserve de valeur reconnue mondialement. Son adoption institutionnelle s'accélère, illustrée par l'approbation d'ETF Bitcoin et l'intérêt croissant des grandes institutions financières. Son prix, qui a récemment franchi la barre symbolique des 100 000 dollars, témoigne de cette reconnaissance grandissante et du rôle central qu'il pourrait jouer dans l'économie numérique du futur.`
   },
   {
     id: "3",
@@ -238,7 +237,7 @@ Si OpenSea a longtemps été une référence incontournable dans le monde des NF
   },
   {
     id: "4",
-    title: "Solana : La Blockchain Ultra-Rapide",
+    title: "Solana : L'innovation au service des utilisateurs'",
     description: "Plongez dans l'écosystème Solana, ses avantages en termes de rapidité et de coûts, ainsi que ses défis techniques.",
     imageUrl: "/images/solana.jpg",
     slug: "solana-ecosystem",
@@ -257,8 +256,8 @@ Avec la montée en puissance des **meme coins et applications DeFi** sur son ré
 ## Les Avantages de Solana
 
 - **Vitesse et Scalabilité** : Solana peut traiter jusqu'à **65 000 transactions par seconde (TPS)**, bien au-delà des blockchains concurrentes.
-- **Frais ultra-faibles** : Une transaction coûte en moyenne **moins d'un centime**, rendant le réseau accessible à tous.
-- **Décentralisation et Sécurité** : Un réseau de **plusieurs milliers de validateurs** répartis dans le monde garantit une forte résilience. Ce point fait toutefois l'objet de critiques légitimes, la blockchain étant moins décentralisée que d'autres blockchains concurrentes : le nombre de validateurs effectifs est assez faible et les barrières à l'entrée sont elevées. 
+- **Frais ultra-faibles** : Une transaction coûte **quelques centimes**, rendant le réseau accessible à tous.
+- **Décentralisation et Sécurité** : Un réseau de **plusieurs centaines de validateurs** répartis dans le monde garantit une forte résilience. Ce point fait toutefois l'objet de critiques légitimes, la blockchain étant moins décentralisée que d'autres blockchains concurrentes : le nombre de validateurs effectifs reste relativement faible et les barrières à l'entrée (matériel, staking) sont elevées. 
 - **Expérience utilisateur fluide** : Solana élimine les problèmes de congestion et offre une UX optimisée.
 
 ## Historique et Développement de Solana
@@ -279,7 +278,7 @@ Actuellement, Solana compte **1 319 validateurs actifs** (au 7 mars 2025), répa
 
 ### Proof of History (PoH) : un horodatage cryptographique pour accélérer le consensus
 
-L'une des innovations majeures de Solana est son mécanisme de **Proof of History (PoH)**. Contrairement aux blockchains classiques où chaque bloc doit être validé de manière séquentielle par le réseau entier avant de passer au suivant, Solana utilise un système d’horodatage cryptographique permettant d’organiser les transactions **avant** même qu'elles ne soient validées.
+L'une des innovations majeures de Solana est son mécanisme de **Proof of History (PoH)**. Contrairement aux blockchains classiques où chaque bloc doit être validé de manière séquentielle par le réseau entier avant de passer au suivant, Solana utilise un système d'horodatage cryptographique permettant d'organiser les transactions **avant** même qu'elles ne soient validées.
 
 Le PoH fonctionne comme une **horloge cryptographique vérifiable**, générant une séquence de timestamps indépendants des nœuds du réseau. Cela permet aux validateurs de traiter les transactions en parallèle au lieu d'attendre une synchronisation globale, ce qui réduit drastiquement les temps de confirmation et améliore la scalabilité du réseau.
 
@@ -290,7 +289,7 @@ Grâce à cette approche, Solana peut atteindre **des milliers de transactions p
 
 ### Impact sur la décentralisation
 
-Bien que Solana bénéficie d’un grand nombre de validateurs par rapport à certaines blockchains, la concentration du stake et les contraintes matérielles limitent l’accès à la validation, **favorisant les acteurs disposant d’importantes ressources financières**. Cela pose des défis en termes de décentralisation, certains considérant que le réseau est plus centralisé que ses concurrents comme Ethereum.
+Bien que Solana bénéficie d'un grand nombre de validateurs par rapport à certaines blockchains, la concentration du stake et les contraintes matérielles limitent l'accès à la validation, **favorisant les acteurs disposant d'importantes ressources financières**. Cela pose des défis en termes de décentralisation, certains considérant que le réseau est plus centralisé que ses concurrents comme Ethereum.
 
 ## SOL : Le Token de Solana
 
@@ -343,8 +342,11 @@ Solana s'impose comme **l'une des blockchains les plus prometteuses en 2025**. A
     date: "2024-02-20",
     category: "Analyse",
     keywords: ["FTX", "Sam Bankman-Fried", "crypto crash", "exchange centralisé", "bear market 2022", "faillite FTX", "CEX", "Alameda Research"],
-    readTime: "15 min",
+    readTime: "5 min",
     content: `# FTX : L'Ascension et la Chute de l'Exchange Crypto
+
+![En 2021, Sam Bankman-Fried faisait la couverture du magazine Forbes](/images/sbf2021.jpg)
+*En 2021, Sam Bankman-Fried faisait la couverture du magazine Forbes*
 
 ## Introduction
 

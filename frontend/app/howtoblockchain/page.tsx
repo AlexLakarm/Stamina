@@ -82,6 +82,21 @@ export default function HowToBlockchainPage() {
                             </p>
                         </div>
 
+                        <div className="flex justify-center pt-4 mb-4">
+                            <a
+                                href="https://www.howtoblockchain.staminadev.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-6 text-lg hover:opacity-90 transition-opacity flex items-center gap-2">
+                                    <span className={quicksand.className}>
+                                        Accéder à la plateforme
+                                    </span>
+                                    <ExternalLink className="h-5 w-5" />
+                                </Button>
+                            </a>
+                        </div>
+
                         <div className="space-y-6">
                             <h3 className="text-xl font-semibold text-neutral-300">Fonctionnalités Principales</h3>
                             <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-2 lg:gap-4">
@@ -136,13 +151,13 @@ export default function HowToBlockchainPage() {
 
                         <div className="flex justify-center pt-8">
                             <a
-                                href="https://how-to-blockchain-6aov.vercel.app/"
+                                href="https://www.howtoblockchain.staminadev.com/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
                                 <Button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-6 text-lg hover:opacity-90 transition-opacity flex items-center gap-2">
                                     <span className={quicksand.className}>
-                                        Accéder à la plateforme
+                                        C'est parti !
                                     </span>
                                     <ExternalLink className="h-5 w-5" />
                                 </Button>

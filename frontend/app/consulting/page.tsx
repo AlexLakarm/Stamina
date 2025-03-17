@@ -21,7 +21,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-
 const quicksand = Quicksand({ 
     subsets: ["latin"],
     weight: ['700']
@@ -209,10 +208,12 @@ export default function ConsultingPage() {
                 <h1 className={`${quicksand.className} text-4xl md:text-5xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-white via-neutral-200 to-white drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]`}>
                     Consulting & Formation
                 </h1>
-                    <div className={`${inter.className} space-y-8 text-lg text-neutral-400 leading-relaxed`}>
-                        <div className="bg-neutral-900/50 p-6 rounded-xl border border-blue-500/40 shadow-[0_0_15px_rgba(59,130,246,0.15)]">
-                            <h2 className="text-2xl font-bold text-neutral-200 mb-4">Notre Expertise</h2>
-                            <p>
+                    <div className={`${inter.className} space-y-8 text-lg text-neutral-300 leading-relaxed`}>
+                        <div className="bg-purple-500/20 p-6 rounded-xl border border-purple-400/40 shadow-[0_0_15px_rgba(102,102,255,0.3)]">
+                            <h2 className="text-2xl md:text-3xl font-bold text-neutral-200 mb-4">
+                                Notre Expertise
+                            </h2>
+                            <p className="text-neutral-300 text-base md:text-lg">
                                 Nous accompagnons les entreprises et les professionnels dans leur compréhension 
                                 de l'écosystème blockchain et crypto. Spécialisés dans le secteur financier, 
                                 nous intervenons également auprès d'organisations de tous secteurs pour des missions 
@@ -223,35 +224,41 @@ export default function ConsultingPage() {
                         <div className="space-y-6">
                             <h3 className="text-xl font-semibold text-neutral-300">Nos Services</h3>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div className="p-6 rounded-xl bg-neutral-900/50 border border-neutral-400/50 hover:border-neutral-200/50 transition-colors">
-                                    <h4 className="text-neutral-200 font-medium mb-2 text-xl md:text-lg">Conseil Stratégique</h4>
+                                <div className="p-6 rounded-xl bg-neutral-900/30 border border-neutral-400/50 hover:border-neutral-200/50 transition-colors">
+                                    <h4 className="text-neutral-200 font-medium mb-2 text-xl md:text-lg">
+                                        Conseil Stratégique
+                                    </h4>
                                     <p className="text-neutral-400 text-lg md:text-base">
-                                        Accompagnement des organisations dans leur approche de l'écosystème crypto, 
-                                        avec une expertise particulière pour le secteur financier.
+                                        Interventions ciblées pour décrypter les enjeux de la blockchain et des cryptomonnaies. 
+                                        Nous vous aidons à comprendre des thématiques spécifiques (DeFi, NFTs, ...) et à 
+                                        identifier les opportunités concrètes pour votre organisation.
                                     </p>
                                 </div>
                                 
-                                <div className="p-6 rounded-xl bg-neutral-900/50 border border-neutral-400/50 hover:border-neutral-200/50 transition-colors">
-                                    <h4 className="text-neutral-200 font-medium mb-2 text-xl md:text-lg">Formation & Workshops</h4>
+                                <div className="p-6 rounded-xl bg-neutral-900/30 border border-neutral-400/50 hover:border-neutral-200/50 transition-colors">
+                                    <h4 className="text-neutral-200 font-medium mb-2 text-xl md:text-lg">Formation de vos équipes</h4>
                                     <p className="text-neutral-400 text-lg md:text-base">
-                                        Sessions pratiques et séminaires adaptés à votre contexte : découverte, 
-                                        manipulation des outils et cas d'usage sectoriels.
+                                        Présentation détaillée des concepts fondamentaux de la blockchain, démos live et manipulations des outils web3.
+                                        Notre objectif est de permettre à vos équipes d'être en confiance lorsqu'une problématique crypto se présente.
                                     </p>
                                 </div>
 
-                                <div className="p-6 rounded-xl bg-neutral-900/50 border border-neutral-400/50 hover:border-neutral-200/50 transition-colors">
-                                    <h4 className="text-neutral-200 font-medium mb-2 text-xl md:text-lg">Veille & Analyse</h4>
+                                <div className="p-6 rounded-xl bg-neutral-900/30 border border-neutral-400/50 hover:border-neutral-200/50 transition-colors">
+                                    <h4 className="text-neutral-200 font-medium mb-2 text-xl md:text-lg">
+                                        Présentations & Événements
+                                    </h4>
                                     <p className="text-neutral-400 text-lg md:text-base">
-                                        Décryptage des innovations blockchain et de leurs impacts potentiels 
-                                        sur votre activité et votre secteur.
+                                        Interventions lors de vos événements (salons, séminaires, conférences) pour présenter 
+                                        les innovations blockchain de manière captivante. De la vulgarisation à l'expertise pointue, 
+                                        nous adaptons notre discours pour faire saisir le potentiel de ces technologies à tout public.
                                     </p>
                                 </div>
 
-                                <div className="p-6 rounded-xl bg-neutral-900/50 border border-neutral-400/50 hover:border-neutral-200/50 transition-colors">
-                                    <h4 className="text-neutral-200 font-medium mb-2 text-xl md:text-lg">Support Réglementaire</h4>
+                                <div className="p-6 rounded-xl bg-neutral-900/30 border border-neutral-400/50 hover:border-neutral-200/50 transition-colors">
+                                    <h4 className="text-neutral-200 font-medium mb-2 text-xl md:text-lg">Support & Veille Réglementaire</h4>
                                     <p className="text-neutral-400 text-lg md:text-base">
-                                        Accompagnement dans la compréhension du cadre réglementaire crypto 
-                                        et de ses implications pour votre activité.
+                                        Veille technologique et réglementaire sur la blockchain et la crypto.
+                                        Nous vous accompagnons sur le long terme en devenant votre partenaire de confiance, disponible à tout moment.
                                     </p>
                                 </div>
                             </div>

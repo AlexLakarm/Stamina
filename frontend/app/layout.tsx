@@ -5,15 +5,36 @@ import CustomRainbowKitProvider from "@/components/shared/customRainbowKit";
 import Footer from "@/components/shared/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
-import Script from 'next/script'
+import Script from 'next/script';
+import { GTM_ID } from '@/utils/gtm';
+import { PageViewTracker } from '@/components/analytics/page-view-tracker';
 
 const inter = Inter({ subsets: ["latin"] });
 
-const GTM_ID = 'GTM-T2Z3K44V';
-
 export const metadata: Metadata = {
-  title: "Stamina - Dev & Consulting",
+  metadataBase: new URL('https://staminadev.com'),
+  title: {
+    default: "Stamina Dev | Consultant Blockchain, Développeur Web3  & Formation",
+    template: '%s | Stamina'
+  },
   description: "Expert blockchain, Stamina vous accompagne dans vos projets Web3 avec des solutions sur mesure en développement et conseil.",
+  openGraph: {
+    type: 'website',
+    url: 'https://staminadev.com',
+    title: 'Stamina Dev | Consultant Blockchain, Développeur Web3  & Formation',
+    description: 'Expert blockchain, Stamina vous accompagne dans vos projets Web3',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
 };
 
 export default function RootLayout({
@@ -24,28 +45,33 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning className="h-full dark">
       <head>
-        {/* Google Tag Manager */}
         <Script
-          id="gtm"
-          strategy="beforeInteractive"
+          id="gtm-script"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','${GTM_ID}');`
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              window.dataLayer.push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+              });
+            `
           }}
+        />
+        <Script
+          id="gtm-load"
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`}
         />
       </head>
       <body className={`${inter.className} min-h-screen flex flex-col dark`}>
-        {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe 
             src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}
-          ></iframe>
+          />
         </noscript>
 
         <ThemeProvider
@@ -64,6 +90,7 @@ export default function RootLayout({
           </CustomRainbowKitProvider>
         </ThemeProvider>
         <Toaster />
+        <PageViewTracker />
       </body>
     </html>
   );

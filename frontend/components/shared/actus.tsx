@@ -22,7 +22,7 @@ const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid md:auto-rows-[20rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto",
+        "grid grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto",
         className
       )}
     >
@@ -49,18 +49,18 @@ const BentoGridItem = ({
       <motion.div
         whileHover={{ scale: 1.01 }}
         className={cn(
-          "row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 bg-neutral-900 border border-neutral-800 justify-between flex flex-col space-y-4",
+          "row-span-1 rounded-xl hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 bg-neutral-900 border border-neutral-800 hover:border-neutral-200/50 justify-between flex flex-col space-y-4 h-full",
           className
         )}
       >
         {header}
-        <div className="group-hover/bento:translate-x-2 transition duration-200">
-          <div className="font-bold text-neutral-200 mb-2 mt-2">
+        <div className="transition duration-200 flex flex-col flex-1">
+          <div className="font-bold text-neutral-200 mb-2 mt-2 text-xl md:text-xl">
             {title}
           </div>
-          <div className="font-normal text-neutral-400 text-sm">
+          <p className="text-neutral-300/90 text-lg md:text-lg font-light">
             {description}
-          </div>
+          </p>
         </div>
       </motion.div>
     </Link>
@@ -74,7 +74,7 @@ export default function Actus() {
   return (
     <div className="relative py-16 bg-neutral-950">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className={`${quicksand.className} text-3xl md:text-5xl font-bold text-center mb-14 bg-clip-text text-transparent bg-gradient-to-r from-white via-neutral-200 to-white drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]`}>
+        <h2 className={`${quicksand.className} text-4xl md:text-5xl font-bold text-center mb-14 bg-clip-text text-transparent bg-gradient-to-r from-white via-neutral-200 to-white drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]`}>
           Nos derniers articles et analyses
         </h2>
         

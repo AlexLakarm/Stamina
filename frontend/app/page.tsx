@@ -18,7 +18,7 @@ export default function Home() {
 
   return (
     <main className="bg-neutral-950 min-h-screen">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-2 sm:px-4">
         <HeaderMain />
         <div className="space-y-2">
           <Slogan />

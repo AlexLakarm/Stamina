@@ -43,6 +43,13 @@ export function ArticleLayout({ article }: { article: Article }) {
                   {children}
                 </a>
               ),
+              img: ({ src, alt }) => (
+                <img 
+                  src={src} 
+                  alt={alt} 
+                  className="max-w-[400px] mx-auto"
+                />
+              ),
             }}
           >
             {article.content}
